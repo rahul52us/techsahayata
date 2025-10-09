@@ -24,3 +24,35 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Custom centered headline style to match provided design */
+.egDqYs {
+  position: relative;
+  margin: 0;
+  color: rgb(56, 178, 172);
+  font-weight: 700;
+  text-align: center;
+}
+
+@media screen and (min-width: 1em) {
+  .egDqYs {
+    font-size: 2.6rem;
+    line-height: 3.6rem;
+  }
+}
+
+/* Simple marquee animation used for brand logo rows */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.marquee-track {
+  display: flex;
+  width: 200%;
+  animation: marquee 25s linear infinite;
+}
+
+.marquee-track.reverse {
+  animation-direction: reverse;
+}
