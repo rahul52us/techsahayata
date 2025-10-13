@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Image from "next/image";
 
 interface OCRFeature {
   title: string;
@@ -55,38 +56,71 @@ const ocrFeatures: OCRFeature[] = [
 
 export default function OCRPage() {
   return (
-    <main className="bg-[#f3fafc] py-20 px-6 md:px-12">
-      <div className="max-w-7xl mx-auto text-center">
-        {/* Heading */}
-        <h1 className="text-3xl md:text-4xl font-bold text-[#33aed7] mb-4">
-          Optical Character Recognition (OCR)
-        </h1>
-        <p className="text-gray-700 max-w-3xl mx-auto mb-12 text-base md:text-lg leading-relaxed">
-          Experience the power of OCR — a cutting-edge solution designed to
-          extract, process, and validate text from images, PDFs, and handwritten
-          documents. Transform physical data into digital insights with
-          speed and accuracy.
-        </p>
+    <main className="bg-[#f3fafc] font-sans">
+      {/* 🌟 Minimal Hero Section */}
+      <section className="relative w-full h-[55vh] md:h-[60vh] overflow-hidden">
+        <Image
+          src="/assets/ocrhero.jpg" 
+          alt="OCR Hero"
+          fill
+          priority
+          className="object-cover object-center"
+        />
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#002c3a]/90 via-[#00485a]/70 to-[#046c8a]/60"></div>
 
-        {/* Grid Section */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 justify-center">
-          {ocrFeatures.map((feature, index) => (
-            <FeatureCard key={index} feature={feature} />
-          ))}
+        {/* Text Content */}
+        <div className="absolute inset-0 flex flex-col justify-center items-center text-center text-white px-6 md:px-12">
+          <h1 className="text-3xl md:text-5xl font-bold mb-3 leading-tight animate-fade-in-up">
+            Intelligent OCR for Modern Workflows
+          </h1>
+          <p className="text-base md:text-lg max-w-2xl mx-auto text-gray-200 mb-6 animate-fade-in-up delay-100">
+            Unlock the power of text recognition across documents, images, and
+            handwritten notes — fast, accurate, and multilingual.
+          </p>
+          <a
+            href="#features"
+            className="bg-[#33aed7] hover:bg-[#2a96bb] text-white px-8 py-3 rounded-full font-semibold shadow-lg hover:shadow-2xl transition transform hover:-translate-y-1"
+          >
+            Explore OCR Projects
+          </a>
         </div>
+      </section>
 
-        {/* CTA Section */}
-        <div className="mt-16">
-          <button className="bg-[#33aed7] hover:bg-[#2a96bb] text-white px-10 py-4 rounded-full font-semibold shadow-md hover:shadow-xl transition">
-            Book a Free Demo
-          </button>
+      {/* ✨ Features Section */}
+      <section id="features" className="py-20 px-6 md:px-12">
+        <div className="max-w-7xl mx-auto text-center">
+          {/* Heading */}
+          <h2 className="text-3xl md:text-4xl font-bold text-[#33aed7] mb-4">
+            Optical Character Recognition (OCR)
+          </h2>
+          <p className="text-gray-700 max-w-3xl mx-auto mb-12 text-base md:text-lg leading-relaxed">
+            Experience the power of OCR — a cutting-edge solution designed to
+            extract, process, and validate text from images, PDFs, and handwritten
+            documents. Transform physical data into digital insights with unmatched
+            accuracy.
+          </p>
+
+          {/* Grid Section */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 justify-center">
+            {ocrFeatures.map((feature, index) => (
+              <FeatureCard key={index} feature={feature} />
+            ))}
+          </div>
+
+          {/* CTA Section */}
+          <div className="mt-16">
+            <button className="bg-[#33aed7] hover:bg-[#2a96bb] text-white px-10 py-4 rounded-full font-semibold shadow-md hover:shadow-xl transition">
+              Book a Free Demo
+            </button>
+          </div>
         </div>
-      </div>
+      </section>
     </main>
   );
 }
 
-/* Reusable Feature Card Component */
+/* 🎬 Feature Card Component */
 function FeatureCard({ feature }: { feature: OCRFeature }) {
   return (
     <div className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-[#c2edf9] group">
