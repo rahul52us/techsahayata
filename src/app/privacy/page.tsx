@@ -1,11 +1,17 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import { ShieldCheck } from "lucide-react";
+import { motion } from "framer-motion";
+import { ShieldCheck, Lock, Globe2, Cookie, UserCheck, RefreshCcw, Mail } from "lucide-react";
 
 export default function PrivacyPage() {
+  const fadeIn = {
+    hidden: { opacity: 0, y: 40 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+  };
+
   return (
-    <main className="w-full min-h-screen bg-gradient-to-b from-white via-[#f4fbfd] to-white text-gray-800 font-sans">
+    <main className="w-full min-h-screen bg-gradient-to-b from-white via-[#f5fcff] to-white text-gray-800 font-sans overflow-hidden">
       {/* Hero Section */}
       <section className="relative w-full h-[520px] md:h-[600px] flex items-center justify-center overflow-hidden">
         <Image
@@ -15,9 +21,14 @@ export default function PrivacyPage() {
           className="object-cover object-center opacity-90"
           priority
         />
-        <div className="absolute inset-0 bg-black/30"></div>
+        <div className="absolute inset-0 bg-black/50"></div>
 
-        <div className="relative z-10 text-center text-white px-6">
+        <motion.div
+          initial={{ opacity: 0, y: 60 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="relative z-10 text-center text-white px-6"
+        >
           <div className="flex justify-center mb-6">
             <div className="p-5 rounded-full bg-white/20 border border-white/30 backdrop-blur-md">
               <ShieldCheck size={56} className="text-white" />
@@ -38,129 +49,219 @@ export default function PrivacyPage() {
               <strong>Last Updated:</strong> {new Date().toLocaleDateString()}
             </p>
           </div>
-        </div>
+        </motion.div>
       </section>
 
       {/* Content Section */}
-      <section className="py-20">
-        <div className="max-w-5xl mx-auto px-6 space-y-16 leading-relaxed text-lg">
-          <div>
-            <h2 className="text-3xl font-semibold text-[#33aed7] mb-4">
-              1. Information We Collect
-            </h2>
-            <p>
-              We may collect the following types of information to enhance and
-              personalize your experience with our services:
-            </p>
-            <ul className="list-disc pl-6 mt-3 space-y-2">
-              <li>Personal details such as name, email, and phone number.</li>
-              <li>
-                Technical data including IP address, browser type, and device
-                details.
-              </li>
-              <li>
-                Usage data that helps us understand how you interact with our
-                platform.
-              </li>
-            </ul>
-          </div>
+      <section className="py-24 relative">
+        {/* background blur gradient shapes */}
+        <div className="absolute top-32 left-0 w-72 h-72 bg-[#33aed7]/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-10 right-0 w-96 h-96 bg-[#0c92b2]/10 rounded-full blur-3xl"></div>
 
-          <div>
-            <h2 className="text-3xl font-semibold text-[#33aed7] mb-4">
-              2. How We Use Your Information
-            </h2>
-            <ul className="list-disc pl-6 space-y-2">
-              <li>To provide, operate, and maintain our services.</li>
-              <li>To improve user experience and optimize performance.</li>
-              <li>To communicate important updates or service changes.</li>
-              <li>To comply with legal and regulatory obligations.</li>
-            </ul>
-          </div>
+        <div className="max-w-6xl mx-auto px-6 space-y-28">
+          {/* 1 */}
+          <motion.div
+            variants={fadeIn}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="flex flex-col md:flex-row items-center gap-10"
+          >
+            <div className="md:w-1/2">
+              <Image
+                src="/assets/privacy-data.jpg"
+                alt="Data Privacy"
+                width={600}
+                height={400}
+                className="rounded-2xl shadow-lg"
+              />
+            </div>
+            <div className="md:w-1/2">
+              <h2 className="text-3xl font-semibold text-[#33aed7] mb-4">
+                1. Information We Collect
+              </h2>
+              <p>
+                We collect data to personalize and enhance your experience.
+                These include:
+              </p>
+              <ul className="list-disc pl-6 mt-3 space-y-2">
+                <li>Personal details like name, email, and phone number.</li>
+                <li>Technical data such as IP address and device info.</li>
+                <li>Usage insights that help us improve our platform.</li>
+              </ul>
+            </div>
+          </motion.div>
 
-          <div>
-            <h2 className="text-3xl font-semibold text-[#33aed7] mb-4">
-              3. Data Protection and Security
-            </h2>
-            <p>
-              We implement strong security measures including encryption, secure
-              servers, and restricted access controls to protect your
-              information from unauthorized access or misuse.
-            </p>
-          </div>
+          {/* 2 */}
+          <motion.div
+            variants={fadeIn}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="flex flex-col-reverse md:flex-row items-center gap-10"
+          >
+            <div className="md:w-1/2">
+              <h2 className="text-3xl font-semibold text-[#33aed7] mb-4">
+                2. How We Use Your Information
+              </h2>
+              <ul className="list-disc pl-6 space-y-2">
+                <li>To provide, operate, and maintain our services.</li>
+                <li>To improve user experience and optimize performance.</li>
+                <li>To communicate updates or service changes.</li>
+                <li>To comply with legal obligations.</li>
+              </ul>
+            </div>
+            <div className="md:w-1/2">
+              <Image
+                src="/assets/privacy-usage.jpg"
+                alt="Data Usage"
+                width={600}
+                height={400}
+                className="rounded-2xl shadow-lg"
+              />
+            </div>
+          </motion.div>
 
-          <div>
-            <h2 className="text-3xl font-semibold text-[#33aed7] mb-4">
-              4. Sharing of Information
-            </h2>
-            <p>
-              We respect your privacy and do not sell your data. Limited
-              information may be shared only with:
-            </p>
-            <ul className="list-disc pl-6 mt-3 space-y-2">
-              <li>Trusted partners under confidentiality agreements.</li>
-              <li>Authorities, when legally required.</li>
-            </ul>
-          </div>
+          {/* 3 */}
+          <motion.div
+            variants={fadeIn}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="flex flex-col md:flex-row items-center gap-10"
+          >
+            <div className="md:w-1/2">
+              <Image
+                src="/assets/privacy-security.jpeg"
+                alt="Data Security"
+                width={600}
+                height={400}
+                className="rounded-2xl shadow-lg"
+              />
+            </div>
+            <div className="md:w-1/2">
+              <h2 className="text-3xl font-semibold text-[#33aed7] mb-4">
+                3. Data Protection and Security
+              </h2>
+              <p>
+                We employ top-tier measures including encryption, firewalls, and
+                access controls to ensure your data remains secure.
+              </p>
+            </div>
+          </motion.div>
 
-          <div>
-            <h2 className="text-3xl font-semibold text-[#33aed7] mb-4">
-              5. Cookies
-            </h2>
-            <p>
-              We use cookies to improve your browsing experience and analyze
-              website performance. You may disable cookies through your browser
-              settings if you prefer.
-            </p>
-          </div>
+          {/* 4 */}
+          <motion.div
+            variants={fadeIn}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="flex flex-col-reverse md:flex-row items-center gap-10"
+          >
+            <div className="md:w-1/2">
+              <h2 className="text-3xl font-semibold text-[#33aed7] mb-4">
+                4. Sharing of Information
+              </h2>
+              <p>
+                We only share data when necessary with trusted partners or
+                authorities:
+              </p>
+              <ul className="list-disc pl-6 mt-3 space-y-2">
+                <li>Confidential partners under strict NDAs.</li>
+                <li>Regulatory authorities when legally required.</li>
+              </ul>
+            </div>
+            <div className="md:w-1/2">
+              <Image
+                src="/assets/privacy-sharing.jpg"
+                alt="Data Sharing"
+                width={600}
+                height={400}
+                className="rounded-2xl shadow-lg"
+              />
+            </div>
+          </motion.div>
 
-          <div>
+          {/* 5 */}
+          <motion.div
+            variants={fadeIn}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="flex flex-col md:flex-row items-center gap-10"
+          >
+            <div className="md:w-1/2">
+              <Image
+                src="/assets/privacy-cookies.webp"
+                alt="Cookies Policy"
+                width={600}
+                height={400}
+                className="rounded-2xl shadow-lg"
+              />
+            </div>
+            <div className="md:w-1/2">
+              <h2 className="text-3xl font-semibold text-[#33aed7] mb-4">
+                5. Cookies
+              </h2>
+              <p>
+                We use cookies to make your experience smoother and analyze
+                performance. You can disable cookies anytime in your browser
+                settings.
+              </p>
+            </div>
+          </motion.div>
+
+          {/* 6–8 (condensed clean layout) */}
+          <motion.div
+            variants={fadeIn}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="text-center mt-10"
+          >
             <h2 className="text-3xl font-semibold text-[#33aed7] mb-4">
               6. Your Rights
             </h2>
-            <p>
-              You have the right to access, correct, or request deletion of your
-              personal data. For assistance, contact us at{" "}
+            <p className="max-w-3xl mx-auto mb-10">
+              You can access, modify, or delete your data by contacting us at{" "}
               <span className="text-[#33aed7] font-medium">
                 privacy@techsahayata.com
               </span>
               .
             </p>
-          </div>
 
-          <div>
             <h2 className="text-3xl font-semibold text-[#33aed7] mb-4">
               7. Policy Updates
             </h2>
-            <p>
-              This policy may be updated periodically to reflect changes in our
-              practices or legal obligations. Any revisions will be posted here
-              with an updated effective date.
+            <p className="max-w-3xl mx-auto mb-10">
+              We may update this policy periodically. Updates will appear on
+              this page with a new effective date.
             </p>
-          </div>
 
-          <div>
             <h2 className="text-3xl font-semibold text-[#33aed7] mb-4">
               8. Contact Us
             </h2>
-            <p>
-              <strong>Email:</strong>{" "}
-              <span className="text-[#33aed7]">privacy@techsahayata.com</span>
-            </p>
-            <p>
-              <strong>Website:</strong>{" "}
-              <a
-                href="https://www.techsahayata.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[#33aed7] hover:underline"
-              >
-                www.techsahayata.com
-              </a>
-            </p>
-            <p>
-              <strong>Address:</strong> [Insert Company Address]
-            </p>
-          </div>
+            <div className="max-w-3xl mx-auto space-y-2">
+              <p>
+                <strong>Email:</strong>{" "}
+                <span className="text-[#33aed7]">privacy@techsahayata.com</span>
+              </p>
+              <p>
+                <strong>Website:</strong>{" "}
+                <a
+                  href="https://www.techsahayata.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#33aed7] hover:underline"
+                >
+                  www.techsahayata.com
+                </a>
+              </p>
+              <p>
+                <strong>Address:</strong> [Insert Company Address]
+              </p>
+            </div>
+          </motion.div>
         </div>
       </section>
     </main>
