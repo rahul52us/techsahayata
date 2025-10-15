@@ -663,90 +663,80 @@ export default function Home() {
       {/* Robot illustrater */}
 
 
-      <div className="container mx-auto p-8 flex flex-col md:flex-row items-center justify-between bg-gradient-to-r from-[#e6f7fc] to-white rounded-1xl shadow-xl border border-[#c2edf9] gap-10">
-        {/* Left side (GIF image) */}
-        <div className="w-full md:w-1/2 flex justify-center">
-          <img
-            src="/assets/platform.gif"
-            alt="Robot Illustration"
-            width={450}
-            height={450}
-            className="rounded-2xl shadow-lg transition-transform duration-500 hover:scale-105"
-          />
-        </div>
+      <div className="container mx-auto p-8 flex flex-col md:flex-row items-center justify-between bg-gradient-to-r from-[#e6f7fc] to-white  shadow-xl border border-[#c2edf9] gap-12">
+  {/* Left side (GIF image) */}
+  <div className="w-full md:w-1/2 flex justify-center md:justify-end">
+    <img
+      src="/assets/platform.gif"
+      alt="Robot Illustration"
+      className="w-full max-w-lg md:max-w-xl rounded-2xl shadow-xl transition-transform duration-500 hover:scale-105"
+    />
+  </div>
 
-        {/* Right side (content list) */}
-        <div className="w-full md:w-1/2 space-y-8">
-          <h2 className="text-2xl md:text-3xl font-bold text-[#33aed7] mb-4">
-            Our Core Solutions
-          </h2>
+  {/* Right side (content list) */}
+  <div className="w-full md:w-1/2 space-y-8 md:pl-12">
+    <h2 className="text-3xl md:text-4xl font-bold text-[#33aed7] mb-6">
+      Our Core Solutions
+    </h2>
 
-          {/* Websites Section */}
-          <div>
-            <h3 className="text-xl font-semibold text-[#0c92b2] flex items-center gap-2">
-              Websites
-            </h3>
-            <ul className="mt-3 space-y-2 text-gray-700">
-              <li>24/7 online presence and global reach</li>
-              <li>Builds brand credibility and trust</li>
-              <li>Cost-effective marketing and lead generation</li>
-              <li>Easy to update and share information</li>
-            </ul>
-          </div>
+    {/* Websites Section */}
+    <div>
+      <h3 className="text-2xl font-semibold text-[#0c92b2] mb-3">Websites</h3>
+      <ul className="space-y-2 text-gray-700 list-disc list-inside">
+        <li>24/7 online presence and global reach</li>
+        <li>Builds brand credibility and trust</li>
+        <li>Cost-effective marketing and lead generation</li>
+        <li>Easy to update and share information</li>
+      </ul>
+    </div>
 
-          {/* Mobile Apps Section */}
-          <div>
-            <h3 className="text-xl font-semibold text-[#0c92b2] flex items-center gap-2">
-              Mobile Apps
-            </h3>
-            <ul className="mt-3 space-y-2 text-gray-700">
-              <li>Enhances customer engagement and loyalty</li>
-              <li>Provides instant access to services anytime, anywhere</li>
-              <li>Push notifications for real-time updates</li>
-              <li>Offers personalized user experiences</li>
-            </ul>
-          </div>
+    {/* Mobile Apps Section */}
+    <div>
+      <h3 className="text-2xl font-semibold text-[#0c92b2] mb-3">Mobile Apps</h3>
+      <ul className="space-y-2 text-gray-700 list-disc list-inside">
+        <li>Enhances customer engagement and loyalty</li>
+        <li>Provides instant access to services anytime, anywhere</li>
+        <li>Push notifications for real-time updates</li>
+        <li>Offers personalized user experiences</li>
+      </ul>
+    </div>
 
-          {/* Applications & Software Section */}
-          <div>
-            <h3 className="text-xl font-semibold text-[#0c92b2] flex items-center gap-2">
-              Applications & Software
-            </h3>
-            <ul className="mt-3 space-y-2 text-gray-700">
-              <li>Streamline operations and improve productivity</li>
-              <li>Automate complex business workflows</li>
-              <li>Reduce manual errors and save time</li>
-              <li>Enable data-driven decision-making</li>
-            </ul>
-          </div>
+    {/* Applications & Software Section */}
+    <div>
+      <h3 className="text-2xl font-semibold text-[#0c92b2] mb-3">Applications & Software</h3>
+      <ul className="space-y-2 text-gray-700 list-disc list-inside">
+        <li>Streamline operations and improve productivity</li>
+        <li>Automate complex business workflows</li>
+        <li>Reduce manual errors and save time</li>
+        <li>Enable data-driven decision-making</li>
+      </ul>
+    </div>
 
-          {/* RPA Section */}
-          <div>
-            <h3 className="text-xl font-semibold text-[#0c92b2] flex items-center gap-2">
-              RPA (Robotic Process Automation)
-            </h3>
-            <ul className="mt-3 space-y-2 text-gray-700">
-              <li>Automates repetitive, rule-based tasks</li>
-              <li>Increases efficiency and accuracy</li>
-              <li>Reduces operational costs</li>
-              <li>Frees employees for more strategic work</li>
-            </ul>
-          </div>
+    {/* RPA Section */}
+    <div>
+      <h3 className="text-2xl font-semibold text-[#0c92b2] mb-3">RPA (Robotic Process Automation)</h3>
+      <ul className="space-y-2 text-gray-700 list-disc list-inside">
+        <li>Automates repetitive, rule-based tasks</li>
+        <li>Increases efficiency and accuracy</li>
+        <li>Reduces operational costs</li>
+        <li>Frees employees for more strategic work</li>
+      </ul>
+    </div>
 
-          {/* AI Automation Section */}
-          <div>
-            <h3 className="text-xl font-semibold text-[#0c92b2] flex items-center gap-2">
-              AI (Artificial Intelligence) Automation
-            </h3>
-            <ul className="mt-3 space-y-2 text-gray-700">
-              <li>Learns and adapts to improve over time</li>
-              <li>Provides intelligent insights and predictions</li>
-              <li>Enhances decision-making through data analysis</li>
-              <li>Enables smarter, faster customer service</li>
-            </ul>
-          </div>
-        </div>
-      </div>
+    {/* AI Automation Section */}
+    <div>
+      <h3 className="text-2xl font-semibold text-[#0c92b2] mb-3">AI (Artificial Intelligence) Automation</h3>
+      <ul className="space-y-2 text-gray-700 list-disc list-inside">
+        <li>Learns and adapts to improve over time</li>
+        <li>Provides intelligent insights and predictions</li>
+        <li>Enhances decision-making through data analysis</li>
+        <li>Enables smarter, faster customer service</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+      
       <section className="flex flex-col md:flex-row items-center justify-between py-12 px-6 md:px-12 bg-[#e6f7fc]">
         {/* Left Column: Text */}
         <div className="w-full md:w-1/2 text-left bg-[#f0fbff] p-8 rounded-2xl shadow-md border border-[#c2edf9]">
@@ -772,77 +762,81 @@ export default function Home() {
 
 
       <section className="py-16 px-6 bg-[#e6f7fc]">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex items-center space-x-6 bg-[#f0fbff] rounded-2xl p-10 shadow-md border border-[#c2edf9]">
-            {/* Image Section */}
-            <div className="w-1/3">
-              <img
-                src="/assets/finance-1.webp"
-                alt="RPA Illustration"
-                className="w-full h-auto rounded-lg shadow-lg transition-transform duration-500 hover:scale-105"
-              />
-            </div>
+  <div className="max-w-7xl mx-auto">
+    <div className="flex flex-col md:flex-row items-center bg-[#f0fbff] rounded-2xl p-6 md:p-10 shadow-md border border-[#c2edf9] gap-6">
+      {/* Image Section */}
+      <div className="w-full md:w-1/3 flex justify-center">
+        <img
+          src="/assets/finance-1.webp"
+          alt="RPA Illustration"
+          className="w-full h-auto rounded-lg shadow-lg transition-transform duration-500 hover:scale-105"
+        />
+      </div>
 
-            {/* Text Section */}
-            <div className="w-2/3">
-              <h2 className="text-3xl font-bold text-[#33aed7]">
-                Can RPA help Finance and Accounting? Yes!
-              </h2>
-              <p className="mt-4 text-gray-700 text-lg leading-relaxed">
-                Automation can empower finance and accounting business units to be
-                more efficient, streamline high-touch processes, and boost employee
-                satisfaction.
-              </p>
-              <p className="mt-4 text-gray-700 text-lg leading-relaxed">
-                End-to-end process automation can save up to 60% processing time and
-                cost, all while integrating multiple legacy systems and applications,
-                reducing the need for manual labor and ensuring maximum data security
-                and compliance across all operations.
-              </p>
-              <p className="mt-4 text-gray-700 text-lg leading-relaxed">
-                Additionally, hyperautomation can accelerate complex processes within
-                the department.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Text Section */}
+      <div className="w-full md:w-2/3">
+        <h2 className="text-2xl md:text-3xl font-bold text-[#33aed7] text-center md:text-left">
+          Can RPA help Finance and Accounting? Yes!
+        </h2>
+        <p className="mt-4 text-gray-700 text-base md:text-lg leading-relaxed text-justify">
+          Automation can empower finance and accounting business units to be
+          more efficient, streamline high-touch processes, and boost employee
+          satisfaction.
+        </p>
+        <p className="mt-4 text-gray-700 text-base md:text-lg leading-relaxed text-justify">
+          End-to-end process automation can save up to 60% processing time and
+          cost, all while integrating multiple legacy systems and applications,
+          reducing the need for manual labor and ensuring maximum data security
+          and compliance across all operations.
+        </p>
+        <p className="mt-4 text-gray-700 text-base md:text-lg leading-relaxed text-justify">
+          Additionally, hyperautomation can accelerate complex processes within
+          the department.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
 
 
-      <section className="py-16 px-6 bg-[#e6f7fc]">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex items-center space-x-6 flex-row-reverse bg-[#f0fbff] rounded-2xl p-10 shadow-md border border-[#c2edf9]">
 
-            {/* Image Section */}
-            <div className="w-1/3">
-              <img
-                src="/assets/finance-2.webp"
-                alt="Automation Illustration"
-                className="w-full h-auto rounded-lg shadow-lg transition-transform duration-500 hover:scale-105"
-              />
-            </div>
+    <section className="py-16 px-6 bg-[#e6f7fc]">
+  <div className="max-w-7xl mx-auto">
+    <div className="flex flex-col md:flex-row-reverse items-center space-y-6 md:space-y-0 md:space-x-6 bg-[#f0fbff] rounded-2xl p-6 md:p-10">
 
-            {/* Text Section */}
-            <div className="w-2/3">
-              <h2 className="text-3xl font-bold text-[#33aed7]">
-                What can be automated? A lot!
-              </h2>
-              <p className="mt-4 text-gray-700 text-lg leading-relaxed">
-                There are key areas of opportunity for automation inside finance and
-                accounting. From customer onboarding and invoicing, to cash
-                application, to logistics management to invoice processing, to
-                payments processing.
-              </p>
-              <p className="mt-4 text-gray-700 text-lg leading-relaxed">
-                Nearly any process can benefit from automation inside finance and
-                accounting. In the next page, you will discover process heatmaps
-                that highlight where automation has the biggest potential across
-                the business unit.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Image Section */}
+      <div className="w-full md:w-1/3 order-first md:order-last">
+        <img
+          src="/assets/finance-2.webp"
+          alt="Automation Illustration"
+          className="w-full h-auto rounded-lg shadow-lg transition-transform duration-500 hover:scale-105"
+        />
+      </div>
+
+      {/* Text Section */}
+      <div className="w-full md:w-2/3 order-last md:order-first">
+        <h2 className="text-3xl font-bold text-[#33aed7]">
+          What can be automated? A lot!
+        </h2>
+        <p className="mt-4 text-gray-700 text-lg leading-relaxed">
+          There are key areas of opportunity for automation inside finance and
+          accounting. From customer onboarding and invoicing, to cash
+          application, to logistics management to invoice processing, to
+          payments processing.
+        </p>
+        <p className="mt-4 text-gray-700 text-lg leading-relaxed">
+          Nearly any process can benefit from automation inside finance and
+          accounting. In the next page, you will discover process heatmaps
+          that highlight where automation has the biggest potential across
+          the business unit.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
     </main>
   );
 }
