@@ -261,61 +261,61 @@ export default function Home() {
       </section> */}
 
       {/* Brands marquee section */}
-    <section className="w-full py-16 sm:py-20 bg-white">
-  <div className="container mx-auto px-4 sm:px-6 lg:px-12">
-    <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center text-[#33aed7]">
-      Innovative Brands That Trust Us
-    </h2>
+      <section className="w-full py-16 sm:py-20 bg-white">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-12">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center text-[#33aed7]">
+            Innovative Brands That Trust Us
+          </h2>
 
-    {/* Row 1 - right to left */}
-    <div className="mt-8 sm:mt-10 overflow-hidden">
-      <div className="marquee-track flex animate-[marquee_25s_linear_infinite]">
-        <div className="flex items-center justify-around gap-6 sm:gap-10 lg:gap-12 shrink-0 w-full opacity-90">
-          <Image src="/assets/travellogo.png" alt="Brand" width={180} height={64} className="w-28 sm:w-36 md:w-40 lg:w-44 h-auto object-contain" />
-          <Image src="/assets/travellogo.png" alt="Brand" width={180} height={64} className="w-28 sm:w-36 md:w-40 lg:w-44 h-auto object-contain" />
-          <Image src="/assets/busssahayta.jpg" alt="Brand" width={180} height={64} className="w-28 sm:w-36 md:w-40 lg:w-44 h-auto object-contain" />
-          <Image src="/assets/busssahayta.jpg" alt="Brand" width={180} height={64} className="w-28 sm:w-36 md:w-40 lg:w-44 h-auto object-contain" />
-          <Image src="/assets/mentalhealthlogo.png" alt="Brand" width={180} height={64} className="w-28 sm:w-36 md:w-40 lg:w-44 h-auto object-contain" />
-          <Image src="/assets/mentalhealthlogo.png" alt="Brand" width={180} height={64} className="w-28 sm:w-36 md:w-40 lg:w-44 h-auto object-contain" />
+          {/* Row 1 - right to left */}
+          <div className="mt-8 sm:mt-10 overflow-hidden">
+            <div className="marquee-track flex animate-[marquee_25s_linear_infinite]">
+              <div className="flex items-center justify-around gap-6 sm:gap-10 lg:gap-12 shrink-0 w-full opacity-90">
+                <Image src="/assets/travellogo.png" alt="Brand" width={180} height={64} className="w-28 sm:w-36 md:w-40 lg:w-44 h-auto object-contain" />
+                <Image src="/assets/travellogo.png" alt="Brand" width={180} height={64} className="w-28 sm:w-36 md:w-40 lg:w-44 h-auto object-contain" />
+                <Image src="/assets/busssahayta.jpg" alt="Brand" width={180} height={64} className="w-28 sm:w-36 md:w-40 lg:w-44 h-auto object-contain" />
+                <Image src="/assets/busssahayta.jpg" alt="Brand" width={180} height={64} className="w-28 sm:w-36 md:w-40 lg:w-44 h-auto object-contain" />
+                <Image src="/assets/mentalhealthlogo.png" alt="Brand" width={180} height={64} className="w-28 sm:w-36 md:w-40 lg:w-44 h-auto object-contain" />
+                <Image src="/assets/mentalhealthlogo.png" alt="Brand" width={180} height={64} className="w-28 sm:w-36 md:w-40 lg:w-44 h-auto object-contain" />
+              </div>
+
+              <div className="flex items-center justify-around gap-6 sm:gap-10 lg:gap-12 shrink-0 w-full opacity-90">
+                <Image src="/assets/travellogo.png" alt="Brand" width={180} height={64} className="w-28 sm:w-36 md:w-40 lg:w-44 h-auto object-contain" />
+                <Image src="/assets/travellogo.png" alt="Brand" width={180} height={64} className="w-28 sm:w-36 md:w-40 lg:w-44 h-auto object-contain" />
+                <Image src="/assets/busssahayta.jpg" alt="Brand" width={180} height={64} className="w-28 sm:w-36 md:w-40 lg:w-44 h-auto object-contain" />
+                <Image src="/assets/busssahayta.jpg" alt="Brand" width={180} height={64} className="w-28 sm:w-36 md:w-40 lg:w-44 h-auto object-contain" />
+                <Image src="/assets/mentalhealthlogo.png" alt="Brand" width={180} height={64} className="w-28 sm:w-36 md:w-40 lg:w-44 h-auto object-contain" />
+                <Image src="/assets/mentalhealthlogo.png" alt="Brand" width={180} height={64} className="w-28 sm:w-36 md:w-40 lg:w-44 h-auto object-contain" />
+              </div>
+            </div>
+          </div>
+
+          {/* Row 2 - left to right */}
+          <div className="mt-8 sm:mt-10 overflow-hidden">
+            <div className="marquee-track reverse flex animate-[marquee_25s_linear_infinite_reverse]">
+              <div className="flex items-center justify-around gap-6 sm:gap-10 lg:gap-12 shrink-0 w-full opacity-90">
+                <Image src="/assets/travellogo.png" alt="Brand" width={180} height={64} className="w-28 sm:w-36 md:w-40 lg:w-44 h-auto object-contain" />
+                <Image src="/assets/travellogo.png" alt="Brand" width={180} height={64} className="w-28 sm:w-36 md:w-40 lg:w-44 h-auto object-contain" />
+                <Image src="/assets/busssahayta.jpg" alt="Brand" width={180} height={64} className="w-28 sm:w-36 md:w-40 lg:w-44 h-auto object-contain" />
+                <Image src="/assets/busssahayta.jpg" alt="Brand" width={180} height={64} className="w-28 sm:w-36 md:w-40 lg:w-44 h-auto object-contain" />
+                <Image src="/assets/mentalhealthlogo.png" alt="Brand" width={180} height={64} className="w-28 sm:w-36 md:w-40 lg:w-44 h-auto object-contain" />
+                <Image src="/assets/mentalhealthlogo.png" alt="Brand" width={180} height={64} className="w-28 sm:w-36 md:w-40 lg:w-44 h-auto object-contain" />
+              </div>
+
+              <div className="flex items-center justify-around gap-6 sm:gap-10 lg:gap-12 shrink-0 w-full opacity-90">
+                <Image src="/assets/travellogo.png" alt="Brand" width={180} height={64} className="w-28 sm:w-36 md:w-40 lg:w-44 h-auto object-contain" />
+                <Image src="/assets/travellogo.png" alt="Brand" width={180} height={64} className="w-28 sm:w-36 md:w-40 lg:w-44 h-auto object-contain" />
+                <Image src="/assets/busssahayta.jpg" alt="Brand" width={180} height={64} className="w-28 sm:w-36 md:w-40 lg:w-44 h-auto object-contain" />
+                <Image src="/assets/busssahayta.jpg" alt="Brand" width={180} height={64} className="w-28 sm:w-36 md:w-40 lg:w-44 h-auto object-contain" />
+                <Image src="/assets/mentalhealthlogo.png" alt="Brand" width={180} height={64} className="w-28 sm:w-36 md:w-40 lg:w-44 h-auto object-contain" />
+                <Image src="/assets/mentalhealthlogo.png" alt="Brand" width={180} height={64} className="w-28 sm:w-36 md:w-40 lg:w-44 h-auto object-contain" />
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div className="flex items-center justify-around gap-6 sm:gap-10 lg:gap-12 shrink-0 w-full opacity-90">
-          <Image src="/assets/travellogo.png" alt="Brand" width={180} height={64} className="w-28 sm:w-36 md:w-40 lg:w-44 h-auto object-contain" />
-          <Image src="/assets/travellogo.png" alt="Brand" width={180} height={64} className="w-28 sm:w-36 md:w-40 lg:w-44 h-auto object-contain" />
-          <Image src="/assets/busssahayta.jpg" alt="Brand" width={180} height={64} className="w-28 sm:w-36 md:w-40 lg:w-44 h-auto object-contain" />
-          <Image src="/assets/busssahayta.jpg" alt="Brand" width={180} height={64} className="w-28 sm:w-36 md:w-40 lg:w-44 h-auto object-contain" />
-          <Image src="/assets/mentalhealthlogo.png" alt="Brand" width={180} height={64} className="w-28 sm:w-36 md:w-40 lg:w-44 h-auto object-contain" />
-          <Image src="/assets/mentalhealthlogo.png" alt="Brand" width={180} height={64} className="w-28 sm:w-36 md:w-40 lg:w-44 h-auto object-contain" />
-        </div>
-      </div>
-    </div>
-
-    {/* Row 2 - left to right */}
-    <div className="mt-8 sm:mt-10 overflow-hidden">
-      <div className="marquee-track reverse flex animate-[marquee_25s_linear_infinite_reverse]">
-        <div className="flex items-center justify-around gap-6 sm:gap-10 lg:gap-12 shrink-0 w-full opacity-90">
-          <Image src="/assets/travellogo.png" alt="Brand" width={180} height={64} className="w-28 sm:w-36 md:w-40 lg:w-44 h-auto object-contain" />
-          <Image src="/assets/travellogo.png" alt="Brand" width={180} height={64} className="w-28 sm:w-36 md:w-40 lg:w-44 h-auto object-contain" />
-          <Image src="/assets/busssahayta.jpg" alt="Brand" width={180} height={64} className="w-28 sm:w-36 md:w-40 lg:w-44 h-auto object-contain" />
-          <Image src="/assets/busssahayta.jpg" alt="Brand" width={180} height={64} className="w-28 sm:w-36 md:w-40 lg:w-44 h-auto object-contain" />
-          <Image src="/assets/mentalhealthlogo.png" alt="Brand" width={180} height={64} className="w-28 sm:w-36 md:w-40 lg:w-44 h-auto object-contain" />
-          <Image src="/assets/mentalhealthlogo.png" alt="Brand" width={180} height={64} className="w-28 sm:w-36 md:w-40 lg:w-44 h-auto object-contain" />
-        </div>
-
-        <div className="flex items-center justify-around gap-6 sm:gap-10 lg:gap-12 shrink-0 w-full opacity-90">
-          <Image src="/assets/travellogo.png" alt="Brand" width={180} height={64} className="w-28 sm:w-36 md:w-40 lg:w-44 h-auto object-contain" />
-          <Image src="/assets/travellogo.png" alt="Brand" width={180} height={64} className="w-28 sm:w-36 md:w-40 lg:w-44 h-auto object-contain" />
-          <Image src="/assets/busssahayta.jpg" alt="Brand" width={180} height={64} className="w-28 sm:w-36 md:w-40 lg:w-44 h-auto object-contain" />
-          <Image src="/assets/busssahayta.jpg" alt="Brand" width={180} height={64} className="w-28 sm:w-36 md:w-40 lg:w-44 h-auto object-contain" />
-          <Image src="/assets/mentalhealthlogo.png" alt="Brand" width={180} height={64} className="w-28 sm:w-36 md:w-40 lg:w-44 h-auto object-contain" />
-          <Image src="/assets/mentalhealthlogo.png" alt="Brand" width={180} height={64} className="w-28 sm:w-36 md:w-40 lg:w-44 h-auto object-contain" />
-        </div>
-      </div>
-    </div>
-  </div>
-
-  {/* Tailwind keyframes for marquee */}
-  <style jsx global>{`
+        {/* Tailwind keyframes for marquee */}
+        <style jsx global>{`
     @keyframes marquee {
       0% {
         transform: translateX(0%);
@@ -325,88 +325,88 @@ export default function Home() {
       }
     }
   `}</style>
-</section>
+      </section>
 
 
 
-   <section className="relative w-full py-24 bg-gradient-to-br from-[#e6f9ff] via-white to-[#f0fcff] overflow-hidden">
-  {/* Decorative Background Orbs */}
-  <div className="absolute -top-24 -left-24 w-80 h-80 bg-[#33aed7]/20 rounded-full blur-3xl animate-pulse"></div>
-  <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#33aed7]/10 rounded-full blur-3xl animate-ping"></div>
+      <section className="relative w-full py-24 bg-gradient-to-br from-[#e6f9ff] via-white to-[#f0fcff] overflow-hidden">
+        {/* Decorative Background Orbs */}
+        <div className="absolute -top-24 -left-24 w-80 h-80 bg-[#33aed7]/20 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#33aed7]/10 rounded-full blur-3xl animate-ping"></div>
 
-  <div className="relative container mx-auto px-6 lg:px-12 text-center">
-    {/* Section Heading */}
-    <h2 className="text-4xl md:text-5xl font-extrabold text-[#33aed7] mb-6">
-      Mobile Apps & AI — The Unified Ecosystem
-    </h2>
-    <p className="text-lg text-gray-700 max-w-2xl mx-auto mb-16">
-      Explore how modern mobile applications combine core system components with artificial intelligence 
-      to deliver smarter, faster, and human-like experiences.
-    </p>
-
-    {/* Responsive Cards */}
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-      {/* Card 1 */}
-      <div className="group relative bg-white shadow-xl border border-[#33aed7]/20 rounded-3xl p-8 flex flex-col justify-between h-full hover:shadow-[#33aed7]/30 transition-all duration-500 hover:-translate-y-2">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#33aed7]/10 to-[#33aed7]/20 opacity-0 group-hover:opacity-50 blur-3xl transition-opacity duration-700 rounded-3xl"></div>
-
-        <div className="relative z-10 flex justify-center mb-8">
-          <img
-            src="/assets/web2.png"
-            alt="Mobile App Components"
-            className="w-full max-w-sm h-auto rounded-2xl object-contain shadow-lg transition-transform duration-700 group-hover:scale-105"
-          />
-        </div>
-
-        <div className="relative z-10 flex flex-col flex-grow justify-end">
-          <h3 className="text-2xl font-semibold text-[#33aed7] mb-3">
-            Components of Mobile Apps
-          </h3>
-          <p className="text-gray-600 max-w-md mx-auto">
-            Discover the interconnected elements that power our comprehensive mobile app ecosystem — 
-            from backend intelligence to user-facing design.
+        <div className="relative container mx-auto px-6 lg:px-12 text-center">
+          {/* Section Heading */}
+          <h2 className="text-4xl md:text-5xl font-extrabold text-[#33aed7] mb-6">
+            Mobile Apps & AI — The Unified Ecosystem
+          </h2>
+          <p className="text-lg text-gray-700 max-w-2xl mx-auto mb-16">
+            Explore how modern mobile applications combine core system components with artificial intelligence
+            to deliver smarter, faster, and human-like experiences.
           </p>
-        </div>
-      </div>
 
-      {/* Card 2 */}
-      <div className="group relative bg-white shadow-xl border border-[#33aed7]/20 rounded-3xl p-8 flex flex-col justify-between h-full hover:shadow-[#33aed7]/30 transition-all duration-500 hover:-translate-y-2">
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="w-72 h-72 bg-[#33aed7]/30 blur-3xl rounded-full opacity-0 group-hover:opacity-40 transition-opacity duration-700"></div>
-        </div>
+          {/* Responsive Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+            {/* Card 1 */}
+            <div className="group relative bg-white shadow-xl border border-[#33aed7]/20 rounded-3xl p-8 flex flex-col justify-between h-full hover:shadow-[#33aed7]/30 transition-all duration-500 hover:-translate-y-2">
+              <div className="absolute inset-0 bg-gradient-to-br from-[#33aed7]/10 to-[#33aed7]/20 opacity-0 group-hover:opacity-50 blur-3xl transition-opacity duration-700 rounded-3xl"></div>
 
-        <div className="relative z-10 flex justify-center mb-8">
-          <img
-            src="/assets/AIMobileImpact.png"
-            alt="AI Mobile Impact"
-            className="w-full max-w-sm h-auto rounded-2xl object-contain shadow-lg transition-transform duration-700 group-hover:scale-105"
-          />
-        </div>
+              <div className="relative z-10 flex justify-center mb-8">
+                <img
+                  src="/assets/web2.png"
+                  alt="Mobile App Components"
+                  className="w-full max-w-sm h-auto rounded-2xl object-contain shadow-lg transition-transform duration-700 group-hover:scale-105"
+                />
+              </div>
 
-        <div className="relative z-10 flex flex-col flex-grow justify-end">
-          <h3 className="text-2xl font-semibold text-[#33aed7] mb-3">
-            Impact of Mobile Apps with AI
-          </h3>
-          <p className="text-gray-600 max-w-md mx-auto">
-            AI-infused mobile apps redefine engagement with predictive insights, automation, and adaptive interactions — 
-            making technology feel more human.
-          </p>
-        </div>
-      </div>
-    </div>
+              <div className="relative z-10 flex flex-col flex-grow justify-end">
+                <h3 className="text-2xl font-semibold text-[#33aed7] mb-3">
+                  Components of Mobile Apps
+                </h3>
+                <p className="text-gray-600 max-w-md mx-auto">
+                  Discover the interconnected elements that power our comprehensive mobile app ecosystem —
+                  from backend intelligence to user-facing design.
+                </p>
+              </div>
+            </div>
 
-    {/* Unified Footer Text */}
-    <div className="mt-20">
-      <h3 className="text-3xl font-bold text-[#33aed7] mb-4">
-        Unified Mobile Intelligence
-      </h3>
-      <p className="text-gray-700 max-w-2xl mx-auto">
-        When traditional app components seamlessly integrate with AI capabilities, 
-        they form a dynamic ecosystem — one that evolves with users and redefines digital innovation.
-      </p>
-    </div>
-  </div>
-</section>
+            {/* Card 2 */}
+            <div className="group relative bg-white shadow-xl border border-[#33aed7]/20 rounded-3xl p-8 flex flex-col justify-between h-full hover:shadow-[#33aed7]/30 transition-all duration-500 hover:-translate-y-2">
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="w-72 h-72 bg-[#33aed7]/30 blur-3xl rounded-full opacity-0 group-hover:opacity-40 transition-opacity duration-700"></div>
+              </div>
+
+              <div className="relative z-10 flex justify-center mb-8">
+                <img
+                  src="/assets/AIMobileImpact.png"
+                  alt="AI Mobile Impact"
+                  className="w-full max-w-sm h-auto rounded-2xl object-contain shadow-lg transition-transform duration-700 group-hover:scale-105"
+                />
+              </div>
+
+              <div className="relative z-10 flex flex-col flex-grow justify-end">
+                <h3 className="text-2xl font-semibold text-[#33aed7] mb-3">
+                  Impact of Mobile Apps with AI
+                </h3>
+                <p className="text-gray-600 max-w-md mx-auto">
+                  AI-infused mobile apps redefine engagement with predictive insights, automation, and adaptive interactions —
+                  making technology feel more human.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Unified Footer Text */}
+          <div className="mt-20">
+            <h3 className="text-3xl font-bold text-[#33aed7] mb-4">
+              Unified Mobile Intelligence
+            </h3>
+            <p className="text-gray-700 max-w-2xl mx-auto">
+              When traditional app components seamlessly integrate with AI capabilities,
+              they form a dynamic ecosystem — one that evolves with users and redefines digital innovation.
+            </p>
+          </div>
+        </div>
+      </section>
 
 
 
@@ -508,109 +508,109 @@ export default function Home() {
       </section>
 
       <section className="relative w-full py-24 bg-gradient-to-br from-[#e6f9ff] via-white to-[#f0fcff] overflow-hidden">
-  {/* Animated Background Blobs */}
-  <div className="absolute top-0 left-0 w-96 h-96 bg-[#33aed7]/20 rounded-full blur-3xl animate-pulse"></div>
-  <div className="absolute bottom-0 right-0 w-[28rem] h-[28rem] bg-[#33aed7]/10 rounded-full blur-3xl animate-ping"></div>
+        {/* Animated Background Blobs */}
+        <div className="absolute top-0 left-0 w-96 h-96 bg-[#33aed7]/20 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-0 right-0 w-[28rem] h-[28rem] bg-[#33aed7]/10 rounded-full blur-3xl animate-ping"></div>
 
-  <div className="relative container mx-auto px-6 lg:px-12 text-center z-10">
-    {/* Header */}
-    <h2 className="text-4xl md:text-5xl font-extrabold text-[#33aed7] mb-6 capitalize">
-      Benefits of RPA, AI & Automation
-    </h2>
-    <p className="text-lg text-gray-700 max-w-3xl mx-auto mb-12">
-      Revolutionize your operations with intelligent automation that minimizes manual work, enhances precision,
-      and accelerates digital transformation across every business process.
-    </p>
+        <div className="relative container mx-auto px-6 lg:px-12 text-center z-10">
+          {/* Header */}
+          <h2 className="text-4xl md:text-5xl font-extrabold text-[#33aed7] mb-6 capitalize">
+            Benefits of RPA, AI & Automation
+          </h2>
+          <p className="text-lg text-gray-700 max-w-3xl mx-auto mb-12">
+            Revolutionize your operations with intelligent automation that minimizes manual work, enhances precision,
+            and accelerates digital transformation across every business process.
+          </p>
 
-    {/* Core Section */}
-    <div className="relative flex flex-col items-center justify-center">
-      {/* Glowing Halo */}
-      <div className="absolute w-96 h-96 bg-[#33aed7]/20 blur-3xl rounded-full animate-pulse"></div>
+          {/* Core Section */}
+          <div className="relative flex flex-col items-center justify-center">
+            {/* Glowing Halo */}
+            <div className="absolute w-96 h-96 bg-[#33aed7]/20 blur-3xl rounded-full animate-pulse"></div>
 
-      {/* Main Card */}
-      <div className="relative bg-white/70 backdrop-blur-xl border border-[#33aed7]/20 rounded-3xl shadow-2xl p-10 max-w-5xl mx-auto">
-        <div className="flex flex-col lg:flex-row items-center gap-10">
-          {/* Left - Image with Glow */}
-          <div className="flex-1 flex justify-center relative">
-            <div className="absolute w-64 h-64 bg-[#33aed7]/10 rounded-full blur-2xl animate-bounce"></div>
-            <img
-              src="/assets/rpaaides.png"
-              alt="RPA AI Automation"
-              className="relative z-10 w-80 rounded-2xl shadow-2xl hover:scale-105 transition-transform duration-700"
-            />
+            {/* Main Card */}
+            <div className="relative bg-white/70 backdrop-blur-xl border border-[#33aed7]/20 rounded-3xl shadow-2xl p-10 max-w-5xl mx-auto">
+              <div className="flex flex-col lg:flex-row items-center gap-10">
+                {/* Left - Image with Glow */}
+                <div className="flex-1 flex justify-center relative">
+                  <div className="absolute w-64 h-64 bg-[#33aed7]/10 rounded-full blur-2xl animate-bounce"></div>
+                  <img
+                    src="/assets/rpaaides.png"
+                    alt="RPA AI Automation"
+                    className="relative z-10 w-80 rounded-2xl shadow-2xl hover:scale-105 transition-transform duration-700"
+                  />
+                </div>
+
+                {/* Right - Text Content */}
+                <div className="flex-1 text-left">
+                  <h3 className="text-3xl font-bold text-gray-800 mb-4">
+                    Smart. Scalable. Self-Optimizing.
+                  </h3>
+                  <p className="text-gray-600 leading-relaxed mb-6">
+                    Harness the synergy of Robotic Process Automation, Artificial Intelligence, and Machine Learning
+                    to unlock new levels of efficiency and innovation.
+                  </p>
+
+                  <ul className="space-y-3 text-gray-700">
+                    <li className="flex items-center">
+                      <div className="w-3 h-3 bg-[#33aed7] rounded-full mr-3"></div>
+                      <span>Automates repetitive and rule-based tasks seamlessly</span>
+                    </li>
+                    <li className="flex items-center">
+                      <div className="w-3 h-3 bg-[#33aed7] rounded-full mr-3"></div>
+                      <span>Improves data accuracy and reduces human error</span>
+                    </li>
+                    <li className="flex items-center">
+                      <div className="w-3 h-3 bg-[#33aed7] rounded-full mr-3"></div>
+                      <span>Integrates AI for predictive and adaptive processes</span>
+                    </li>
+                    <li className="flex items-center">
+                      <div className="w-3 h-3 bg-[#33aed7] rounded-full mr-3"></div>
+                      <span>Frees human talent for creative and strategic roles</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
 
-          {/* Right - Text Content */}
-          <div className="flex-1 text-left">
-            <h3 className="text-3xl font-bold text-gray-800 mb-4">
-              Smart. Scalable. Self-Optimizing.
-            </h3>
-            <p className="text-gray-600 leading-relaxed mb-6">
-              Harness the synergy of Robotic Process Automation, Artificial Intelligence, and Machine Learning 
-              to unlock new levels of efficiency and innovation.
-            </p>
-
-            <ul className="space-y-3 text-gray-700">
-              <li className="flex items-center">
-                <div className="w-3 h-3 bg-[#33aed7] rounded-full mr-3"></div>
-                <span>Automates repetitive and rule-based tasks seamlessly</span>
-              </li>
-              <li className="flex items-center">
-                <div className="w-3 h-3 bg-[#33aed7] rounded-full mr-3"></div>
-                <span>Improves data accuracy and reduces human error</span>
-              </li>
-              <li className="flex items-center">
-                <div className="w-3 h-3 bg-[#33aed7] rounded-full mr-3"></div>
-                <span>Integrates AI for predictive and adaptive processes</span>
-              </li>
-              <li className="flex items-center">
-                <div className="w-3 h-3 bg-[#33aed7] rounded-full mr-3"></div>
-                <span>Frees human talent for creative and strategic roles</span>
-              </li>
-            </ul>
+          {/* Bottom Benefits Strip */}
+          <div className="mt-20 grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+              {
+                icon: "🤖",
+                title: "Process Automation",
+                desc: "Automate time-consuming, repetitive business tasks with precision.",
+              },
+              {
+                icon: "⚙️",
+                title: "Workflow Optimization",
+                desc: "Streamline operations and enhance inter-departmental collaboration.",
+              },
+              {
+                icon: "📊",
+                title: "AI Insights",
+                desc: "Gain real-time analytics and data-driven decision-making capabilities.",
+              },
+              {
+                icon: "🚀",
+                title: "Scalable Efficiency",
+                desc: "Expand automation to handle complex processes at enterprise scale.",
+              },
+            ].map((item, i) => (
+              <div
+                key={i}
+                className="group bg-white/80 backdrop-blur-lg border border-[#33aed7]/20 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
+              >
+                <div className="text-4xl mb-4">{item.icon}</div>
+                <h4 className="text-xl font-semibold text-[#33aed7] mb-2 group-hover:scale-105 transition-transform duration-300">
+                  {item.title}
+                </h4>
+                <p className="text-gray-700 leading-relaxed">{item.desc}</p>
+              </div>
+            ))}
           </div>
         </div>
-      </div>
-    </div>
-
-    {/* Bottom Benefits Strip */}
-    <div className="mt-20 grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-      {[
-        {
-          icon: "🤖",
-          title: "Process Automation",
-          desc: "Automate time-consuming, repetitive business tasks with precision.",
-        },
-        {
-          icon: "⚙️",
-          title: "Workflow Optimization",
-          desc: "Streamline operations and enhance inter-departmental collaboration.",
-        },
-        {
-          icon: "📊",
-          title: "AI Insights",
-          desc: "Gain real-time analytics and data-driven decision-making capabilities.",
-        },
-        {
-          icon: "🚀",
-          title: "Scalable Efficiency",
-          desc: "Expand automation to handle complex processes at enterprise scale.",
-        },
-      ].map((item, i) => (
-        <div
-          key={i}
-          className="group bg-white/80 backdrop-blur-lg border border-[#33aed7]/20 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
-        >
-          <div className="text-4xl mb-4">{item.icon}</div>
-          <h4 className="text-xl font-semibold text-[#33aed7] mb-2 group-hover:scale-105 transition-transform duration-300">
-            {item.title}
-          </h4>
-          <p className="text-gray-700 leading-relaxed">{item.desc}</p>
-        </div>
-      ))}
-    </div>
-  </div>
-</section>
+      </section>
 
 
 
@@ -663,80 +663,75 @@ export default function Home() {
       {/* Robot illustrater */}
 
 
-      <div className="container mx-auto p-8 flex flex-col md:flex-row items-center justify-between bg-gradient-to-r from-[#e6f7fc] to-white  shadow-xl border border-[#c2edf9] gap-12">
-  {/* Left side (GIF image) */}
-  <div className="w-full md:w-1/2 flex justify-center md:justify-end">
-    <img
-      src="/assets/platform.gif"
-      alt="Robot Illustration"
-      className="w-full max-w-lg md:max-w-xl rounded-2xl shadow-xl transition-transform duration-500 hover:scale-105"
-    />
-  </div>
+      <div className="container mx-auto p-8 flex flex-col md:flex-row items-center justify-between bg-gradient-to-r from-[#e6f7fc] to-white shadow-xl border border-[#c2edf9] gap-12">
+        {/* Left Side - GIF Image */}
+        <div className="w-full md:w-1/2 flex justify-center md:justify-end">
+          <img
+            src="/assets/platform.gif"
+            alt="Robot Illustration"
+            className="w-full max-w-lg md:max-w-xl rounded-2xl shadow-xl transition-transform duration-500 hover:scale-105"
+          />
+        </div>
 
-  {/* Right side (content list) */}
-  <div className="w-full md:w-1/2 space-y-8 md:pl-12">
-    <h2 className="text-3xl md:text-4xl font-bold text-[#33aed7] mb-6">
-      Our Core Solutions
-    </h2>
+        {/* Right Side - Cards */}
+        <div className="w-full md:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-6 md:pl-8">
+          {/* Websites Card */}
+          <div className="bg-white rounded-2xl shadow-md border border-[#c2edf9] p-6 hover:shadow-lg transition-transform duration-300 hover:scale-[1.03]">
+            <h3 className="text-2xl font-semibold text-[#0c92b2] mb-3 text-center">
+              Websites
+            </h3>
+            <ul className="space-y-2 text-gray-700 list-disc list-inside">
+              <li>24/7 online presence and global reach</li>
+              <li>Builds brand credibility and trust</li>
+              <li>Cost-effective marketing and lead generation</li>
+              <li>Easy to update and share information</li>
+            </ul>
+          </div>
 
-    {/* Websites Section */}
-    <div>
-      <h3 className="text-2xl font-semibold text-[#0c92b2] mb-3">Websites</h3>
-      <ul className="space-y-2 text-gray-700 list-disc list-inside">
-        <li>24/7 online presence and global reach</li>
-        <li>Builds brand credibility and trust</li>
-        <li>Cost-effective marketing and lead generation</li>
-        <li>Easy to update and share information</li>
-      </ul>
-    </div>
+          {/* Mobile Apps Card */}
+          <div className="bg-white rounded-2xl shadow-md border border-[#c2edf9] p-6 hover:shadow-lg transition-transform duration-300 hover:scale-[1.03]">
+            <h3 className="text-2xl font-semibold text-[#0c92b2] mb-3 text-center">
+              Mobile Apps
+            </h3>
+            <ul className="space-y-2 text-gray-700 list-disc list-inside">
+              <li>Enhances customer engagement and loyalty</li>
+              <li>Provides instant access anytime, anywhere</li>
+              <li>Push notifications for real-time updates</li>
+              <li>Offers personalized user experiences</li>
+            </ul>
+          </div>
 
-    {/* Mobile Apps Section */}
-    <div>
-      <h3 className="text-2xl font-semibold text-[#0c92b2] mb-3">Mobile Apps</h3>
-      <ul className="space-y-2 text-gray-700 list-disc list-inside">
-        <li>Enhances customer engagement and loyalty</li>
-        <li>Provides instant access to services anytime, anywhere</li>
-        <li>Push notifications for real-time updates</li>
-        <li>Offers personalized user experiences</li>
-      </ul>
-    </div>
+          {/* Applications & Software Card */}
+          <div className="bg-white rounded-2xl shadow-md border border-[#c2edf9] p-6 hover:shadow-lg transition-transform duration-300 hover:scale-[1.03]">
+            <h3 className="text-2xl font-semibold text-[#0c92b2] mb-3 text-center">
+              Applications & Software
+            </h3>
+            <ul className="space-y-2 text-gray-700 list-disc list-inside">
+              <li>Streamline operations and improve productivity</li>
+              <li>Automate complex business workflows</li>
+              <li>Reduce manual errors and save time</li>
+              <li>Enable data-driven decision-making</li>
+            </ul>
+          </div>
 
-    {/* Applications & Software Section */}
-    <div>
-      <h3 className="text-2xl font-semibold text-[#0c92b2] mb-3">Applications & Software</h3>
-      <ul className="space-y-2 text-gray-700 list-disc list-inside">
-        <li>Streamline operations and improve productivity</li>
-        <li>Automate complex business workflows</li>
-        <li>Reduce manual errors and save time</li>
-        <li>Enable data-driven decision-making</li>
-      </ul>
-    </div>
+          {/* RPA + AI Automation Combined Card */}
+          <div className="bg-white rounded-2xl shadow-md border border-[#c2edf9] p-6 hover:shadow-lg transition-transform duration-300 hover:scale-[1.03]">
+            <h3 className="text-2xl font-semibold text-[#0c92b2] mb-3 text-center">
+              RPA & AI Automation
+            </h3>
+            <ul className="space-y-2 text-gray-700 list-disc list-inside">
+              <li>Automates repetitive, rule-based tasks</li>
+              <li>Increases efficiency and accuracy</li>
+              <li>Learns and adapts to improve over time</li>
+              <li>Provides intelligent insights and predictions</li>
+              <li>Reduces operational costs and enhances decision-making</li>
+            </ul>
+          </div>
+        </div>
+      </div>
 
-    {/* RPA Section */}
-    <div>
-      <h3 className="text-2xl font-semibold text-[#0c92b2] mb-3">RPA (Robotic Process Automation)</h3>
-      <ul className="space-y-2 text-gray-700 list-disc list-inside">
-        <li>Automates repetitive, rule-based tasks</li>
-        <li>Increases efficiency and accuracy</li>
-        <li>Reduces operational costs</li>
-        <li>Frees employees for more strategic work</li>
-      </ul>
-    </div>
 
-    {/* AI Automation Section */}
-    <div>
-      <h3 className="text-2xl font-semibold text-[#0c92b2] mb-3">AI (Artificial Intelligence) Automation</h3>
-      <ul className="space-y-2 text-gray-700 list-disc list-inside">
-        <li>Learns and adapts to improve over time</li>
-        <li>Provides intelligent insights and predictions</li>
-        <li>Enhances decision-making through data analysis</li>
-        <li>Enables smarter, faster customer service</li>
-      </ul>
-    </div>
-  </div>
-</div>
 
-      
       <section className="flex flex-col md:flex-row items-center justify-between py-12 px-6 md:px-12 bg-[#e6f7fc]">
         {/* Left Column: Text */}
         <div className="w-full md:w-1/2 text-left bg-[#f0fbff] p-8 rounded-2xl shadow-md border border-[#c2edf9]">
@@ -762,79 +757,79 @@ export default function Home() {
 
 
       <section className="py-16 px-6 bg-[#e6f7fc]">
-  <div className="max-w-7xl mx-auto">
-    <div className="flex flex-col md:flex-row items-center bg-[#f0fbff] rounded-2xl p-6 md:p-10 shadow-md border border-[#c2edf9] gap-6">
-      {/* Image Section */}
-      <div className="w-full md:w-1/3 flex justify-center">
-        <img
-          src="/assets/finance-1.webp"
-          alt="RPA Illustration"
-          className="w-full h-auto rounded-lg shadow-lg transition-transform duration-500 hover:scale-105"
-        />
-      </div>
+        <div className="max-w-7xl mx-auto">
+          <div className="flex flex-col md:flex-row items-center bg-[#f0fbff] rounded-2xl p-6 md:p-10 shadow-md border border-[#c2edf9] gap-6">
+            {/* Image Section */}
+            <div className="w-full md:w-1/3 flex justify-center">
+              <img
+                src="/assets/finance-1.webp"
+                alt="RPA Illustration"
+                className="w-full h-auto rounded-lg shadow-lg transition-transform duration-500 hover:scale-105"
+              />
+            </div>
 
-      {/* Text Section */}
-      <div className="w-full md:w-2/3">
-        <h2 className="text-2xl md:text-3xl font-bold text-[#33aed7] text-center md:text-left">
-          Can RPA help Finance and Accounting? Yes!
-        </h2>
-        <p className="mt-4 text-gray-700 text-base md:text-lg leading-relaxed text-justify">
-          Automation can empower finance and accounting business units to be
-          more efficient, streamline high-touch processes, and boost employee
-          satisfaction.
-        </p>
-        <p className="mt-4 text-gray-700 text-base md:text-lg leading-relaxed text-justify">
-          End-to-end process automation can save up to 60% processing time and
-          cost, all while integrating multiple legacy systems and applications,
-          reducing the need for manual labor and ensuring maximum data security
-          and compliance across all operations.
-        </p>
-        <p className="mt-4 text-gray-700 text-base md:text-lg leading-relaxed text-justify">
-          Additionally, hyperautomation can accelerate complex processes within
-          the department.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
+            {/* Text Section */}
+            <div className="w-full md:w-2/3">
+              <h2 className="text-2xl md:text-3xl font-bold text-[#33aed7] text-center md:text-left">
+                Can RPA help Finance and Accounting? Yes!
+              </h2>
+              <p className="mt-4 text-gray-700 text-base md:text-lg leading-relaxed text-justify">
+                Automation can empower finance and accounting business units to be
+                more efficient, streamline high-touch processes, and boost employee
+                satisfaction.
+              </p>
+              <p className="mt-4 text-gray-700 text-base md:text-lg leading-relaxed text-justify">
+                End-to-end process automation can save up to 60% processing time and
+                cost, all while integrating multiple legacy systems and applications,
+                reducing the need for manual labor and ensuring maximum data security
+                and compliance across all operations.
+              </p>
+              <p className="mt-4 text-gray-700 text-base md:text-lg leading-relaxed text-justify">
+                Additionally, hyperautomation can accelerate complex processes within
+                the department.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
 
 
-    <section className="py-16 px-6 bg-[#e6f7fc]">
-  <div className="max-w-7xl mx-auto">
-    <div className="flex flex-col md:flex-row-reverse items-center space-y-6 md:space-y-0 md:space-x-6 bg-[#f0fbff] rounded-2xl p-6 md:p-10">
+      <section className="py-16 px-6 bg-[#e6f7fc]">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex flex-col md:flex-row-reverse items-center space-y-6 md:space-y-0 md:space-x-6 bg-[#f0fbff] rounded-2xl p-6 md:p-10">
 
-      {/* Image Section */}
-      <div className="w-full md:w-1/3 order-first md:order-last">
-        <img
-          src="/assets/finance-2.webp"
-          alt="Automation Illustration"
-          className="w-full h-auto rounded-lg shadow-lg transition-transform duration-500 hover:scale-105"
-        />
-      </div>
+            {/* Image Section */}
+            <div className="w-full md:w-1/3 order-first md:order-last">
+              <img
+                src="/assets/finance-2.webp"
+                alt="Automation Illustration"
+                className="w-full h-auto rounded-lg shadow-lg transition-transform duration-500 hover:scale-105"
+              />
+            </div>
 
-      {/* Text Section */}
-      <div className="w-full md:w-2/3 order-last md:order-first">
-        <h2 className="text-3xl font-bold text-[#33aed7]">
-          What can be automated? A lot!
-        </h2>
-        <p className="mt-4 text-gray-700 text-lg leading-relaxed">
-          There are key areas of opportunity for automation inside finance and
-          accounting. From customer onboarding and invoicing, to cash
-          application, to logistics management to invoice processing, to
-          payments processing.
-        </p>
-        <p className="mt-4 text-gray-700 text-lg leading-relaxed">
-          Nearly any process can benefit from automation inside finance and
-          accounting. In the next page, you will discover process heatmaps
-          that highlight where automation has the biggest potential across
-          the business unit.
-        </p>
-      </div>
+            {/* Text Section */}
+            <div className="w-full md:w-2/3 order-last md:order-first">
+              <h2 className="text-3xl font-bold text-[#33aed7]">
+                What can be automated? A lot!
+              </h2>
+              <p className="mt-4 text-gray-700 text-lg leading-relaxed">
+                There are key areas of opportunity for automation inside finance and
+                accounting. From customer onboarding and invoicing, to cash
+                application, to logistics management to invoice processing, to
+                payments processing.
+              </p>
+              <p className="mt-4 text-gray-700 text-lg leading-relaxed">
+                Nearly any process can benefit from automation inside finance and
+                accounting. In the next page, you will discover process heatmaps
+                that highlight where automation has the biggest potential across
+                the business unit.
+              </p>
+            </div>
 
-    </div>
-  </div>
-</section>
+          </div>
+        </div>
+      </section>
 
 
     </main>
