@@ -663,72 +663,80 @@ export default function Home() {
       {/* Robot illustrater */}
 
 
-      <div className="container mx-auto p-8 flex flex-col md:flex-row items-center justify-between bg-gradient-to-r from-[#e6f7fc] to-white shadow-xl border border-[#c2edf9] gap-12">
-        {/* Left Side - GIF Image */}
-        <div className="w-full md:w-1/2 flex justify-center md:justify-end">
-          <img
-            src="/assets/platform.gif"
-            alt="Robot Illustration"
-            className="w-full max-w-lg md:max-w-xl rounded-2xl shadow-xl transition-transform duration-500 hover:scale-105"
-          />
-        </div>
-
-        {/* Right Side - Cards */}
-        <div className="w-full md:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-6 md:pl-8">
-          {/* Websites Card */}
-          <div className="bg-white rounded-2xl shadow-md border border-[#c2edf9] p-6 hover:shadow-lg transition-transform duration-300 hover:scale-[1.03]">
-            <h3 className="text-2xl font-semibold text-[#0c92b2] mb-3 text-center">
-              Websites
-            </h3>
-            <ul className="space-y-2 text-gray-700 list-disc list-inside">
-              <li>24/7 online presence and global reach</li>
-              <li>Builds brand credibility and trust</li>
-              <li>Cost-effective marketing and lead generation</li>
-              <li>Easy to update and share information</li>
-            </ul>
-          </div>
-
-          {/* Mobile Apps Card */}
-          <div className="bg-white rounded-2xl shadow-md border border-[#c2edf9] p-6 hover:shadow-lg transition-transform duration-300 hover:scale-[1.03]">
-            <h3 className="text-2xl font-semibold text-[#0c92b2] mb-3 text-center">
-              Mobile Apps
-            </h3>
-            <ul className="space-y-2 text-gray-700 list-disc list-inside">
-              <li>Enhances customer engagement and loyalty</li>
-              <li>Provides instant access anytime, anywhere</li>
-              <li>Push notifications for real-time updates</li>
-              <li>Offers personalized user experiences</li>
-            </ul>
-          </div>
-
-          {/* Applications & Software Card */}
-          <div className="bg-white rounded-2xl shadow-md border border-[#c2edf9] p-6 hover:shadow-lg transition-transform duration-300 hover:scale-[1.03]">
-            <h3 className="text-2xl font-semibold text-[#0c92b2] mb-3 text-center">
-              Applications & Software
-            </h3>
-            <ul className="space-y-2 text-gray-700 list-disc list-inside">
-              <li>Streamline operations and improve productivity</li>
-              <li>Automate complex business workflows</li>
-              <li>Reduce manual errors and save time</li>
-              <li>Enable data-driven decision-making</li>
-            </ul>
-          </div>
-
-          {/* RPA + AI Automation Combined Card */}
-          <div className="bg-white rounded-2xl shadow-md border border-[#c2edf9] p-6 hover:shadow-lg transition-transform duration-300 hover:scale-[1.03]">
-            <h3 className="text-2xl font-semibold text-[#0c92b2] mb-3 text-center">
-              RPA & AI Automation
-            </h3>
-            <ul className="space-y-2 text-gray-700 list-disc list-inside">
-              <li>Automates repetitive, rule-based tasks</li>
-              <li>Increases efficiency and accuracy</li>
-              <li>Learns and adapts to improve over time</li>
-              <li>Provides intelligent insights and predictions</li>
-              <li>Reduces operational costs and enhances decision-making</li>
-            </ul>
-          </div>
-        </div>
+      <div className="w-full bg-gradient-to-r from-[#e6f7fc] to-white py-20 px-6 flex items-center justify-center">
+  <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+    {/* Left Column */}
+    <div className="flex flex-col gap-8">
+      {/* Websites */}
+      <div className="bg-white p-6 rounded-2xl shadow-lg border border-[#c2edf9] hover:shadow-xl transition-transform duration-300 hover:scale-[1.03]">
+        <h3 className="text-2xl font-semibold text-[#0c92b2] mb-3 text-center">
+          Websites
+        </h3>
+        <ul className="text-gray-700 list-disc list-inside space-y-1">
+          <li>24/7 online presence</li>
+          <li>Builds brand credibility</li>
+          <li>Cost-effective marketing</li>
+          <li>Easy to update info</li>
+        </ul>
       </div>
+
+      {/* Applications & Software */}
+      <div className="bg-white p-6 rounded-2xl shadow-lg border border-[#c2edf9] hover:shadow-xl transition-transform duration-300 hover:scale-[1.03]">
+        <h3 className="text-2xl font-semibold text-[#0c92b2] mb-3 text-center">
+          Applications & Software
+        </h3>
+        <ul className="text-gray-700 list-disc list-inside space-y-1">
+          <li>Streamline operations</li>
+          <li>Automate workflows</li>
+          <li>Save time & reduce errors</li>
+          <li>Data-driven insights</li>
+        </ul>
+      </div>
+    </div>
+
+    {/* Center GIF */}
+    <div className="flex justify-center items-center">
+      <div className="bg-white rounded-3xl shadow-2xl border border-[#c2edf9] p-4 md:p-8 hover:shadow-[0_0_30px_#c2edf9] transition-shadow duration-500">
+        <img
+          src="/assets/platform.gif"
+          alt="Platform Illustration"
+          className="w-[250px] md:w-[320px] lg:w-[360px] rounded-2xl object-contain"
+        />
+      </div>
+    </div>
+
+    {/* Right Column */}
+    <div className="flex flex-col gap-8">
+      {/* Mobile Apps */}
+      <div className="bg-white p-6 rounded-2xl shadow-lg border border-[#c2edf9] hover:shadow-xl transition-transform duration-300 hover:scale-[1.03]">
+        <h3 className="text-2xl font-semibold text-[#0c92b2] mb-3 text-center">
+          Mobile Apps
+        </h3>
+        <ul className="text-gray-700 list-disc list-inside space-y-1">
+          <li>Enhances engagement</li>
+          <li>Access anytime, anywhere</li>
+          <li>Push notifications</li>
+          <li>Personalized experience</li>
+        </ul>
+      </div>
+
+      {/* RPA & AI Automation */}
+      <div className="bg-white p-6 rounded-2xl shadow-lg border border-[#c2edf9] hover:shadow-xl transition-transform duration-300 hover:scale-[1.03]">
+        <h3 className="text-2xl font-semibold text-[#0c92b2] mb-3 text-center">
+          RPA & AI Automation
+        </h3>
+        <ul className="text-gray-700 list-disc list-inside space-y-1">
+          <li>Automates tasks</li>
+          <li>Improves accuracy</li>
+          <li>Adapts with learning</li>
+          <li>Smart predictions</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 
 
 
