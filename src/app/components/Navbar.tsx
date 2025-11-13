@@ -67,14 +67,14 @@ const Navbar: FC = () => {
       <div className="container mx-auto flex items-center justify-between px-10 h-full">
         {/* Logo */}
         <Link href="/" className="flex items-center group">
-          <Image
+          <img
             src="https://res.cloudinary.com/dtlrp3fzu/image/upload/v1763011911/stick_website_assets/wtwjiyybu7odemnlu76z.png"
             alt="TechSahayata Logo"
-            width={145}
-            height={40}
-            priority
+            width="145"
+            height="40"
             className="object-contain transition-transform duration-300 group-hover:scale-110"
           />
+
         </Link>
 
         {/* Desktop Menu */}
@@ -102,9 +102,8 @@ const Navbar: FC = () => {
               <Package size={18} /> Products
               <ChevronDown
                 size={16}
-                className={`transition-transform duration-200 ${
-                  isProductsOpen ? "rotate-180 text-[#33aed7]" : ""
-                }`}
+                className={`transition-transform duration-200 ${isProductsOpen ? "rotate-180 text-[#33aed7]" : ""
+                  }`}
               />
             </button>
             {isProductsOpen && (
@@ -132,9 +131,8 @@ const Navbar: FC = () => {
               <Building2 size={18} /> Company
               <ChevronDown
                 size={16}
-                className={`transition-transform duration-200 ${
-                  isCompanyOpen ? "rotate-180 text-[#33aed7]" : ""
-                }`}
+                className={`transition-transform duration-200 ${isCompanyOpen ? "rotate-180 text-[#33aed7]" : ""
+                  }`}
               />
             </button>
             {isCompanyOpen && (
