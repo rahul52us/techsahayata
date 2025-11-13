@@ -60,7 +60,7 @@ export default function RpaAutomation() {
       {/* 🌟 Hero Section */}
       <section className="relative w-full h-[55vh] md:h-[60vh] overflow-hidden">
         <Image
-          src="/assets/rpaaihero.jpg" 
+          src="https://res.cloudinary.com/dtlrp3fzu/image/upload/v1762963528/rpaaihero_bybmus.jpg" 
           alt="RPA Automation Hero"
           fill
           priority

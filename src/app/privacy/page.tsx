@@ -15,7 +15,7 @@ export default function PrivacyPage() {
       {/* Hero Section */}
       <section className="relative w-full h-[520px] md:h-[600px] flex items-center justify-center overflow-hidden">
         <Image
-          src="/assets/privacypolicyhero.webp"
+          src="https://res.cloudinary.com/dtlrp3fzu/image/upload/v1762963516/privacypolicyhero_iavmny.webp"
           alt="Privacy Policy"
           fill
           className="object-cover object-center opacity-90"
@@ -69,7 +69,7 @@ export default function PrivacyPage() {
           >
             <div className="md:w-1/2">
               <Image
-                src="/assets/privacy-data.jpg"
+                src="https://res.cloudinary.com/dtlrp3fzu/image/upload/v1762963518/privacy-security_parrto.jpg"
                 alt="Data Privacy"
                 width={600}
                 height={400}
@@ -113,7 +113,7 @@ export default function PrivacyPage() {
             </div>
             <div className="md:w-1/2">
               <Image
-                src="/assets/privacy-usage.jpg"
+                src="https://res.cloudinary.com/dtlrp3fzu/image/upload/v1762963515/privacy-data_kxnkqo.jpg"
                 alt="Data Usage"
                 width={600}
                 height={400}
@@ -132,7 +132,7 @@ export default function PrivacyPage() {
           >
             <div className="md:w-1/2">
               <Image
-                src="/assets/privacy-security.jpeg"
+                src="https://res.cloudinary.com/dtlrp3fzu/image/upload/v1762963518/privacy-usage_kddwvy.jpg"
                 alt="Data Security"
                 width={600}
                 height={400}
@@ -173,7 +173,7 @@ export default function PrivacyPage() {
             </div>
             <div className="md:w-1/2">
               <Image
-                src="/assets/privacy-sharing.jpg"
+                src="https://res.cloudinary.com/dtlrp3fzu/image/upload/v1762963518/privacy-sharing_xi2uls.jpg"
                 alt="Data Sharing"
                 width={600}
                 height={400}
@@ -192,7 +192,7 @@ export default function PrivacyPage() {
           >
             <div className="md:w-1/2">
               <Image
-                src="/assets/privacy-cookies.webp"
+                src="https://res.cloudinary.com/dtlrp3fzu/image/upload/v1762963514/privacy-cookies_yr1zam.webp"
                 alt="Cookies Policy"
                 width={600}
                 height={400}

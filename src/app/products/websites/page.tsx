@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import Image from "next/image";
 
 interface Project {
   title: string;
@@ -14,28 +13,32 @@ const projects: Project[] = [
     title: "MetaMind Health",
     description:
       "Empowering mental wellness with cutting-edge AI tools and therapy solutions for holistic health.",
-    video: "/assets/metamind.mp4",
+    video:
+      "https://res.cloudinary.com/dtlrp3fzu/video/upload/v1762963670/metamind_ugzwpe.mp4",
     link: "https://www.metamindhealth.com/",
   },
   {
     title: "Travel Explorer",
     description:
       "Discover and book travel experiences across destinations with seamless search and booking features.",
-    video: "/assets/travel.mp4",
+    video:
+      "https://res.cloudinary.com/dtlrp3fzu/video/upload/v1762964003/travel_aez7h2.mp4",
     link: "https://travel-six-tan-34.vercel.app/",
   },
   {
     title: "Basify",
     description:
       "A complete business management platform for small enterprises to grow and simplify operations.",
-    video: "/assets/basify.mp4",
+    video:
+      "https://res.cloudinary.com/dtlrp3fzu/video/upload/v1762963964/basify_myikat.mp4",
     link: "https://basify.vercel.app/",
   },
   {
     title: "Business Sahayata",
     description:
       "Providing digital transformation, consulting, and marketing services to help businesses scale up.",
-    video: "/assets/business.mp4",
+    video:
+      "https://res.cloudinary.com/dtlrp3fzu/video/upload/v1762963829/business_up1a9i.mp4",
     link: "https://businesssahayata.com/",
   },
 ];
@@ -43,15 +46,15 @@ const projects: Project[] = [
 export default function Projects() {
   return (
     <main className="bg-[#f3fafc] font-sans">
-      {/* 🌟 Minimal Hero Section */}
-      <section className="relative w-full h-[55vh] md:h-[60vh] overflow-hidden">
-        <Image
-          src="/assets/webhero.jpg" 
+      {/* 🌟 Hero Section */}
+      <section className="relative w-full h-[65vh] md:h-[80vh] overflow-hidden">
+        {/* ✅ Full-width, full-height hero image */}
+        <img
+          src="https://res.cloudinary.com/dtlrp3fzu/image/upload/v1762963740/webhero_zqqnmi.jpg"
           alt="Projects Hero"
-          fill
-          priority
-          className="object-cover object-center"
+          className="absolute top-0 left-0 w-full h-full object-cover object-center"
         />
+
         {/* Overlay */}
         <div className="absolute inset-0 bg-gradient-to-r from-[#002c3a]/90 via-[#00485a]/70 to-[#046c8a]/60"></div>
 

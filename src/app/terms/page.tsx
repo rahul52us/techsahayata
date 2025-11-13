@@ -29,7 +29,7 @@ export default function TermsPage() {
       {/* Hero Section */}
       <section className="relative w-full h-[520px] md:h-[600px] flex items-center justify-center overflow-hidden">
         <Image
-          src="/assets/termsserhero.jpg"
+          src="https://res.cloudinary.com/dtlrp3fzu/image/upload/v1762963642/termsserhero_tm17zb.jpg"
           alt="Terms of Service"
           fill
           className="object-cover object-center opacity-90"
@@ -105,7 +105,7 @@ export default function TermsPage() {
           >
             <div className="md:w-1/2">
               <Image
-                src="/assets/logo.png"
+                src="https://res.cloudinary.com/dtlrp3fzu/image/upload/v1762963469/logo_ud1if4.png"
                 alt="Company Overview"
                 width={600}
                 height={400}
@@ -151,7 +151,7 @@ export default function TermsPage() {
             </div>
             <div className="md:w-1/2">
               <Image
-                src="/assets/terms-services.jpg"
+                src="https://res.cloudinary.com/dtlrp3fzu/image/upload/v1762963656/terms-services_atzz5c.jpg"
                 alt="Use of Services"
                 width={600}
                 height={400}
@@ -171,7 +171,7 @@ export default function TermsPage() {
           >
             <div className="md:w-1/2">
               <Image
-                src="/assets/terms-payment.webp"
+                src="https://res.cloudinary.com/dtlrp3fzu/image/upload/v1762963628/terms-payment_erb9eb.webp"
                 alt="Payments and Billing"
                 width={600}
                 height={400}

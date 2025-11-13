@@ -60,7 +60,7 @@ export default function Applications() {
       {/* 🌟 Hero Section */}
       <section className="relative w-full h-[55vh] md:h-[60vh] overflow-hidden">
         <Image
-          src="/assets/androidhero.jpg" 
+          src="https://res.cloudinary.com/dtlrp3fzu/image/upload/v1762967839/techsahayata-assets/androidhero.jpg" 
           alt="Applications Hero"
           fill
           priority

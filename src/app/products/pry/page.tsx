@@ -7,7 +7,7 @@ export default function PRYPage() {
       {/* Hero Section */}
       <section className="relative w-full h-[560px] lg:h-[620px]">
         <Image
-          src="/assets/bg-home-new.webp"
+          src="/https://res.cloudinary.com/dtlrp3fzu/image/upload/v1763011872/stick_website_assets/gs0yszubl35zpxve6pue.webp"
           alt="PRY background"
           fill
           className="object-cover"
@@ -48,7 +48,7 @@ export default function PRYPage() {
         <div className="flex justify-center">
           <div className="w-full max-w-3xl aspect-video rounded-lg overflow-hidden shadow-lg border">
             <video
-              src="/assets/pry-getting-started.mp4"
+              src="/https://res.cloudinary.com/dtlrp3fzu/video/upload/v1763011933/stick_website_assets/m1hg49dtz667qap3mwa4.mp4"
               autoPlay
               loop
               muted
@@ -69,7 +69,7 @@ export default function PRYPage() {
           {/* Barcode */}
           <div className="bg-white p-6 rounded-lg shadow-md text-center hover:shadow-lg transition">
             <Image
-              src="/assets/barcode.gif"
+              src="/https://res.cloudinary.com/dtlrp3fzu/image/upload/v1763011865/stick_website_assets/ma9et8vb8s05o7vpgxgm.gif"
               alt="Barcode Icon"
               width={64}
               height={64}
@@ -87,7 +87,7 @@ export default function PRYPage() {
           {/* Template Less */}
           <div className="bg-white p-6 rounded-lg shadow-md text-center hover:shadow-lg transition">
             <Image
-              src="/assets/invoice-processing.gif"
+              src="/https://res.cloudinary.com/dtlrp3fzu/image/upload/v1763011909/stick_website_assets/oesssqxiyjzr6zbqncv1.gif"
               alt="Template Icon"
               width={64}
               height={64}
@@ -105,7 +105,7 @@ export default function PRYPage() {
           {/* Signature */}
           <div className="bg-white p-6 rounded-lg shadow-md text-center hover:shadow-lg transition">
             <Image
-              src="/assets/signature.gif"
+              src="/https://res.cloudinary.com/dtlrp3fzu/image/upload/v1763011938/stick_website_assets/qzx9qslav82uqzu6nnul.gif"
               alt="Signature Icon"
               width={64}
               height={64}
@@ -123,7 +123,7 @@ export default function PRYPage() {
           {/* Multilingual */}
           <div className="bg-white p-6 rounded-lg shadow-md text-center hover:shadow-lg transition">
             <Image
-              src="/assets/multi-language.gif"
+              src="/https://res.cloudinary.com/dtlrp3fzu/image/upload/v1763011920/stick_website_assets/woswxkt65zrefms6nszc.gif"
               alt="Multilingual Icon"
               width={64}
               height={64}
@@ -141,7 +141,7 @@ export default function PRYPage() {
           {/* Stamp */}
           <div className="bg-white p-6 rounded-lg shadow-md text-center hover:shadow-lg transition">
             <Image
-              src="/assets/stamp.gif"
+              src="/https://res.cloudinary.com/dtlrp3fzu/image/upload/v1763011939/stick_website_assets/tgbcxxzev27gqfwru2cx.gif"
               alt="Stamp Icon"
               width={64}
               height={64}
@@ -178,7 +178,7 @@ export default function PRYPage() {
           {/* Right Icon */}
           <div className="lg:w-1/3 flex justify-center">
             <Image
-              src="/assets/engine.webp"
+              src="/https://res.cloudinary.com/dtlrp3fzu/image/upload/v1763011884/stick_website_assets/vr5tbklbrkfoqd916zoo.webp"
               alt="Engine Icon"
               width={220}
               height={220}

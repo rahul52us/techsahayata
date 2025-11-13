@@ -6,7 +6,7 @@ export default function VaOmPage() {
       {/* Hero Section */}
       <section
         className="relative w-full min-h-[80vh] flex items-center justify-center bg-cover bg-center"
-        style={{ backgroundImage: 'url("/assets/vaom-hero-section.webp")' }}
+        style={{ backgroundImage: 'url("/https://res.cloudinary.com/dtlrp3fzu/image/upload/v1763011952/stick_website_assets/a305evfr5ovz8bfgpjxu.webp")' }}
       >
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-black/70"></div>
         <div className="relative z-10 flex flex-col items-center text-center px-6 py-24 w-full max-w-3xl">
@@ -57,7 +57,7 @@ export default function VaOmPage() {
           </div>
           <div className="flex-1 flex items-center justify-center">
             <img
-              src="/assets/why-vaom.gif"
+              src="/https://res.cloudinary.com/dtlrp3fzu/image/upload/v1763011956/stick_website_assets/qo1jqjtiucjoilozfjps.gif"
               alt="Why VaOm?"
               className="w-full max-w-md h-auto object-cover rounded-2xl shadow-2xl border-4 border-white"
             />
@@ -83,7 +83,7 @@ export default function VaOmPage() {
           </div>
           <div className="lg:w-1/2 w-full flex items-center justify-center">
             <div className="bg-teal-500 text-white rounded-3xl p-10 w-[320px] h-[220px] flex items-center justify-center shadow-2xl">
-              <img src="/assets/onboarding.webp" alt="Data extraction" className="w-40 h-40 object-contain" />
+              <img src="/https://res.cloudinary.com/dtlrp3fzu/image/upload/v1763011922/stick_website_assets/qwuwn9qvxsek8skfdxdw.webp" alt="Data extraction" className="w-40 h-40 object-contain" />
             </div>
           </div>
         </div>
@@ -94,7 +94,7 @@ export default function VaOmPage() {
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
           <div className="lg:w-1/2 w-full flex items-center justify-center order-2 lg:order-1">
             <div className="bg-teal-500 text-white rounded-3xl p-10 w-[320px] h-[220px] flex items-center justify-center shadow-2xl">
-              <img src="/assets/due-diligence.webp" alt="Data extraction" className="w-40 h-40 object-contain" />
+              <img src="/https://res.cloudinary.com/dtlrp3fzu/image/upload/v1763011883/stick_website_assets/qy7vayw5dim2xlmna7xw.webp" alt="Data extraction" className="w-40 h-40 object-contain" />
               <g stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <svg x="10" y="22" width="44" height="28" rx="4" />
                 <path d="M18 30h12M18 36h10" />
@@ -122,7 +122,7 @@ export default function VaOmPage() {
           </div>
           <div className="lg:w-1/2 w-full flex items-center justify-center">
             <div className="bg-teal-500 text-white rounded-3xl p-10 w-[320px] h-[220px] flex items-center justify-center shadow-2xl">
-              <img src="/assets/due-diligence.webp" alt="Data extraction" className="w-40 h-40 object-contain" />
+              <img src="/https://res.cloudinary.com/dtlrp3fzu/image/upload/v1763011883/stick_website_assets/qy7vayw5dim2xlmna7xw.webp" alt="Data extraction" className="w-40 h-40 object-contain" />
               <g stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M8 18h48v28H8z" />
                 <path d="M16 26h32M16 34h20" />
@@ -138,7 +138,7 @@ export default function VaOmPage() {
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
           <div className="lg:w-1/2 w-full flex items-center justify-center order-2 lg:order-1">
             <div className="bg-teal-500 text-white rounded-3xl p-10 w-[320px] h-[220px] flex items-center justify-center shadow-2xl">
-              <img src="/assets/invoice.webp" alt="Data extraction" className="w-40 h-40 object-contain" />
+              <img src="/https://res.cloudinary.com/dtlrp3fzu/image/upload/v1763011910/stick_website_assets/heddmwl48f615gerwcdd.webp" alt="Data extraction" className="w-40 h-40 object-contain" />
               <g stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <svg x="12" y="16" width="40" height="32" rx="3" />
                 <path d="M20 26h24M20 34h12" />
@@ -165,7 +165,7 @@ export default function VaOmPage() {
           </div>
           <div className="lg:w-1/2 w-full flex items-center justify-center">
             <div className="bg-teal-500 text-white rounded-3xl p-10 w-[320px] h-[220px] flex items-center justify-center shadow-2xl">
-              <img src="/assets/matching.webp" alt="Data extraction" className="w-40 h-40 object-contain" />
+              <img src="/https://res.cloudinary.com/dtlrp3fzu/image/upload/v1763011912/stick_website_assets/gmvdjtoe5toekkvszz02.webp" alt="Data extraction" className="w-40 h-40 object-contain" />
               <g stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <circle cx="20" cy="24" r="6" />
                 <circle cx="44" cy="24" r="6" />
@@ -180,7 +180,7 @@ export default function VaOmPage() {
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
           <div className="lg:w-1/2 w-full flex items-center justify-center order-2 lg:order-1">
             <div className="bg-teal-500 text-white rounded-3xl p-10 w-[320px] h-[220px] flex items-center justify-center shadow-2xl">
-              <img src="/assets/payment-reconciliation.webp" alt="Data extraction" className="w-40 h-40 object-contain" />
+              <img src="/https://res.cloudinary.com/dtlrp3fzu/image/upload/v1763011923/stick_website_assets/oo0sfsr4avj6razdxszk.webp" alt="Data extraction" className="w-40 h-40 object-contain" />
               <g stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M16 20h32v24H16z" />
                 <path d="M24 28h16M24 36h10" />
@@ -207,7 +207,7 @@ export default function VaOmPage() {
           </div>
           <div className="lg:w-1/2 w-full flex items-center justify-center">
             <div className="bg-teal-500 text-white rounded-3xl p-10 w-[320px] h-[220px] flex items-center justify-center shadow-2xl">
-              <img src="/assets/help-desk.webp" alt="Data extraction" className="w-40 h-40 object-contain" />
+              <img src="/https://res.cloudinary.com/dtlrp3fzu/image/upload/v1763011905/stick_website_assets/iadztgbsctgpbjpppqvn.webp" alt="Data extraction" className="w-40 h-40 object-contain" />
               <g stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M32 12v6M18 24h28M12 44h12v6H12zM40 44h12v6H40z" />
               </g>
@@ -220,7 +220,7 @@ export default function VaOmPage() {
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
           <div className="lg:w-1/2 w-full flex items-center justify-center order-2 lg:order-1">
             <div className="bg-teal-500 text-white rounded-3xl p-10 w-[320px] h-[220px] flex items-center justify-center shadow-2xl">
-              <img src="/assets/catalog-management.webp" alt="Data extraction" className="w-40 h-40 object-contain" />
+              <img src="/https://res.cloudinary.com/dtlrp3fzu/image/upload/v1763011878/stick_website_assets/jlnv6qc2ffvkjbarkdkn.webp" alt="Data extraction" className="w-40 h-40 object-contain" />
               <g stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <svg x="10" y="16" width="44" height="8" rx="2" />
                 <svg x="10" y="30" width="44" height="8" rx="2" />

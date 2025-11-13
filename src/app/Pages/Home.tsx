@@ -2,7 +2,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import heroImage from "../../../public/assets/bg-home-new.jpg";
 import { ArrowRight } from "lucide-react";
 
 
@@ -75,7 +74,7 @@ export default function Home() {
 
   const factSlides = [
     {
-      image: '/assets/facts-04.webp',
+      image: 'https://res.cloudinary.com/dtlrp3fzu/image/upload/v1763011887/stick_website_assets/i6ykd9kdt7c2evop36hl.webp',
       lines: [
         'Our IDP (Intelligent Data Processor) software uses AI and NLP to process and analyze large amounts of data in real-time.',
         'It can extract, transform, load data, clean, enrich structure it, identify patterns and anomalies and generate insights using machine learning algorithms.',
@@ -83,7 +82,7 @@ export default function Home() {
       ],
     },
     {
-      image: '/assets/facts-05.webp',
+      image: 'https://res.cloudinary.com/dtlrp3fzu/image/upload/v1763011888/stick_website_assets/cbrkvsh3vzidudjgxdfm.webp',
       lines: [
         'IDP systems accelerate processing by using OCR, NLP and ML to convert unstructured documents into structured data.',
         'They reduce manual effort and speed up downstream workflows while maintaining traceability and audit logs.',
@@ -91,7 +90,7 @@ export default function Home() {
       ],
     },
     {
-      image: '/assets/facts-06.webp',
+      image: 'https://res.cloudinary.com/dtlrp3fzu/image/upload/v1763011888/stick_website_assets/f6spa6wfwzohkiunfp8z.webp',
       lines: [
         'IDP platforms can integrate with ERP, CRM and RPA tools to automate end-to-end processes.',
         'They improve data quality and enable analytics that drive business decisions at scale.',
@@ -141,11 +140,9 @@ export default function Home() {
     <main className="w-full">
       <section className="relative w-full h-[90vh] overflow-hidden">
         {/* Hero Image */}
-        <Image
-          src={heroImage}
+        <img
+            src="https://res.cloudinary.com/dtlrp3fzu/image/upload/v1763011871/stick_website_assets/va1znnbi9jdcrqinwwzi.jpg"
           alt="Techsahayata Hero"
-          fill
-          priority
           className="object-cover object-center"
         />
 
@@ -188,8 +185,8 @@ export default function Home() {
             {/* Card 1 */}
             <div className="rounded-3xl shadow-xl/30 shadow-sm bg-white ring-1 ring-gray-100 p-8 text-center">
               <div className="mx-auto max-w-[360px]">
-                <Image
-                  src="/assets/web.png"
+                <img
+                  src="https://res.cloudinary.com/dtlrp3fzu/image/upload/v1763011953/stick_website_assets/yzla03aleaywmmvuirve.png"
                   alt="Uncover"
                   width={720}
                   height={480}
@@ -205,8 +202,8 @@ export default function Home() {
             {/* Card 2 */}
             <div className="rounded-3xl shadow-sm bg-white ring-1 ring-gray-100 p-8 text-center">
               <div className="mx-auto max-w-[360px]">
-                <Image
-                  src="/assets/mobile.jpg"
+                <img
+                  src="https://res.cloudinary.com/dtlrp3fzu/image/upload/v1763011918/stick_website_assets/whynhgjynqe9vsf0nq3p.jpg"
                   alt="Automate"
                   width={720}
                   height={480}
@@ -221,8 +218,8 @@ export default function Home() {
             {/* Card 3 */}
             <div className="rounded-3xl shadow-sm bg-white ring-1 ring-gray-100 p-8 text-center">
               <div className="mx-auto max-w-[360px]">
-                <Image
-                  src="/assets/rpaai.webp"
+                <img
+                  src="https://res.cloudinary.com/dtlrp3fzu/image/upload/v1763011935/stick_website_assets/z3veldz5x2r8kktrg1fm.webp"
                   alt="Execute"
                   width={720}
                   height={480}
@@ -271,21 +268,21 @@ export default function Home() {
           <div className="mt-8 sm:mt-10 overflow-hidden">
             <div className="marquee-track flex animate-[marquee_25s_linear_infinite]">
               <div className="flex items-center justify-around gap-6 sm:gap-10 lg:gap-12 shrink-0 w-full opacity-90">
-                <Image src="/assets/travellogo.png" alt="Brand" width={180} height={64} className="w-28 sm:w-36 md:w-40 lg:w-44 h-auto object-contain" />
-                <Image src="/assets/travellogo.png" alt="Brand" width={180} height={64} className="w-28 sm:w-36 md:w-40 lg:w-44 h-auto object-contain" />
-                <Image src="/assets/busssahayta.jpg" alt="Brand" width={180} height={64} className="w-28 sm:w-36 md:w-40 lg:w-44 h-auto object-contain" />
-                <Image src="/assets/busssahayta.jpg" alt="Brand" width={180} height={64} className="w-28 sm:w-36 md:w-40 lg:w-44 h-auto object-contain" />
-                <Image src="/assets/mentalhealthlogo.png" alt="Brand" width={180} height={64} className="w-28 sm:w-36 md:w-40 lg:w-44 h-auto object-contain" />
-                <Image src="/assets/mentalhealthlogo.png" alt="Brand" width={180} height={64} className="w-28 sm:w-36 md:w-40 lg:w-44 h-auto object-contain" />
+                <img src="https://res.cloudinary.com/dtlrp3fzu/image/upload/v1763011950/stick_website_assets/odyldfca0sjvdegdpilr.png" alt="Brand" width={180} height={64} className="w-28 sm:w-36 md:w-40 lg:w-44 h-auto object-contain" />
+                <img src="https://res.cloudinary.com/dtlrp3fzu/image/upload/v1763011950/stick_website_assets/odyldfca0sjvdegdpilr.png" alt="Brand" width={180} height={64} className="w-28 sm:w-36 md:w-40 lg:w-44 h-auto object-contain" />
+                <img src="https://res.cloudinary.com/dtlrp3fzu/image/upload/v1763011877/stick_website_assets/gnmdihgway62nl90nsrr.jpg" alt="Brand" width={180} height={64} className="w-28 sm:w-36 md:w-40 lg:w-44 h-auto object-contain" />
+                <img src="https://res.cloudinary.com/dtlrp3fzu/image/upload/v1763011877/stick_website_assets/gnmdihgway62nl90nsrr.jpg" alt="Brand" width={180} height={64} className="w-28 sm:w-36 md:w-40 lg:w-44 h-auto object-contain" />
+                <img src="https://res.cloudinary.com/dtlrp3fzu/image/upload/v1763011913/stick_website_assets/uy3iw2ltfwvk8edwkiuu.png" alt="Brand" width={180} height={64} className="w-28 sm:w-36 md:w-40 lg:w-44 h-auto object-contain" />
+                <img src="https://res.cloudinary.com/dtlrp3fzu/image/upload/v1763011913/stick_website_assets/uy3iw2ltfwvk8edwkiuu.png" alt="Brand" width={180} height={64} className="w-28 sm:w-36 md:w-40 lg:w-44 h-auto object-contain" />
               </div>
 
               <div className="flex items-center justify-around gap-6 sm:gap-10 lg:gap-12 shrink-0 w-full opacity-90">
-                <Image src="/assets/travellogo.png" alt="Brand" width={180} height={64} className="w-28 sm:w-36 md:w-40 lg:w-44 h-auto object-contain" />
-                <Image src="/assets/travellogo.png" alt="Brand" width={180} height={64} className="w-28 sm:w-36 md:w-40 lg:w-44 h-auto object-contain" />
-                <Image src="/assets/busssahayta.jpg" alt="Brand" width={180} height={64} className="w-28 sm:w-36 md:w-40 lg:w-44 h-auto object-contain" />
-                <Image src="/assets/busssahayta.jpg" alt="Brand" width={180} height={64} className="w-28 sm:w-36 md:w-40 lg:w-44 h-auto object-contain" />
-                <Image src="/assets/mentalhealthlogo.png" alt="Brand" width={180} height={64} className="w-28 sm:w-36 md:w-40 lg:w-44 h-auto object-contain" />
-                <Image src="/assets/mentalhealthlogo.png" alt="Brand" width={180} height={64} className="w-28 sm:w-36 md:w-40 lg:w-44 h-auto object-contain" />
+                <img src="https://res.cloudinary.com/dtlrp3fzu/image/upload/v1763011950/stick_website_assets/odyldfca0sjvdegdpilr.png" alt="Brand" width={180} height={64} className="w-28 sm:w-36 md:w-40 lg:w-44 h-auto object-contain" />
+                <img src="https://res.cloudinary.com/dtlrp3fzu/image/upload/v1763011950/stick_website_assets/odyldfca0sjvdegdpilr.png" alt="Brand" width={180} height={64} className="w-28 sm:w-36 md:w-40 lg:w-44 h-auto object-contain" />
+                <img src="https://res.cloudinary.com/dtlrp3fzu/image/upload/v1763011877/stick_website_assets/gnmdihgway62nl90nsrr.jpg" alt="Brand" width={180} height={64} className="w-28 sm:w-36 md:w-40 lg:w-44 h-auto object-contain" />
+                <img src="https://res.cloudinary.com/dtlrp3fzu/image/upload/v1763011877/stick_website_assets/gnmdihgway62nl90nsrr.jpg" alt="Brand" width={180} height={64} className="w-28 sm:w-36 md:w-40 lg:w-44 h-auto object-contain" />
+                <img src="https://res.cloudinary.com/dtlrp3fzu/image/upload/v1763011913/stick_website_assets/uy3iw2ltfwvk8edwkiuu.png" alt="Brand" width={180} height={64} className="w-28 sm:w-36 md:w-40 lg:w-44 h-auto object-contain" />
+                <img src="https://res.cloudinary.com/dtlrp3fzu/image/upload/v1763011913/stick_website_assets/uy3iw2ltfwvk8edwkiuu.png" alt="Brand" width={180} height={64} className="w-28 sm:w-36 md:w-40 lg:w-44 h-auto object-contain" />
               </div>
             </div>
           </div>
@@ -294,21 +291,21 @@ export default function Home() {
           <div className="mt-8 sm:mt-10 overflow-hidden">
             <div className="marquee-track reverse flex animate-[marquee_25s_linear_infinite_reverse]">
               <div className="flex items-center justify-around gap-6 sm:gap-10 lg:gap-12 shrink-0 w-full opacity-90">
-                <Image src="/assets/travellogo.png" alt="Brand" width={180} height={64} className="w-28 sm:w-36 md:w-40 lg:w-44 h-auto object-contain" />
-                <Image src="/assets/travellogo.png" alt="Brand" width={180} height={64} className="w-28 sm:w-36 md:w-40 lg:w-44 h-auto object-contain" />
-                <Image src="/assets/busssahayta.jpg" alt="Brand" width={180} height={64} className="w-28 sm:w-36 md:w-40 lg:w-44 h-auto object-contain" />
-                <Image src="/assets/busssahayta.jpg" alt="Brand" width={180} height={64} className="w-28 sm:w-36 md:w-40 lg:w-44 h-auto object-contain" />
-                <Image src="/assets/mentalhealthlogo.png" alt="Brand" width={180} height={64} className="w-28 sm:w-36 md:w-40 lg:w-44 h-auto object-contain" />
-                <Image src="/assets/mentalhealthlogo.png" alt="Brand" width={180} height={64} className="w-28 sm:w-36 md:w-40 lg:w-44 h-auto object-contain" />
+                <img src="https://res.cloudinary.com/dtlrp3fzu/image/upload/v1763011950/stick_website_assets/odyldfca0sjvdegdpilr.png" alt="Brand" width={180} height={64} className="w-28 sm:w-36 md:w-40 lg:w-44 h-auto object-contain" />
+                <img src="https://res.cloudinary.com/dtlrp3fzu/image/upload/v1763011950/stick_website_assets/odyldfca0sjvdegdpilr.png" alt="Brand" width={180} height={64} className="w-28 sm:w-36 md:w-40 lg:w-44 h-auto object-contain" />
+                <img src="https://res.cloudinary.com/dtlrp3fzu/image/upload/v1763011877/stick_website_assets/gnmdihgway62nl90nsrr.jpg" alt="Brand" width={180} height={64} className="w-28 sm:w-36 md:w-40 lg:w-44 h-auto object-contain" />
+                <img src="https://res.cloudinary.com/dtlrp3fzu/image/upload/v1763011877/stick_website_assets/gnmdihgway62nl90nsrr.jpg" alt="Brand" width={180} height={64} className="w-28 sm:w-36 md:w-40 lg:w-44 h-auto object-contain" />
+                <img src="https://res.cloudinary.com/dtlrp3fzu/image/upload/v1763011913/stick_website_assets/uy3iw2ltfwvk8edwkiuu.png" alt="Brand" width={180} height={64} className="w-28 sm:w-36 md:w-40 lg:w-44 h-auto object-contain" />
+                <img src="https://res.cloudinary.com/dtlrp3fzu/image/upload/v1763011913/stick_website_assets/uy3iw2ltfwvk8edwkiuu.png" alt="Brand" width={180} height={64} className="w-28 sm:w-36 md:w-40 lg:w-44 h-auto object-contain" />
               </div>
 
               <div className="flex items-center justify-around gap-6 sm:gap-10 lg:gap-12 shrink-0 w-full opacity-90">
-                <Image src="/assets/travellogo.png" alt="Brand" width={180} height={64} className="w-28 sm:w-36 md:w-40 lg:w-44 h-auto object-contain" />
-                <Image src="/assets/travellogo.png" alt="Brand" width={180} height={64} className="w-28 sm:w-36 md:w-40 lg:w-44 h-auto object-contain" />
-                <Image src="/assets/busssahayta.jpg" alt="Brand" width={180} height={64} className="w-28 sm:w-36 md:w-40 lg:w-44 h-auto object-contain" />
-                <Image src="/assets/busssahayta.jpg" alt="Brand" width={180} height={64} className="w-28 sm:w-36 md:w-40 lg:w-44 h-auto object-contain" />
-                <Image src="/assets/mentalhealthlogo.png" alt="Brand" width={180} height={64} className="w-28 sm:w-36 md:w-40 lg:w-44 h-auto object-contain" />
-                <Image src="/assets/mentalhealthlogo.png" alt="Brand" width={180} height={64} className="w-28 sm:w-36 md:w-40 lg:w-44 h-auto object-contain" />
+                <img src="https://res.cloudinary.com/dtlrp3fzu/image/upload/v1763011950/stick_website_assets/odyldfca0sjvdegdpilr.png" alt="Brand" width={180} height={64} className="w-28 sm:w-36 md:w-40 lg:w-44 h-auto object-contain" />
+                <img src="https://res.cloudinary.com/dtlrp3fzu/image/upload/v1763011950/stick_website_assets/odyldfca0sjvdegdpilr.png" alt="Brand" width={180} height={64} className="w-28 sm:w-36 md:w-40 lg:w-44 h-auto object-contain" />
+                <img src="https://res.cloudinary.com/dtlrp3fzu/image/upload/v1763011877/stick_website_assets/gnmdihgway62nl90nsrr.jpg" alt="Brand" width={180} height={64} className="w-28 sm:w-36 md:w-40 lg:w-44 h-auto object-contain" />
+                <img src="https://res.cloudinary.com/dtlrp3fzu/image/upload/v1763011877/stick_website_assets/gnmdihgway62nl90nsrr.jpg" alt="Brand" width={180} height={64} className="w-28 sm:w-36 md:w-40 lg:w-44 h-auto object-contain" />
+                <img src="https://res.cloudinary.com/dtlrp3fzu/image/upload/v1763011913/stick_website_assets/uy3iw2ltfwvk8edwkiuu.png" alt="Brand" width={180} height={64} className="w-28 sm:w-36 md:w-40 lg:w-44 h-auto object-contain" />
+                <img src="https://res.cloudinary.com/dtlrp3fzu/image/upload/v1763011913/stick_website_assets/uy3iw2ltfwvk8edwkiuu.png" alt="Brand" width={180} height={64} className="w-28 sm:w-36 md:w-40 lg:w-44 h-auto object-contain" />
               </div>
             </div>
           </div>
@@ -352,7 +349,7 @@ export default function Home() {
 
               <div className="relative z-10 flex justify-center mb-8">
                 <img
-                  src="/assets/web2.png"
+                  src="https://res.cloudinary.com/dtlrp3fzu/image/upload/v1763011954/stick_website_assets/tk2iy5vz5qgxe0tjtx2f.png"
                   alt="Mobile App Components"
                   className="w-full max-w-sm h-auto rounded-2xl object-contain shadow-lg transition-transform duration-700 group-hover:scale-105"
                 />
@@ -377,7 +374,7 @@ export default function Home() {
 
               <div className="relative z-10 flex justify-center mb-8">
                 <img
-                  src="/assets/AIMobileImpact.png"
+                  src="https://res.cloudinary.com/dtlrp3fzu/image/upload/v1763011860/stick_website_assets/lknhnmkr5yf3qt2an0gv.png"
                   alt="AI Mobile Impact"
                   className="w-full max-w-sm h-auto rounded-2xl object-contain shadow-lg transition-transform duration-700 group-hover:scale-105"
                 />
@@ -468,7 +465,7 @@ export default function Home() {
                 <div className="flex-1 flex justify-center relative">
                   <div className="absolute w-64 h-64 bg-[#33aed7]/10 rounded-full blur-2xl animate-bounce"></div>
                   <img
-                    src="/assets/Application Software Integration - Benefits & Challenges.png"
+                    src="https://res.cloudinary.com/dtlrp3fzu/image/upload/v1763011862/stick_website_assets/z3wmxmweewnzjmstmbod.png"
                     alt="Benefits of Software"
                     className="relative z-10 w-80 rounded-2xl shadow-xl hover:scale-105 transition-transform duration-700"
                   />
@@ -534,7 +531,7 @@ export default function Home() {
                 <div className="flex-1 flex justify-center relative">
                   <div className="absolute w-64 h-64 bg-[#33aed7]/10 rounded-full blur-2xl animate-bounce"></div>
                   <img
-                    src="/assets/rpaaides.png"
+                    src="https://res.cloudinary.com/dtlrp3fzu/image/upload/v1763011936/stick_website_assets/cdsfm7gzdfzwfum6ra0g.png"
                     alt="RPA AI Automation"
                     className="relative z-10 w-80 rounded-2xl shadow-2xl hover:scale-105 transition-transform duration-700"
                   />
@@ -698,7 +695,7 @@ export default function Home() {
     <div className="flex justify-center items-center">
       <div className="bg-white rounded-3xl shadow-2xl border border-[#c2edf9] p-4 md:p-8 hover:shadow-[0_0_30px_#c2edf9] transition-shadow duration-500">
         <img
-          src="/assets/platform.gif"
+          src="https://res.cloudinary.com/dtlrp3fzu/image/upload/v1763011925/stick_website_assets/mhx4rg1w4utnmkfqj7rb.gif"
           alt="Platform Illustration"
           className="w-[250px] md:w-[320px] lg:w-[360px] rounded-2xl object-contain"
         />
@@ -756,7 +753,7 @@ export default function Home() {
         {/* Right Column: Image */}
         <div className="w-full md:w-1/2 text-center mt-10 md:mt-0">
           <img
-            src="/assets/datasafe.webp"
+              src="https://res.cloudinary.com/dtlrp3fzu/image/upload/v1763011881/stick_website_assets/lvmwfoyhfdmqdltfrtv6.webp"
             alt="Data Security Visual"
             className="w-56 md:w-72 mx-auto rounded-lg shadow-lg transition-transform duration-500 hover:scale-105"
           />
@@ -770,7 +767,7 @@ export default function Home() {
             {/* Image Section */}
             <div className="w-full md:w-1/3 flex justify-center">
               <img
-                src="/assets/finance-1.webp"
+                  src="https://res.cloudinary.com/dtlrp3fzu/image/upload/v1763011894/stick_website_assets/a9sa8hjnhj2ufrbfhtgl.jpg"
                 alt="RPA Illustration"
                 className="w-full h-auto rounded-lg shadow-lg transition-transform duration-500 hover:scale-105"
               />
@@ -810,7 +807,7 @@ export default function Home() {
             {/* Image Section */}
             <div className="w-full md:w-1/3 order-first md:order-last">
               <img
-                src="/assets/finance-2.webp"
+                  src="https://res.cloudinary.com/dtlrp3fzu/image/upload/v1763011895/stick_website_assets/bkhpqiggdhhhplavtz58.jpg"
                 alt="Automation Illustration"
                 className="w-full h-auto rounded-lg shadow-lg transition-transform duration-500 hover:scale-105"
               />

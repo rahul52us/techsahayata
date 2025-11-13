@@ -12,7 +12,7 @@ import {
   PlayCircle,
   Info,
 } from "lucide-react";
-import logo from "../../../public/assets/logo.png";
+// using external Cloudinary URL directly in Image src
 
 const Navbar: FC = () => {
   const [isProductsOpen, setProductsOpen] = useState(false);
@@ -68,7 +68,7 @@ const Navbar: FC = () => {
         {/* Logo */}
         <Link href="/" className="flex items-center group">
           <Image
-            src={logo}
+            src="https://res.cloudinary.com/dtlrp3fzu/image/upload/v1763011911/stick_website_assets/wtwjiyybu7odemnlu76z.png"
             alt="TechSahayata Logo"
             width={145}
             height={40}

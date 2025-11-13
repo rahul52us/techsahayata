@@ -5,8 +5,8 @@ import { useState } from "react";
 
 export default function ExpensePage() {
   const videos = [
-    "/assets/pry-getting-started.mp4",
-    "/assets/pry-getting-started.mp4",
+    "/https://res.cloudinary.com/dtlrp3fzu/video/upload/v1763011933/stick_website_assets/m1hg49dtz667qap3mwa4.mp4",
+    "/https://res.cloudinary.com/dtlrp3fzu/video/upload/v1763011933/stick_website_assets/m1hg49dtz667qap3mwa4.mp4",
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -24,7 +24,7 @@ export default function ExpensePage() {
       {/* Header Section */}
       <section className="relative w-full h-[560px] lg:h-[620px]">
         <img
-          src="/assets/expense.webp"
+          src="/https://res.cloudinary.com/dtlrp3fzu/image/upload/v1763011884/stick_website_assets/uh8efecihkqa0bj9rhtm.webp"
           alt="Expense background"
           className="absolute inset-0 w-full h-full object-cover"
         />
@@ -136,7 +136,7 @@ export default function ExpensePage() {
 
           <div className="lg:w-1/2 flex justify-center lg:justify-end">
             <div className="w-56 h-56 rounded-full bg-teal-400 flex items-center justify-center shadow-lg">
-              <img src="/assets/trip-request.webp" alt="Trip request" className="w-40 h-40 object-contain" />
+              <img src="/https://res.cloudinary.com/dtlrp3fzu/image/upload/v1763011951/stick_website_assets/uco1emlyw7hs8idehv2o.webp" alt="Trip request" className="w-40 h-40 object-contain" />
             </div>
           </div>
         </div>
@@ -145,7 +145,7 @@ export default function ExpensePage() {
         <div className="flex flex-col lg:flex-row items-center gap-8">
           <div className="lg:w-1/2 flex justify-center lg:justify-start order-1 lg:order-none">
             <div className="w-56 h-56 rounded-full bg-teal-400 flex items-center justify-center shadow-lg">
-              <img src="/assets/data-extraction.webp" alt="Data extraction" className="w-40 h-40 object-contain" />
+              <img src="/https://res.cloudinary.com/dtlrp3fzu/image/upload/v1763011880/stick_website_assets/elqeqwbry5tsazgxbka5.webp" alt="Data extraction" className="w-40 h-40 object-contain" />
             </div>
           </div>
 
@@ -172,7 +172,7 @@ export default function ExpensePage() {
 
           <div className="lg:w-1/2 flex justify-center lg:justify-end">
             <div className="w-56 h-56 rounded-full bg-teal-400 flex items-center justify-center shadow-lg">
-              <img src="/assets/classification.webp" alt="Trip request" className="w-40 h-40 object-contain" />
+              <img src="/https://res.cloudinary.com/dtlrp3fzu/image/upload/v1763011880/stick_website_assets/drzc31fg280wd9afmmsm.webp" alt="Trip request" className="w-40 h-40 object-contain" />
             </div>
           </div>
         </div>
@@ -181,7 +181,7 @@ export default function ExpensePage() {
         <div className="flex flex-col lg:flex-row items-center gap-8">
           <div className="lg:w-1/2 flex justify-center lg:justify-start order-1 lg:order-none">
             <div className="w-56 h-56 rounded-full bg-teal-400 flex items-center justify-center shadow-lg">
-              <img src="/assets/approved.webp" alt="Data extraction" className="w-40 h-40 object-contain" />
+              <img src="/https://res.cloudinary.com/dtlrp3fzu/image/upload/v1763011863/stick_website_assets/rg8zzoqt8mpx8beaoxqa.webp" alt="Data extraction" className="w-40 h-40 object-contain" />
             </div>
           </div>
 

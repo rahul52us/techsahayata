@@ -18,7 +18,7 @@ const About = () => {
         >
           <div className="absolute inset-0 bg-gradient-to-b from-sky-800/70 via-sky-700/50 to-sky-50 z-10" />
           <img
-            src="/assets/abouthero.jpg"
+            src="https://res.cloudinary.com/dtlrp3fzu/image/upload/v1762967830/techsahayata-assets/abouthero.jpg"
             alt="Tech innovation background"
             className="w-full h-full object-cover"
           />
@@ -120,7 +120,7 @@ const About = () => {
             className="mb-16 rounded-3xl overflow-hidden shadow-2xl border border-sky-200"
           >
             <img
-              src="/assets/expertise-visual.jpg"
+              src="https://res.cloudinary.com/dtlrp3fzu/image/upload/v1762963325/expertise-visual_irrgc4.jpg"
               alt="Expertise banner"
               className="w-full h-[400px] object-cover"
             />
@@ -184,7 +184,7 @@ const About = () => {
             className="mb-16 rounded-3xl overflow-hidden shadow-2xl border border-sky-200"
           >
             <img
-              src="/assets/mission-future.jpg"
+              src="https://res.cloudinary.com/dtlrp3fzu/image/upload/v1762963471/mission-future_lhrlz7.jpg"
               alt="Mission vision banner"
               className="w-full h-[350px] object-cover"
             />
