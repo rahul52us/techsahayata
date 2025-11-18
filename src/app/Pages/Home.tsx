@@ -110,12 +110,12 @@ export default function Home() {
   const goNextFact = () => setFactIndex((i) => (i + 1) % factSlides.length);
   const goToFact = (i: number) => setFactIndex(i);
   const products = [
-    {
-      title: "OCR",
-      description:
-        "OCR (Optical Character Recognition) is a technology that converts printed or handwritten text in images, scanned documents, or PDFs into editable and searchable digital text.",
-      href: "/products/pry",
-    },
+    // {
+    //   title: "OCR",
+    //   description:
+    //     "OCR (Optical Character Recognition) is a technology that converts printed or handwritten text in images, scanned documents, or PDFs into editable and searchable digital text.",
+    //   href: "/products/pry",
+    // },
     {
       title: "Website",
       description:
@@ -128,12 +128,12 @@ export default function Home() {
         "Application is a software program designed to perform specific tasks or solve particular problems for users or businesses.",
       href: "/products/expense",
     },
-    {
-      title: "RPA automation & AI Products",
-      description:
-        "RPA (Robotic Process Automation) and AI Automation help businesses automate repetitive tasks and make smarter decisions.",
-      href: "/products/expense",
-    },
+    // {
+    //   title: "RPA automation & AI Products",
+    //   description:
+    //     "RPA (Robotic Process Automation) and AI Automation help businesses automate repetitive tasks and make smarter decisions.",
+    //   href: "/products/expense",
+    // },
   ];
 
   return (
@@ -617,41 +617,43 @@ export default function Home() {
 
 
       <section className="py-20 bg-[#e6f7fc]">
-        <div className="max-w-7xl mx-auto px-6 text-center">
-          {/* Section Title */}
-          <h2 className="text-4xl md:text-5xl font-extrabold text-[#33aed7] mb-14">
-            Our Products
-          </h2>
+  <div className="max-w-7xl mx-auto px-6 text-center">
+    
+    {/* Section Title */}
+    <h2 className="text-4xl md:text-5xl font-extrabold text-[#33aed7] mb-14">
+      Our Products
+    </h2>
 
-          {/* Product Cards Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {products.map((product, index) => (
-              <div
-                key={index}
-                className="group relative bg-white rounded-2xl border border-[#33aed7]/10 shadow-md hover:shadow-2xl transition-all duration-500 p-8 flex flex-col justify-between h-full"
-              >
-                {/* Gradient Corner */}
-                <div className="absolute top-0 right-0 bg-gradient-to-r from-[#33aed7] to-[#0c8db5] rounded-bl-2xl p-3">
-                  <ArrowRight className="text-white w-5 h-5" />
-                </div>
-
-                {/* Title */}
-                <h3 className="text-xl font-semibold text-[#33aed7] mb-4">
-                  {product.title}
-                </h3>
-
-                {/* Description */}
-                <p className="text-gray-700 text-base leading-relaxed flex-grow">
-                  {product.description}
-                </p>
-
-                {/* Bottom Accent Line */}
-                <div className="mt-6 w-full h-1 rounded-full bg-gradient-to-r from-[#33aed7] to-[#0c8db5] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              </div>
-            ))}
+    {/* Product Cards Grid (ONLY 2 PRODUCTS) */}
+    <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 justify-center items-start max-w-4xl mx-auto">
+      {products.slice(0, 2).map((product, index) => (
+        <div
+          key={index}
+          className="group relative bg-white rounded-2xl border border-[#33aed7]/10 shadow-md hover:shadow-2xl transition-all duration-500 p-8 flex flex-col justify-between h-full"
+        >
+          {/* Gradient Corner */}
+          <div className="absolute top-0 right-0 bg-gradient-to-r from-[#33aed7] to-[#0c8db5] rounded-bl-2xl p-3">
+            <ArrowRight className="text-white w-5 h-5" />
           </div>
+
+          {/* Title */}
+          <h3 className="text-xl font-semibold text-[#33aed7] mb-4">
+            {product.title}
+          </h3>
+
+          {/* Description */}
+          <p className="text-gray-700 text-base leading-relaxed flex-grow">
+            {product.description}
+          </p>
+
+          {/* Bottom Accent Line */}
+          <div className="mt-6 w-full h-1 rounded-full bg-gradient-to-r from-[#33aed7] to-[#0c8db5] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
         </div>
-      </section>
+      ))}
+    </div>
+  </div>
+</section>
+
 
 
 

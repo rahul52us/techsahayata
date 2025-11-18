@@ -1,7 +1,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import Navbar from "../app/components/Navbar";
-import Footer from "../app/components/Footer";
+// import Footer from "../app/components/Footer";
 
 export const metadata: Metadata = {
   title: "Techsahayata-Starter with Techsahayata",
@@ -20,7 +20,7 @@ export default function RootLayout({
         
         {children}
 
-        <Footer />
+        {/* <Footer /> */}
       </body>
 
       

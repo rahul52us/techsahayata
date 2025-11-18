@@ -48,10 +48,10 @@ const Navbar: FC = () => {
 
   // ✅ Product Links
   const productsLinks = [
-    { name: "OCR", href: "/products/ocr" },
+    // { name: "OCR", href: "/products/ocr" },
     { name: "Websites", href: "/products/websites" },
     { name: "Applications", href: "/products/applications" },
-    { name: "RPA Automation & AI Products", href: "/products/rpa-automation" },
+    // { name: "RPA Automation & AI Products", href: "/products/rpa-automation" },
   ];
 
   // ✅ Company Links (without About Us)
