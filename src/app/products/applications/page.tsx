@@ -15,7 +15,7 @@ const appProjects: Project[] = [
     description:
       "A fitness and wellness app helping users track steps, calories, and daily activities with insights.",
     image:
-      "https://res.cloudinary.com/dtlrp3fzu/image/upload/v1763478659/original-4788ae2ebc604984b82262c597d0373b_hv2r6j.webp",
+      "https://res.cloudinary.com/dtlrp3fzu/image/upload/v1763594403/original-4788ae2ebc604984b82262c597d0373b_nekkxv.webp",
     link: "#",
   },
   {
@@ -23,7 +23,7 @@ const appProjects: Project[] = [
     description:
       "A food ordering and restaurant discovery app for seamless browsing, ordering, and delivery.",
     image:
-      "https://res.cloudinary.com/dtlrp3fzu/image/upload/v1763478658/e64a5091f8c490ce60ea9e1a6e162389_lw7jsf.webp",
+      "https://res.cloudinary.com/dtlrp3fzu/image/upload/v1763594403/e64a5091f8c490ce60ea9e1a6e162389_tbygpp.webp",
     link: "#",
   },
   {
@@ -31,7 +31,7 @@ const appProjects: Project[] = [
     description:
       "A modern e-learning platform offering courses, live classes, and student progress tracking.",
     image:
-      "https://res.cloudinary.com/dtlrp3fzu/image/upload/v1763478660/online-learning-mobile-app-ui-kit-with-different-gui-layout-including-log-in-create-account-course-information-screen-vector_napybl.jpg",
+      "https://res.cloudinary.com/dtlrp3fzu/image/upload/v1763594404/online-learning-mobile-app-ui-kit-with-different-gui-layout-including-log-in-create-account-course-information-screen-vector_dkjgfr.jpg",
     link: "#",
   },
   {
@@ -39,7 +39,7 @@ const appProjects: Project[] = [
     description:
       "An all-in-one app for discovering, managing, and booking local and global events.",
     image:
-      "https://res.cloudinary.com/dtlrp3fzu/image/upload/v1763478659/a6d5408b054a0b2e61bb8d010beac7bf_defrad.jpg",
+      "https://res.cloudinary.com/dtlrp3fzu/image/upload/v1763594404/a6d5408b054a0b2e61bb8d010beac7bf_se8elu.jpg",
     link: "#",
   },
   {
@@ -47,7 +47,7 @@ const appProjects: Project[] = [
     description:
       "An e-commerce app that delivers a smooth shopping experience with smart product recommendations.",
     image:
-      "https://res.cloudinary.com/dtlrp3fzu/image/upload/v1763478659/original-a804252a9f6e48720934a444d60b1c52_vyek2j.webp",
+      "https://res.cloudinary.com/dtlrp3fzu/image/upload/v1763594403/original-a804252a9f6e48720934a444d60b1c52_fhjffe.webp",
     link: "#",
   },
   {
@@ -55,7 +55,7 @@ const appProjects: Project[] = [
     description:
       "A productivity and task management app designed to help users plan, track, and achieve goals.",
     image:
-      "https://res.cloudinary.com/dtlrp3fzu/image/upload/v1763478659/original-8d8335dca57f937f99e641efa90995fa_rvabyt.webp",
+      "https://res.cloudinary.com/dtlrp3fzu/image/upload/v1763594403/original-8d8335dca57f937f99e641efa90995fa_tvkyy4.webp",
     link: "#",
   },
 ];
@@ -66,9 +66,10 @@ export default function Applications() {
       {/* 🌟 Hero Section */}
       <section className="relative w-full h-[55vh] md:h-[60vh] overflow-hidden">
         <Image
-          src="https://res.cloudinary.com/dtlrp3fzu/image/upload/v1762967839/techsahayata-assets/androidhero.jpg"
+          src="https://res.cloudinary.com/dtlrp3fzu/image/upload/v1763011861/stick_website_assets/vtoemz0m6susdgindhvn.jpg"
           alt="Applications Hero"
           fill
+          unoptimized
           priority
           className="object-cover object-center"
         />
@@ -111,6 +112,7 @@ export default function Applications() {
                     src={project.image}
                     alt={project.title}
                     fill
+                    unoptimized
                     className="object-cover w-full h-full group-hover:scale-110 transition-transform duration-500"
                   />
                 </div>
