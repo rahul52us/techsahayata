@@ -4,7 +4,8 @@ import React from "react";
 interface Project {
   title: string;
   description: string;
-  video: string;
+  video?: string;
+  image?: string;
   link: string;
 }
 
@@ -41,6 +42,40 @@ const projects: Project[] = [
       "https://res.cloudinary.com/dtlrp3fzu/video/upload/v1762963829/business_up1a9i.mp4",
     link: "https://businesssahayata.com/",
   },
+
+  // ⭐ NEW WEB PRODUCTS ADDED BELOW ⭐
+  {
+    title: "DentalCare",
+    description:
+      "Modern website for dental clinics with appointment booking, treatments display, and patient management.",
+    image:
+      "https://res.cloudinary.com/dtlrp3fzu/image/upload/v1763789011/Dentalcare_o3dgep.png",
+    link: "https://dental-frontend-sandy.vercel.app/login",
+  },
+  {
+    title: "FX NTop",
+    description:
+      "A financial analytics dashboard for tracking forex signals, market trends, and trading insights.",
+    image:
+      "https://res.cloudinary.com/dtlrp3fzu/image/upload/v1763789011/fxntop_dtogqj.png",
+    link: "https://fx.ntop.in/login",
+  },
+  {
+    title: "Travel CRM",
+    description:
+      "A smart CRM built for travel agencies to manage leads, bookings, follow-ups, and customer pipelines.",
+    image:
+      "https://res.cloudinary.com/dtlrp3fzu/image/upload/v1763789011/travellcrm_er3zfz.png",
+    link: "https://travel-crm-iota.vercel.app/login",
+  },
+  {
+    title: "HRMS Portal",
+    description:
+      "A Human Resource Management System with attendance, leave, payroll, and employee management features.",
+    image:
+      "https://res.cloudinary.com/dtlrp3fzu/image/upload/v1763789011/HRMS_xnjhxy.png",
+    link: "https://hrms-portals.vercel.app/login",
+  },
 ];
 
 export default function Projects() {
@@ -48,17 +83,14 @@ export default function Projects() {
     <main className="bg-[#f3fafc] font-sans">
       {/* 🌟 Hero Section */}
       <section className="relative w-full h-[65vh] md:h-[80vh] overflow-hidden">
-        {/* ✅ Full-width, full-height hero image */}
         <img
           src="https://res.cloudinary.com/dtlrp3fzu/image/upload/v1762963740/webhero_zqqnmi.jpg"
           alt="Projects Hero"
           className="absolute top-0 left-0 w-full h-full object-cover object-center"
         />
 
-        {/* Overlay */}
         <div className="absolute inset-0 bg-gradient-to-r from-[#002c3a]/90 via-[#00485a]/70 to-[#046c8a]/60"></div>
 
-        {/* Text Content */}
         <div className="absolute inset-0 flex flex-col justify-center items-center text-center text-white px-6 md:px-12">
           <h1 className="text-3xl md:text-5xl font-bold mb-3 leading-tight animate-fade-in-up">
             Our Web Products
@@ -79,28 +111,34 @@ export default function Projects() {
       {/* 💻 Projects Section */}
       <section id="projects" className="py-20 px-6 md:px-12">
         <div className="max-w-7xl mx-auto text-center">
-          {/* Heading */}
           <h2 className="text-3xl md:text-4xl font-bold text-[#33aed7] mb-12">
             Our Web Products
           </h2>
 
-          {/* Grid Section */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 justify-center">
             {projects.map((project, index) => (
               <div
                 key={index}
                 className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-[#c2edf9] group"
               >
-                {/* Project Video */}
+                {/* Image or Video */}
                 <div className="relative h-56 w-full overflow-hidden">
-                  <video
-                    src={project.video}
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    className="object-cover w-full h-full group-hover:scale-110 transition-transform duration-500"
-                  />
+                  {project.video ? (
+                    <video
+                      src={project.video}
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                      className="object-cover w-full h-full group-hover:scale-110 transition-transform duration-500"
+                    />
+                  ) : (
+                    <img
+                      src={project.image!}
+                      alt={project.title}
+                      className="object-cover w-full h-full group-hover:scale-110 transition-transform duration-500"
+                    />
+                  )}
                 </div>
 
                 {/* Content */}
