@@ -43,7 +43,7 @@ const projects: Project[] = [
     link: "https://businesssahayata.com/",
   },
 
-  // ⭐ NEW WEB PRODUCTS ADDED BELOW ⭐
+  
   {
     title: "DentalCare",
     description:
@@ -76,12 +76,20 @@ const projects: Project[] = [
       "https://res.cloudinary.com/dtlrp3fzu/image/upload/v1763789011/HRMS_xnjhxy.png",
     link: "https://hrms-portals.vercel.app/login",
   },
+  {
+    title: "School Management System",
+    description:
+      "A comprehensive platform for schools to manage students, teachers, classes, and academic records.",
+    video:
+      "https://res.cloudinary.com/dtlrp3fzu/video/upload/v1763997053/Recording_2025-11-24_203439_h3cl2d.mp4",
+    link: "https://school-managent.vercel.app/",
+  },
 ];
 
 export default function Projects() {
   return (
     <main className="bg-[#f3fafc] font-sans">
-      {/* 🌟 Hero Section */}
+      {/* Hero Section */}
       <section className="relative w-full h-[65vh] md:h-[80vh] overflow-hidden">
         <img
           src="https://res.cloudinary.com/dtlrp3fzu/image/upload/v1762963740/webhero_zqqnmi.jpg"
