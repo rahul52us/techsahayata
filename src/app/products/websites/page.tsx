@@ -84,6 +84,14 @@ const projects: Project[] = [
       "https://res.cloudinary.com/dtlrp3fzu/video/upload/v1763997053/Recording_2025-11-24_203439_h3cl2d.mp4",
     link: "https://school-managent.vercel.app/",
   },
+    {
+    title: "Kleen Driving school",
+    description:
+      "Driving schools offer professional training for safe, confident driving, covering traffic laws.",
+    video:
+      "https://res.cloudinary.com/dtlrp3fzu/video/upload/v1767023023/Recording_2025-12-29_210800_fr4afk.mp4",
+    link: "https://kleen-drive.vercel.app/",
+  },
 ];
 
 export default function Projects() {
