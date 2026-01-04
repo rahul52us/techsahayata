@@ -30,7 +30,7 @@ export default function ContactPage() {
         <div className="absolute inset-0 bg-[url('/assets/bg-pattern.svg')] bg-center bg-no-repeat opacity-5 pointer-events-none"></div>
 
         <div className="relative z-10 max-w-3xl mx-auto">
-          <h1 className="text-5xl md:text-6xl font-extrabold text-[#33AED7] mb-6 drop-shadow-md">
+          <h1 className="text-5xl md:text-6xl font-extrabold text-[#097899] mb-6 drop-shadow-md">
             Contact Us
           </h1>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
@@ -44,8 +44,8 @@ export default function ContactPage() {
       <section className="container mx-auto px-6 lg:px-12 py-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Contact Form */}
-          <div className="bg-white rounded-3xl shadow-2xl p-10 border border-gray-100 hover:shadow-[#33AED7]/20 transition-shadow duration-500">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8 border-l-4 border-[#33AED7] pl-4">
+          <div className="bg-white rounded-3xl shadow-2xl p-10 border border-gray-100 hover:shadow-[#097899]/20 transition-shadow duration-500">
+            <h2 className="text-3xl font-bold text-gray-900 mb-8 border-l-4 border-[#097899] pl-4">
               Send us a Message
             </h2>
 
@@ -63,7 +63,7 @@ export default function ContactPage() {
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#33AED7] focus:border-transparent transition duration-300"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#097899] focus:border-transparent transition duration-300"
                   required
                 />
               </div>
@@ -81,7 +81,7 @@ export default function ContactPage() {
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#33AED7] focus:border-transparent transition duration-300"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#097899] focus:border-transparent transition duration-300"
                   required
                 />
               </div>
@@ -99,7 +99,7 @@ export default function ContactPage() {
                   name="company"
                   value={formData.company}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#33AED7] focus:border-transparent transition duration-300"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#097899] focus:border-transparent transition duration-300"
                 />
               </div>
 
@@ -116,14 +116,14 @@ export default function ContactPage() {
                   value={formData.message}
                   onChange={handleChange}
                   rows={5}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#33AED7] focus:border-transparent transition duration-300"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#097899] focus:border-transparent transition duration-300"
                   required
                 />
               </div>
 
               <button
                 type="submit"
-                className="w-full bg-[#33AED7] hover:bg-[#2c97bd] text-white px-6 py-3 rounded-lg font-semibold text-lg transition-all duration-300 shadow-md hover:shadow-lg hover:shadow-[#33AED7]/30"
+                className="w-full bg-[#097899] hover:bg-[#2c97bd] text-white px-6 py-3 rounded-lg font-semibold text-lg transition-all duration-300 shadow-md hover:shadow-lg hover:shadow-[#097899]/30"
               >
                 Send Message
               </button>
@@ -132,14 +132,14 @@ export default function ContactPage() {
 
           {/* Contact Information */}
           <div className="space-y-8">
-            <div className="bg-gradient-to-br from-[#e6f8fc] to-[#f2fbfe] rounded-3xl p-10 shadow-lg border border-[#33AED7]/10">
-              <h3 className="text-3xl font-bold text-gray-900 mb-6 border-l-4 border-[#33AED7] pl-4">
+            <div className="bg-gradient-to-br from-[#e6f8fc] to-[#f2fbfe] rounded-3xl p-10 shadow-lg border border-[#097899]/10">
+              <h3 className="text-3xl font-bold text-gray-900 mb-6 border-l-4 border-[#097899] pl-4">
                 Get in Touch
               </h3>
               <div className="space-y-5">
                 {/* Address */}
                 <div className="flex items-start space-x-4">
-                  <div className="w-10 h-10 bg-[#33AED7] rounded-full flex items-center justify-center flex-shrink-0 shadow-md">
+                  <div className="w-10 h-10 bg-[#097899] rounded-full flex items-center justify-center flex-shrink-0 shadow-md">
                     <svg
                       className="w-5 h-5 text-white"
                       fill="none"
@@ -170,7 +170,7 @@ export default function ContactPage() {
 
                 {/* Phone */}
                 <div className="flex items-start space-x-4">
-                  <div className="w-10 h-10 bg-[#33AED7] rounded-full flex items-center justify-center flex-shrink-0 shadow-md">
+                  <div className="w-10 h-10 bg-[#097899] rounded-full flex items-center justify-center flex-shrink-0 shadow-md">
                     <svg
                       className="w-5 h-5 text-white"
                       fill="none"
@@ -193,7 +193,7 @@ export default function ContactPage() {
 
                 {/* Email */}
                 <div className="flex items-start space-x-4">
-                  <div className="w-10 h-10 bg-[#33AED7] rounded-full flex items-center justify-center flex-shrink-0 shadow-md">
+                  <div className="w-10 h-10 bg-[#097899] rounded-full flex items-center justify-center flex-shrink-0 shadow-md">
                     <svg
                       className="w-5 h-5 text-white"
                       fill="none"
@@ -217,8 +217,8 @@ export default function ContactPage() {
             </div>
 
             {/* Business Hours */}
-            <div className="bg-white rounded-3xl shadow-2xl p-10 border border-gray-100 hover:shadow-[#33AED7]/20 transition-shadow duration-500">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4 border-l-4 border-[#33AED7] pl-4">
+            <div className="bg-white rounded-3xl shadow-2xl p-10 border border-gray-100 hover:shadow-[#097899]/20 transition-shadow duration-500">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4 border-l-4 border-[#097899] pl-4">
                 Business Hours
               </h3>
               <div className="space-y-3 text-gray-600">
@@ -241,7 +241,7 @@ export default function ContactPage() {
       </section>
 
       {/* Bottom Accent Line */}
-      <div className="w-full h-1 bg-gradient-to-r from-[#33AED7] via-sky-400 to-[#33AED7]"></div>
+      <div className="w-full h-1 bg-gradient-to-r from-[#097899] via-sky-400 to-[#097899]"></div>
     </main>
   );
 }

@@ -80,7 +80,7 @@ export default function OCRPage() {
           </p>
           <a
             href="#features"
-            className="bg-[#33aed7] hover:bg-[#2a96bb] text-white px-8 py-3 rounded-full font-semibold shadow-lg hover:shadow-2xl transition transform hover:-translate-y-1"
+            className="bg-[#097899] hover:bg-[#2a96bb] text-white px-8 py-3 rounded-full font-semibold shadow-lg hover:shadow-2xl transition transform hover:-translate-y-1"
           >
             Explore OCR Projects
           </a>
@@ -91,7 +91,7 @@ export default function OCRPage() {
       <section id="features" className="py-20 px-6 md:px-12">
         <div className="max-w-7xl mx-auto text-center">
           {/* Heading */}
-          <h2 className="text-3xl md:text-4xl font-bold text-[#33aed7] mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-[#097899] mb-4">
             Optical Character Recognition (OCR)
           </h2>
           <p className="text-gray-700 max-w-3xl mx-auto mb-12 text-base md:text-lg leading-relaxed">
@@ -110,7 +110,7 @@ export default function OCRPage() {
 
           {/* CTA Section */}
           <div className="mt-16">
-            <button className="bg-[#33aed7] hover:bg-[#2a96bb] text-white px-10 py-4 rounded-full font-semibold shadow-md hover:shadow-xl transition">
+            <button className="bg-[#097899] hover:bg-[#2a96bb] text-white px-10 py-4 rounded-full font-semibold shadow-md hover:shadow-xl transition">
               Book a Free Demo
             </button>
           </div>
@@ -142,7 +142,7 @@ function FeatureCard({ feature }: { feature: OCRFeature }) {
         <h3 className="text-xl font-semibold text-[#046c8a] mb-2">
           {feature.title}
         </h3>
-        <div className="w-16 h-[2px] bg-[#33aed7] mb-4"></div>
+        <div className="w-16 h-[2px] bg-[#097899] mb-4"></div>
         <p className="text-gray-600 text-sm mb-6 leading-relaxed">
           {feature.description}
         </p>
@@ -150,7 +150,7 @@ function FeatureCard({ feature }: { feature: OCRFeature }) {
           href={feature.link}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-[#046c8a] font-medium inline-flex items-center gap-2 hover:text-[#33aed7] transition-colors"
+          className="text-[#046c8a] font-medium inline-flex items-center gap-2 hover:text-[#097899] transition-colors"
         >
           Explore more
           <svg

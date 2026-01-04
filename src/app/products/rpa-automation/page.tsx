@@ -81,7 +81,7 @@ export default function RpaAutomation() {
           </p>
           <a
             href="#features"
-            className="bg-[#33aed7] hover:bg-[#2a96bb] text-white px-8 py-3 rounded-full font-semibold shadow-lg hover:shadow-2xl transition transform hover:-translate-y-1"
+            className="bg-[#097899] hover:bg-[#2a96bb] text-white px-8 py-3 rounded-full font-semibold shadow-lg hover:shadow-2xl transition transform hover:-translate-y-1"
           >
             Explore Features
           </a>
@@ -92,7 +92,7 @@ export default function RpaAutomation() {
       <section id="features" className="py-20 px-6 md:px-12">
         <div className="max-w-7xl mx-auto text-center">
           {/* Heading */}
-          <h2 className="text-3xl md:text-4xl font-bold text-[#33aed7] mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-[#097899] mb-12">
             Intelligent Automation Features
           </h2>
 
@@ -126,7 +126,7 @@ export default function RpaAutomation() {
                   <h3 className="text-xl font-semibold text-[#046c8a] mb-2">
                     {feature.title}
                   </h3>
-                  <div className="w-16 h-[2px] bg-[#33aed7] mb-4"></div>
+                  <div className="w-16 h-[2px] bg-[#097899] mb-4"></div>
                   <p className="text-gray-600 text-sm mb-6 leading-relaxed">
                     {feature.description}
                   </p>
@@ -134,7 +134,7 @@ export default function RpaAutomation() {
                     href={feature.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-[#046c8a] font-medium inline-flex items-center gap-2 hover:text-[#33aed7] transition-colors"
+                    className="text-[#046c8a] font-medium inline-flex items-center gap-2 hover:text-[#097899] transition-colors"
                   >
                     Explore More
                     <svg
@@ -159,7 +159,7 @@ export default function RpaAutomation() {
 
           {/* CTA Button */}
           <div className="mt-16">
-            <button className="px-10 py-4 rounded-full bg-[#33aed7] hover:bg-[#2a97ba] text-white font-semibold shadow-md hover:shadow-lg transition transform hover:-translate-y-1">
+            <button className="px-10 py-4 rounded-full bg-[#097899] hover:bg-[#2a97ba] text-white font-semibold shadow-md hover:shadow-lg transition transform hover:-translate-y-1">
               Book Free Demo
             </button>
           </div>
