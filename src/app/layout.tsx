@@ -6,6 +6,7 @@ import Navbar from "../app/components/Navbar";
 export const metadata: Metadata = {
   title: "Techsahayata-Starter with Techsahayata",
   description: "Starter with Techsahayata",
+  viewport: 'width=device-width, initial-scale=1',
 };
 
 export default function RootLayout({

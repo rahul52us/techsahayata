@@ -56,3 +56,49 @@ body {
 .marquee-track.reverse {
   animation-direction: reverse;
 }
+
+/* --- Responsive base rules --- */
+/* Make media and embeds scale to container */
+img, picture, video, iframe {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Responsive container utility (works alongside Tailwind container) */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Fluid typography */
+body {
+  font-size: clamp(14px, 1.6vw, 18px);
+}
+
+h1 { font-size: clamp(1.6rem, 3.5vw, 2.6rem); line-height: 1.1; }
+h2 { font-size: clamp(1.25rem, 2.6vw, 2rem); }
+h3 { font-size: clamp(1.1rem, 2.0vw, 1.5rem); }
+
+/* Ensure interactive elements have adequate hit area on small screens */
+button, a[class*="btn"], .btn {
+  min-height: 40px;
+  min-width: 40px;
+}
+
+/* Fix for any overflow from long unbroken text/content */
+.truncate-break {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Small helper for centered headlines used across pages */
+.centered-headline {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
