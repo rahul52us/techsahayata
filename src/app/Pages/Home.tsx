@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { ArrowRight } from "lucide-react";
+import Header from "../components/Header";
 
 
 interface StatCircleProps {
@@ -138,36 +139,7 @@ export default function Home() {
 
   return (
     <main className="w-full">
-      <section className="relative w-full h-[90vh] overflow-hidden">
-        {/* Hero Image */}
-        <img
-          src="https://res.cloudinary.com/dtlrp3fzu/image/upload/v1763011871/stick_website_assets/va1znnbi9jdcrqinwwzi.jpg"
-          alt="Techsahayata Hero"
-          className="object-cover object-center"
-        />
-
-        {/* Dark Overlay */}
-        <div className="absolute inset-0 bg-black/50"></div>
-
-        {/* Overlay Content */}
-        <div className="absolute inset-0 flex items-center">
-          <div className="container mx-auto px-6 lg:px-12">
-            <div className="max-w-xl space-y-6 text-white">
-              <h1 className="text-5xl md:text-4xl font-bold leading-tight">
-                Unlock the Future of Business <br />
-                with{" "}
-                <span className="text-[#097899]">
-                  Techsahayata Driven Framework
-                </span>
-              </h1>
-              <p className="text-lg md:text-xl leading-relaxed text-gray-200">
-                Elevate Efficiency, Drive Innovation, and Transform Your Operational
-                Landscape with Our Advanced AI and Machine Learning Technologies.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <Header/>
 
       {/* Value Props Section */}
       <section className="relative w-full py-24 overflow-hidden bg-gradient-to-b from-slate-50 to-white">
@@ -325,8 +297,6 @@ export default function Home() {
         </div>
 
       </section>
-
-
       {/* Govern Smarter. Operate Leaner. Impact Greener. */}
 
       {/* <section className="w-full py-20 md:py-24 bg-teal-50">
@@ -418,183 +388,372 @@ export default function Home() {
 
 
 
-      <section className="relative w-full py-24 bg-gradient-to-br from-[#e6f9ff] via-white to-[#f0fcff] overflow-hidden">
-        {/* Decorative Background Orbs */}
-        <div className="absolute -top-24 -left-24 w-80 h-80 bg-[#097899]/20 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#097899]/10 rounded-full blur-3xl animate-ping"></div>
+       <section className="relative w-full py-24 bg-[#fcfdfe] overflow-hidden font-sans">
+      {/* --- Smooth Aurora Background --- */}
+      <div className="absolute top-[-20%] left-[-10%] w-[800px] h-[800px] bg-[#097899]/10 rounded-full blur-[160px] animate-pulse pointer-events-none" />
+      <div className="absolute bottom-[-10%] right-[-5%] w-[600px] h-[600px] bg-[#097899]/5 rounded-full blur-[140px] pointer-events-none" />
 
-        <div className="relative container mx-auto px-6 lg:px-12 text-center">
-          {/* Section Heading */}
-          <h2 className="text-4xl md:text-5xl font-extrabold text-[#097899] mb-6">
-            Mobile Apps & AI — The Unified Ecosystem
+      {/* Floating Decorative Elements */}
+      <div className="absolute top-40 left-10 w-4 h-4 rounded-full border-2 border-[#097899]/20 animate-bounce" style={{ animationDuration: '4s' }} />
+      <div className="absolute top-80 right-20 w-8 h-8 rounded-full bg-gradient-to-tr from-[#097899]/10 to-transparent animate-pulse" />
+
+      <div className="relative container mx-auto px-6 lg:px-20">
+        
+        {/* --- Minimalist Header --- */}
+        <div className="relative z-10 max-w-4xl mb-24">
+          <div className="flex items-center gap-4 mb-6">
+            <span className="h-[2px] w-12 bg-[#097899]" />
+            <span className="text-sm font-bold tracking-widest text-[#097899] uppercase italic">Evolution in Motion</span>
+          </div>
+          
+          <h2 className="text-6xl md:text-7xl font-black text-slate-900 mb-8 tracking-tight">
+            Design <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#097899] to-[#40b1d1]">Emotion</span>, 
+            <br />Deploy Intelligence.
           </h2>
-          <p className="text-lg text-gray-700 max-w-2xl mx-auto mb-16">
-            Explore how modern mobile applications combine core system components with artificial intelligence
-            to deliver smarter, faster, and human-like experiences.
+          <p className="text-xl text-slate-500 max-w-2xl leading-relaxed">
+            We bridge the gap between cold logic and human intuition, creating digital experiences that don't just work—they <span className="text-slate-900 font-medium">resonate</span>.
           </p>
+        </div>
 
-          {/* Responsive Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-            {/* Card 1 */}
-            <div className="group relative bg-white shadow-xl border border-[#097899]/20 rounded-3xl p-8 flex flex-col justify-between h-full hover:shadow-[#097899]/30 transition-all duration-500 hover:-translate-y-2">
-              <div className="absolute inset-0 bg-gradient-to-br from-[#097899]/10 to-[#097899]/20 opacity-0 group-hover:opacity-50 blur-3xl transition-opacity duration-700 rounded-3xl"></div>
-
-              <div className="relative z-10 flex justify-center mb-8">
+        {/* --- Unique Staggered Layout --- */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+          
+          {/* Section 01: The Core */}
+          <div className="lg:col-span-7 group relative">
+            <div className="relative overflow-hidden rounded-[3rem] bg-white p-2 shadow-[0_40px_100px_-20px_rgba(9,120,153,0.12)] border border-white">
+              <div className="relative h-[450px] overflow-hidden rounded-[2.8rem] bg-slate-50 flex items-center justify-center">
+                {/* Floating Shadow beneath image */}
+                <div className="absolute bottom-10 w-1/2 h-8 bg-black/10 blur-2xl rounded-full scale-x-150 opacity-50 transition-transform group-hover:scale-x-110" />
                 <img
                   src="https://res.cloudinary.com/dtlrp3fzu/image/upload/v1763011954/stick_website_assets/tk2iy5vz5qgxe0tjtx2f.png"
-                  alt="Mobile App Components"
-                  className="w-full max-w-sm h-auto rounded-2xl object-contain shadow-lg transition-transform duration-700 group-hover:scale-105"
+                  alt="System Architecture"
+                  className="relative z-10 w-3/4 h-auto object-contain transition-transform duration-1000 ease-out group-hover:scale-110 group-hover:-rotate-2"
                 />
               </div>
-
-              <div className="relative z-10 flex flex-col flex-grow justify-end">
-                <h3 className="text-2xl font-semibold text-[#097899] mb-3">
-                  Components of Mobile Apps
-                </h3>
-                <p className="text-gray-600 max-w-md mx-auto">
-                  Discover the interconnected elements that power our comprehensive mobile app ecosystem —
-                  from backend intelligence to user-facing design.
-                </p>
-              </div>
             </div>
+          </div>
 
-            {/* Card 2 */}
-            <div className="group relative bg-white shadow-xl border border-[#097899]/20 rounded-3xl p-8 flex flex-col justify-between h-full hover:shadow-[#097899]/30 transition-all duration-500 hover:-translate-y-2">
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-72 h-72 bg-[#097899]/30 blur-3xl rounded-full opacity-0 group-hover:opacity-40 transition-opacity duration-700"></div>
-              </div>
+          <div className="lg:col-span-5">
+            <span className="text-8xl font-black text-slate-100 absolute -translate-y-20 -translate-x-10 select-none">01</span>
+            <div className="relative z-10">
+              <h3 className="text-4xl font-bold text-slate-900 mb-6 group-hover:text-[#097899] transition-colors">
+                The Architecture of <br /><span className="text-[#097899]">Possibility</span>
+              </h3>
+              <p className="text-lg text-slate-600 mb-8 leading-relaxed">
+                A robust mobile core isn't about code—it's about reliability. We build the silent engine that powers your boldest ideas with 99.9% uptime and zero friction.
+              </p>
+              <ul className="space-y-4">
+                {['Hyper-Reactive UI', 'Cloud-Native Scalability', 'Military-Grade Security'].map((item, i) => (
+                  <li key={i} className="flex items-center gap-3 text-slate-800 font-semibold">
+                    <span className="w-2 h-2 rounded-full bg-[#097899]" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
 
-              <div className="relative z-10 flex justify-center mb-8">
+          {/* Section 02: The Brain (Reversed) */}
+          <div className="lg:col-span-5 order-last lg:order-none">
+            <span className="text-8xl font-black text-slate-100 absolute -translate-y-20 translate-x-40 select-none">02</span>
+            <div className="relative z-10">
+              <h3 className="text-4xl font-bold text-slate-900 mb-6">
+                Cognitive <br /><span className="text-[#097899]">Deep-Flow</span>
+              </h3>
+              <p className="text-lg text-slate-600 mb-8 leading-relaxed">
+                We integrate AI that learns from every tap. Your app becomes an evolving organism, predicting user needs before they even arise.
+              </p>
+              <button className="group flex items-center gap-4 text-[#097899] font-bold text-lg">
+                Explore Intelligence
+                <span className="w-12 h-12 rounded-full border border-[#097899]/20 flex items-center justify-center transition-all group-hover:bg-[#097899] group-hover:text-white group-hover:scale-110">
+                  →
+                </span>
+              </button>
+            </div>
+          </div>
+
+          <div className="lg:col-span-7 group relative">
+             <div className="relative overflow-hidden rounded-[3rem] bg-white p-2 shadow-[0_40px_100px_-20px_rgba(9,120,153,0.12)] border border-white">
+              <div className="relative h-[450px] overflow-hidden rounded-[2.8rem] bg-gradient-to-br from-[#097899]/5 to-transparent flex items-center justify-center">
                 <img
                   src="https://res.cloudinary.com/dtlrp3fzu/image/upload/v1763011860/stick_website_assets/lknhnmkr5yf3qt2an0gv.png"
-                  alt="AI Mobile Impact"
-                  className="w-full max-w-sm h-auto rounded-2xl object-contain shadow-lg transition-transform duration-700 group-hover:scale-105"
+                  alt="AI Impact"
+                  className="w-3/4 h-auto object-contain transition-transform duration-1000 ease-out group-hover:scale-105 group-hover:rotate-2"
                 />
-              </div>
-
-              <div className="relative z-10 flex flex-col flex-grow justify-end">
-                <h3 className="text-2xl font-semibold text-[#097899] mb-3">
-                  Impact of Mobile Apps with AI
-                </h3>
-                <p className="text-gray-600 max-w-md mx-auto">
-                  AI-infused mobile apps redefine engagement with predictive insights, automation, and adaptive interactions —
-                  making technology feel more human.
-                </p>
               </div>
             </div>
           </div>
+        </div>
 
-          {/* Unified Footer Text */}
-          <div className="mt-20">
-            <h3 className="text-3xl font-bold text-[#097899] mb-4">
-              Unified Mobile Intelligence
-            </h3>
-            <p className="text-gray-700 max-w-2xl mx-auto">
-              When traditional app components seamlessly integrate with AI capabilities,
-              they form a dynamic ecosystem — one that evolves with users and redefines digital innovation.
-            </p>
+        {/* --- Lovable CTA Section --- */}
+        <div className="mt-40 text-center">
+          <div className="relative inline-block p-1 rounded-[2.5rem] bg-gradient-to-r from-[#097899]/20 via-[#40b1d1]/20 to-[#097899]/20">
+            <div className="bg-white rounded-[2.4rem] px-12 py-16 md:px-24">
+              <h3 className="text-4xl md:text-5xl font-black text-slate-900 mb-6">
+                Ready for a <span className="italic">Smarter</span> Start?
+              </h3>
+              <p className="text-slate-500 text-lg max-w-xl mx-auto mb-10">
+                Join 50+ visionary brands that transformed their mobile presence with our unified AI-ecosystem.
+              </p>
+              <div className="flex flex-wrap justify-center gap-6">
+                <button className="px-10 py-5 bg-[#097899] text-white font-bold rounded-2xl shadow-[0_20px_40px_-10px_rgba(9,120,153,0.5)] hover:bg-[#075d77] hover:-translate-y-1 transition-all active:scale-95">
+                  Begin the Journey
+                </button>
+                <button className="px-10 py-5 bg-slate-50 text-slate-900 font-bold rounded-2xl hover:bg-slate-100 transition-all border border-slate-200">
+                  Watch Showcase
+                </button>
+              </div>
+            </div>
           </div>
         </div>
-      </section>
+
+      </div>
+    </section>
 
 
 
 
 
       {/* Intelligent Document Processing Section */}
-      <section className="relative w-full py-24 bg-gradient-to-br from-[#e6f9ff] via-white to-[#f0fcff] overflow-hidden">
-        {/* Animated Gradient Blobs */}
-        <div className="absolute top-0 left-0 w-96 h-96 bg-[#097899]/20 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-0 right-0 w-[28rem] h-[28rem] bg-[#097899]/10 rounded-full blur-3xl animate-ping"></div>
+       <section className="relative w-full py-28 bg-white overflow-hidden font-sans">
 
-        <div className="relative container mx-auto px-6 lg:px-12 text-center z-10">
-          {/* Header */}
-          <h2 className="text-4xl md:text-5xl font-extrabold text-[#097899] mb-6 capitalize">
-            Benefits of Software and Applications
+      {/* --- Aesthetic Atmosphere --- */}
+
+      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#097899]/5 rounded-full blur-[120px] pointer-events-none" />
+
+      <div className="absolute -bottom-24 -left-24 w-[600px] h-[600px] bg-[#097899]/10 rounded-full blur-[140px] pointer-events-none opacity-60" />
+
+
+
+      <div className="relative container mx-auto px-6 lg:px-20">
+
+        
+
+        {/* --- Header: Sophisticated & Centered --- */}
+
+        <div className="max-w-3xl mx-auto text-center mb-24">
+
+          <h2 className="text-5xl md:text-6xl font-black text-slate-900 mb-8 tracking-tight">
+
+            The <span className="text-[#097899]">Impact</span> of Intelligence
+
           </h2>
-          <p className="text-lg text-gray-700 max-w-3xl mx-auto mb-12">
-            Empower your organization with intelligent software that automates, accelerates, and amplifies digital workflows — blending AI, automation, and analytics for true transformation.
+
+          <div className="w-24 h-1 bg-gradient-to-r from-transparent via-[#097899] to-transparent mx-auto mb-8" />
+
+          <p className="text-xl text-slate-500 leading-relaxed font-light">
+
+            Empower your organization with software that doesn't just process data—it <span className="text-slate-900 font-semibold italic">amplifies potential</span>.
+
           </p>
 
-          {/* Core Visual Section */}
-          <div className="relative flex flex-col items-center justify-center">
-            {/* Glowing Background Halo */}
-            <div className="absolute w-96 h-96 bg-[#097899]/20 blur-3xl rounded-full animate-pulse"></div>
-
-            {/* Central Image Card */}
-            <div className="relative bg-white/70 backdrop-blur-xl border border-[#097899]/20 rounded-3xl shadow-2xl p-10 max-w-4xl mx-auto">
-              <div className="flex flex-col lg:flex-row items-center gap-10">
-                {/* Left Side - Text */}
-                <div className="flex-1 text-left">
-                  <h3 className="text-3xl font-bold text-gray-800 mb-4">
-                    Smarter Processes. Faster Results.
-                  </h3>
-                  <p className="text-gray-600 leading-relaxed mb-6">
-                    Intelligent software integrates data, automates decisions, and enhances business outcomes — powered by cutting-edge technologies like AI, ML, and NLP.
-                  </p>
-
-                  <ul className="space-y-3 text-gray-700">
-                    <li className="flex items-center">
-                      <div className="w-3 h-3 bg-[#097899] rounded-full mr-3"></div>
-                      <span>Streamlined Data Processing</span>
-                    </li>
-                    <li className="flex items-center">
-                      <div className="w-3 h-3 bg-[#097899] rounded-full mr-3"></div>
-                      <span>Enhanced Automation and Accuracy</span>
-                    </li>
-                    <li className="flex items-center">
-                      <div className="w-3 h-3 bg-[#097899] rounded-full mr-3"></div>
-                      <span>AI-Driven Decision Making</span>
-                    </li>
-                    <li className="flex items-center">
-                      <div className="w-3 h-3 bg-[#097899] rounded-full mr-3"></div>
-                      <span>Seamless Integration Across Systems</span>
-                    </li>
-                  </ul>
-                </div>
-
-                {/* Right Side - 3D Styled Image */}
-                <div className="flex-1 flex justify-center relative">
-                  <div className="absolute w-64 h-64 bg-[#097899]/10 rounded-full blur-2xl animate-bounce"></div>
-                  <img
-                    src="https://res.cloudinary.com/dtlrp3fzu/image/upload/v1763011862/stick_website_assets/z3wmxmweewnzjmstmbod.png"
-                    alt="Benefits of Software"
-                    className="relative z-10 w-80 rounded-2xl shadow-xl hover:scale-105 transition-transform duration-700"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Bottom Glowing Info Strip */}
-          <div className="mt-20 grid md:grid-cols-3 gap-8">
-            {[
-              {
-                title: "AI-Powered Insights",
-                desc: "Analyze and predict trends through intelligent data systems.",
-              },
-              {
-                title: "Accelerated Workflow",
-                desc: "Boost productivity with integrated automation pipelines.",
-              },
-              {
-                title: "Digital Transformation",
-                desc: "Bridge technology with strategy to create business agility.",
-              },
-            ].map((item, i) => (
-              <div
-                key={i}
-                className="bg-white/80 backdrop-blur-lg border border-[#097899]/20 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500"
-              >
-                <h4 className="text-xl font-semibold text-[#097899] mb-3">
-                  {item.title}
-                </h4>
-                <p className="text-gray-700 leading-relaxed">{item.desc}</p>
-              </div>
-            ))}
-          </div>
         </div>
-      </section>
+
+
+
+        {/* --- Central Feature: The Glass Podium --- */}
+
+        <div className="relative z-10 group">
+
+          {/* Background decorative ring */}
+
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-5xl h-[400px] border border-[#097899]/10 rounded-[4rem] -rotate-2 group-hover:rotate-0 transition-transform duration-1000" />
+
+          
+
+          <div className="relative bg-white/40 backdrop-blur-2xl border border-white rounded-[3rem] shadow-[0_32px_120px_-20px_rgba(9,120,153,0.15)] p-8 md:p-16 overflow-hidden">
+
+            <div className="flex flex-col lg:flex-row items-center gap-16">
+
+              
+
+              {/* Left Side: Dynamic List */}
+
+              <div className="flex-1 order-2 lg:order-1">
+
+                <h3 className="text-4xl font-bold text-slate-900 mb-8 leading-tight">
+
+                  Smarter Processes. <br />
+
+                  <span className="text-[#097899]">Exponential Results.</span>
+
+                </h3>
+
+                
+
+                <div className="grid gap-6">
+
+                  {[
+
+                    { label: "Streamlined Data", color: "#097899" },
+
+                    { label: "Predictive Automation", color: "#40b1d1" },
+
+                    { label: "AI-Driven Logic", color: "#097899" },
+
+                    { label: "Seamless Synergy", color: "#40b1d1" }
+
+                  ].map((item, idx) => (
+
+                    <div key={idx} className="flex items-center gap-4 group/item">
+
+                      <div 
+
+                        className="w-10 h-10 rounded-2xl flex items-center justify-center transition-all duration-300 shadow-sm border border-slate-100 group-hover/item:scale-110 group-hover/item:rotate-6"
+
+                        style={{ backgroundColor: `${item.color}10`, color: item.color }}
+
+                      >
+
+                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7" />
+
+                        </svg>
+
+                      </div>
+
+                      <span className="text-lg font-medium text-slate-700 group-hover/item:text-[#097899] transition-colors">
+
+                        {item.label}
+
+                      </span>
+
+                    </div>
+
+                  ))}
+
+                </div>
+
+              </div>
+
+
+
+              {/* Right Side: The 3D Focus */}
+
+              <div className="flex-1 flex justify-center order-1 lg:order-2">
+
+                <div className="relative">
+
+                  {/* Floating Elements around image */}
+
+                  <div className="absolute -top-6 -right-6 w-20 h-20 bg-[#097899]/10 rounded-full blur-xl animate-pulse" />
+
+                  <div className="absolute -bottom-10 -left-10 w-32 h-32 bg-[#40b1d1]/10 rounded-full blur-2xl animate-bounce" style={{ animationDuration: '6s' }} />
+
+                  
+
+                  
+
+                  <img
+
+                    src="https://res.cloudinary.com/dtlrp3fzu/image/upload/v1763011862/stick_website_assets/z3wmxmweewnzjmstmbod.png"
+
+                    alt="Digital Transformation"
+
+                    className="relative z-10 w-[380px] h-auto rounded-[2rem] transform transition-all duration-700 ease-out group-hover:scale-105 group-hover:-translate-y-2"
+
+                  />
+
+                  
+
+                  {/* Reflection/Shadow under image */}
+
+                  <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-[80%] h-4 bg-slate-900/10 blur-xl rounded-[100%] opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+        {/* --- Bottom Triptych: Minimalist Info Strips --- */}
+
+        <div className="mt-24 grid md:grid-cols-3 gap-12">
+
+          {[
+
+            {
+
+              title: "Cognitive Insights",
+
+              desc: "Convert raw numbers into strategic advantages with intelligent analytics.",
+
+              icon: "M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
+
+            },
+
+            {
+
+              title: "Rapid Velocity",
+
+              desc: "Shatter bottlenecks with automation pipelines that work while you sleep.",
+
+              icon: "M13 10V3L4 14h7v7l9-11h-7z"
+
+            },
+
+            {
+
+              title: "Strategic Agility",
+
+              desc: "Build a tech stack that pivots as fast as the global market demands.",
+
+              icon: "M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
+
+            },
+
+          ].map((item, i) => (
+
+            <div
+
+              key={i}
+
+              className="relative group p-4"
+
+            >
+
+              <div className="mb-6 w-14 h-14 rounded-2xl bg-slate-50 flex items-center justify-center text-[#097899] transition-all duration-500 group-hover:bg-[#097899] group-hover:text-white group-hover:scale-110 group-hover:shadow-lg">
+
+                <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d={item.icon} />
+
+                </svg>
+
+              </div>
+
+              <h4 className="text-2xl font-bold text-slate-800 mb-4 transition-colors group-hover:text-[#097899]">
+
+                {item.title}
+
+              </h4>
+
+              <p className="text-slate-500 leading-relaxed font-light">
+
+                {item.desc}
+
+              </p>
+
+              <div className="mt-6 w-0 h-0.5 bg-[#097899]/20 group-hover:w-full transition-all duration-700" />
+
+            </div>
+
+          ))}
+
+        </div>
+
+
+
+      </div>
+
+    </section>
 
       <section className="relative w-full py-24 bg-gradient-to-br from-[#e6f9ff] via-white to-[#f0fcff] overflow-hidden">
         {/* Animated Background Blobs */}
