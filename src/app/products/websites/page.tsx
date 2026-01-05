@@ -72,6 +72,12 @@ const projects: Project[] = [
     video: "https://res.cloudinary.com/dtlrp3fzu/video/upload/v1767023023/Recording_2025-12-29_210800_fr4afk.mp4",
     link: "https://kleen-drive.vercel.app/",
   },
+   {
+    title: "Vd Properties",
+    description: "To simplify real estate with service you can rely on and guidance you can trust.",
+    video: "https://res.cloudinary.com/dtlrp3fzu/video/upload/v1767518417/Recording_2026-01-04_143240_jjw0bz.mp4",
+    link: "https://www.vdproperties.com.au/",
+  },
 ];
 
 export default function Projects() {

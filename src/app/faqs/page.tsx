@@ -86,7 +86,7 @@ const faqs: FAQ[] = [
   {
     question: "How can I get started with TechSahayata?",
     answer:
-      "You can reach out via our website or email: contact@techsahayata.com. Once we understand your requirements, our team will schedule a consultation and provide a customized proposal.",
+      "You can reach out via our website or email: support@techsahayata.com. Once we understand your requirements, our team will schedule a consultation and provide a customized proposal.",
     icon: <Mail className="w-6 h-6 text-[#097899]" />,
   },
   {
