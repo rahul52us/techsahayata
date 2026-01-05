@@ -77,14 +77,13 @@ const Navbar: FC = () => {
         {/* Logo */}
         <Link href="/" className="flex items-center group relative z-50">
           <div className="relative overflow-hidden transition-transform duration-500 group-hover:scale-105">
-            <Image
-              src="https://res.cloudinary.com/dtlrp3fzu/image/upload/v1763011911/stick_website_assets/wtwjiyybu7odemnlu76z.png"
-              alt="TechSahayata Logo"
-              width={160}
-              height={45}
-              priority
-              className="object-contain"
-            />
+            <img
+            src="https://res.cloudinary.com/dtlrp3fzu/image/upload/v1763011911/stick_website_assets/wtwjiyybu7odemnlu76z.png"
+            alt="TechSahayata Logo"
+            width="145"
+            height="40"
+            className="object-contain transition-transform duration-300 group-hover:scale-110"
+          />
           </div>
         </Link>
 

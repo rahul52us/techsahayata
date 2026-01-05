@@ -170,7 +170,7 @@ export default function Home() {
 
             <h2 className="text-4xl md:text-6xl font-black text-slate-900 leading-[1.1] tracking-tight">
 
-              Templateless <span className="text-[#097899]">Document Extraction</span> Powered by Techsahayata.
+              AI-Powered  <span className="text-[#097899]">Web & Application</span> Solutions by Techsahayata.
 
             </h2>
 

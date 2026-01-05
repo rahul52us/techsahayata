@@ -260,7 +260,7 @@ export default function TermsPage() {
               </h2>
               <p>
                 <strong>Email:</strong>{" "}
-                <span className="text-[#33aed7]">support@techsahayata.com</span>
+                <span className="text-[#33aed7]">contact@techsahayata.com</span>
               </p>
               <p>
                 <strong>Website:</strong>{" "}
