@@ -139,7 +139,7 @@ export default function Home() {
 
   return (
     <main className="w-full">
-      <Header/>
+      <Header />
 
       {/* Value Props Section */}
       <section className="relative w-full py-24 overflow-hidden bg-gradient-to-b from-slate-50 to-white">
@@ -336,6 +336,10 @@ export default function Home() {
                 <img src="https://res.cloudinary.com/dtlrp3fzu/image/upload/v1767418988/karmaaurved_logo_olitpr.png" alt="Brand" width={180} height={64} className="w-28 sm:w-36 md:w-40 lg:w-44 h-auto object-contain" />
                 <img src="https://res.cloudinary.com/dtlrp3fzu/image/upload/v1767499670/vd_logo_rkpjnh.png" alt="Brand" width={180} height={64} className="w-28 sm:w-36 md:w-40 lg:w-44 h-auto object-contain" />
                 <img src="https://res.cloudinary.com/dtlrp3fzu/image/upload/v1763011913/stick_website_assets/uy3iw2ltfwvk8edwkiuu.png" alt="Brand" width={180} height={64} className="w-28 sm:w-36 md:w-40 lg:w-44 h-auto object-contain" />
+                <img src="https://res.cloudinary.com/dtlrp3fzu/image/upload/v1769393965/c1fdde2a-e7ce-4164-8eeb-a9ba04fb74af_o8f4fr.png" alt="Brand" width={180} height={64} className="w-28 sm:w-36 md:w-40 lg:w-44 h-auto object-contain" />
+                <img src="https://res.cloudinary.com/dtlrp3fzu/image/upload/v1769393962/logo_yxawve.jpg" alt="Brand" width={180} height={64} className="w-28 sm:w-36 md:w-40 lg:w-44 h-auto object-contain" />
+
+
               </div>
 
               <div className="flex items-center justify-around gap-6 sm:gap-10 lg:gap-12 shrink-0 w-full opacity-90">
@@ -345,6 +349,10 @@ export default function Home() {
                 <img src="https://res.cloudinary.com/dtlrp3fzu/image/upload/v1767499670/vd_logo_rkpjnh.png" alt="Brand" width={180} height={64} className="w-28 sm:w-36 md:w-40 lg:w-44 h-auto object-contain" />
                 <img src="https://res.cloudinary.com/dtlrp3fzu/image/upload/v1763011913/stick_website_assets/uy3iw2ltfwvk8edwkiuu.png" alt="Brand" width={180} height={64} className="w-28 sm:w-36 md:w-40 lg:w-44 h-auto object-contain" />
                 <img src="https://res.cloudinary.com/dtlrp3fzu/image/upload/v1763011913/stick_website_assets/uy3iw2ltfwvk8edwkiuu.png" alt="Brand" width={180} height={64} className="w-28 sm:w-36 md:w-40 lg:w-44 h-auto object-contain" />
+                <img src="https://res.cloudinary.com/dtlrp3fzu/image/upload/v1769393965/c1fdde2a-e7ce-4164-8eeb-a9ba04fb74af_o8f4fr.png" alt="Brand" width={180} height={64} className="w-28 sm:w-36 md:w-40 lg:w-44 h-auto object-contain" />
+                <img src="https://res.cloudinary.com/dtlrp3fzu/image/upload/v1769393962/logo_yxawve.jpg" alt="Brand" width={180} height={64} className="w-28 sm:w-36 md:w-40 lg:w-44 h-auto object-contain" />
+
+
               </div>
             </div>
           </div>
@@ -359,6 +367,10 @@ export default function Home() {
                 <img src="https://res.cloudinary.com/dtlrp3fzu/image/upload/v1767499670/vd_logo_rkpjnh.png" alt="Brand" width={180} height={64} className="w-28 sm:w-36 md:w-40 lg:w-44 h-auto object-contain" />
                 <img src="https://res.cloudinary.com/dtlrp3fzu/image/upload/v1763011913/stick_website_assets/uy3iw2ltfwvk8edwkiuu.png" alt="Brand" width={180} height={64} className="w-28 sm:w-36 md:w-40 lg:w-44 h-auto object-contain" />
                 <img src="https://res.cloudinary.com/dtlrp3fzu/image/upload/v1763011913/stick_website_assets/uy3iw2ltfwvk8edwkiuu.png" alt="Brand" width={180} height={64} className="w-28 sm:w-36 md:w-40 lg:w-44 h-auto object-contain" />
+                <img src="https://res.cloudinary.com/dtlrp3fzu/image/upload/v1769393965/c1fdde2a-e7ce-4164-8eeb-a9ba04fb74af_o8f4fr.png" alt="Brand" width={180} height={64} className="w-28 sm:w-36 md:w-40 lg:w-44 h-auto object-contain" />
+                <img src="https://res.cloudinary.com/dtlrp3fzu/image/upload/v1769393962/logo_yxawve.jpg" alt="Brand" width={180} height={64} className="w-28 sm:w-36 md:w-40 lg:w-44 h-auto object-contain" />
+
+
               </div>
 
               <div className="flex items-center justify-around gap-6 sm:gap-10 lg:gap-12 shrink-0 w-full opacity-90">
@@ -368,6 +380,10 @@ export default function Home() {
                 <img src="https://res.cloudinary.com/dtlrp3fzu/image/upload/v1767499670/vd_logo_rkpjnh.png" alt="Brand" width={180} height={64} className="w-28 sm:w-36 md:w-40 lg:w-44 h-auto object-contain" />
                 <img src="https://res.cloudinary.com/dtlrp3fzu/image/upload/v1763011913/stick_website_assets/uy3iw2ltfwvk8edwkiuu.png" alt="Brand" width={180} height={64} className="w-28 sm:w-36 md:w-40 lg:w-44 h-auto object-contain" />
                 <img src="https://res.cloudinary.com/dtlrp3fzu/image/upload/v1763011913/stick_website_assets/uy3iw2ltfwvk8edwkiuu.png" alt="Brand" width={180} height={64} className="w-28 sm:w-36 md:w-40 lg:w-44 h-auto object-contain" />
+                <img src="https://res.cloudinary.com/dtlrp3fzu/image/upload/v1769393965/c1fdde2a-e7ce-4164-8eeb-a9ba04fb74af_o8f4fr.png" alt="Brand" width={180} height={64} className="w-28 sm:w-36 md:w-40 lg:w-44 h-auto object-contain" />
+                <img src="https://res.cloudinary.com/dtlrp3fzu/image/upload/v1769393962/logo_yxawve.jpg" alt="Brand" width={180} height={64} className="w-28 sm:w-36 md:w-40 lg:w-44 h-auto object-contain" />
+
+
               </div>
             </div>
           </div>
@@ -388,278 +404,280 @@ export default function Home() {
 
 
 
-       <section className="relative w-full py-24 bg-[#fcfdfe] overflow-hidden font-sans">
-      {/* --- Smooth Aurora Background --- */}
-      <div className="absolute top-[-20%] left-[-10%] w-[800px] h-[800px] bg-[#097899]/10 rounded-full blur-[160px] animate-pulse pointer-events-none" />
-      <div className="absolute bottom-[-10%] right-[-5%] w-[600px] h-[600px] bg-[#097899]/5 rounded-full blur-[140px] pointer-events-none" />
+      <section className="relative w-full py-24 bg-[#fcfdfe] overflow-hidden font-sans">
+        {/* --- Smooth Aurora Background --- */}
+        <div className="absolute top-[-20%] left-[-10%] w-[800px] h-[800px] bg-[#097899]/10 rounded-full blur-[160px] animate-pulse pointer-events-none" />
+        <div className="absolute bottom-[-10%] right-[-5%] w-[600px] h-[600px] bg-[#097899]/5 rounded-full blur-[140px] pointer-events-none" />
 
-      {/* Floating Decorative Elements */}
-      <div className="absolute top-40 left-10 w-4 h-4 rounded-full border-2 border-[#097899]/20 animate-bounce" style={{ animationDuration: '4s' }} />
-      <div className="absolute top-80 right-20 w-8 h-8 rounded-full bg-gradient-to-tr from-[#097899]/10 to-transparent animate-pulse" />
+        {/* Floating Decorative Elements */}
+        <div className="absolute top-40 left-10 w-4 h-4 rounded-full border-2 border-[#097899]/20 animate-bounce" style={{ animationDuration: '4s' }} />
+        <div className="absolute top-80 right-20 w-8 h-8 rounded-full bg-gradient-to-tr from-[#097899]/10 to-transparent animate-pulse" />
 
-      <div className="relative container mx-auto px-6 lg:px-20">
-        
-        {/* --- Minimalist Header --- */}
-        <div className="relative z-10 max-w-4xl mb-24">
-          <div className="flex items-center gap-4 mb-6">
-            <span className="h-[2px] w-12 bg-[#097899]" />
-            <span className="text-sm font-bold tracking-widest text-[#097899] uppercase italic">Evolution in Motion</span>
+        <div className="relative container mx-auto px-6 lg:px-20">
+
+          {/* --- Minimalist Header --- */}
+          <div className="relative z-10 max-w-4xl mb-24">
+            <div className="flex items-center gap-4 mb-6">
+              <span className="h-[2px] w-12 bg-[#097899]" />
+              <span className="text-sm font-bold tracking-widest text-[#097899] uppercase italic">Evolution in Motion</span>
+            </div>
+
+            <h2 className="text-6xl md:text-7xl font-black text-slate-900 mb-8 tracking-tight">
+              Design <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#097899] to-[#40b1d1]">Emotion</span>,
+              <br />Deploy Intelligence.
+            </h2>
+            <p className="text-xl text-slate-500 max-w-2xl leading-relaxed">
+              We bridge the gap between cold logic and human intuition, creating digital experiences that don't just work—they <span className="text-slate-900 font-medium">resonate</span>.
+            </p>
           </div>
-          
-          <h2 className="text-6xl md:text-7xl font-black text-slate-900 mb-8 tracking-tight">
-            Design <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#097899] to-[#40b1d1]">Emotion</span>, 
-            <br />Deploy Intelligence.
-          </h2>
-          <p className="text-xl text-slate-500 max-w-2xl leading-relaxed">
-            We bridge the gap between cold logic and human intuition, creating digital experiences that don't just work—they <span className="text-slate-900 font-medium">resonate</span>.
-          </p>
-        </div>
 
-        {/* --- Unique Staggered Layout --- */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
-          
-          {/* Section 01: The Core */}
-          <div className="lg:col-span-7 group relative">
-            <div className="relative overflow-hidden rounded-[3rem] bg-white p-2 shadow-[0_40px_100px_-20px_rgba(9,120,153,0.12)] border border-white">
-              <div className="relative h-[450px] overflow-hidden rounded-[2.8rem] bg-slate-50 flex items-center justify-center">
-                {/* Floating Shadow beneath image */}
-                <div className="absolute bottom-10 w-1/2 h-8 bg-black/10 blur-2xl rounded-full scale-x-150 opacity-50 transition-transform group-hover:scale-x-110" />
-                <img
-                  src="https://res.cloudinary.com/dtlrp3fzu/image/upload/v1763011954/stick_website_assets/tk2iy5vz5qgxe0tjtx2f.png"
-                  alt="System Architecture"
-                  className="relative z-10 w-3/4 h-auto object-contain transition-transform duration-1000 ease-out group-hover:scale-110 group-hover:-rotate-2"
-                />
+          {/* --- Unique Staggered Layout --- */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+
+            {/* Section 01: The Core */}
+            <div className="lg:col-span-7 group relative">
+              <div className="relative overflow-hidden rounded-[3rem] bg-white p-2 shadow-[0_40px_100px_-20px_rgba(9,120,153,0.12)] border border-white">
+                <div className="relative h-[450px] overflow-hidden rounded-[2.8rem] bg-slate-50 flex items-center justify-center">
+                  {/* Floating Shadow beneath image */}
+                  <div className="absolute bottom-10 w-1/2 h-8 bg-black/10 blur-2xl rounded-full scale-x-150 opacity-50 transition-transform group-hover:scale-x-110" />
+                  <img
+                    src="https://res.cloudinary.com/dtlrp3fzu/image/upload/v1763011954/stick_website_assets/tk2iy5vz5qgxe0tjtx2f.png"
+                    alt="System Architecture"
+                    className="relative z-10 w-3/4 h-auto object-contain transition-transform duration-1000 ease-out group-hover:scale-110 group-hover:-rotate-2"
+                  />
+                </div>
               </div>
             </div>
-          </div>
 
-          <div className="lg:col-span-5">
-            <span className="text-8xl font-black text-slate-100 absolute -translate-y-20 -translate-x-10 select-none">01</span>
-            <div className="relative z-10">
-              <h3 className="text-4xl font-bold text-slate-900 mb-6 group-hover:text-[#097899] transition-colors">
-                The Architecture of <br /><span className="text-[#097899]">Possibility</span>
-              </h3>
-              <p className="text-lg text-slate-600 mb-8 leading-relaxed">
-                A robust mobile core isn't about code—it's about reliability. We build the silent engine that powers your boldest ideas with 99.9% uptime and zero friction.
-              </p>
-              <ul className="space-y-4">
-                {['Hyper-Reactive UI', 'Cloud-Native Scalability', 'Military-Grade Security'].map((item, i) => (
-                  <li key={i} className="flex items-center gap-3 text-slate-800 font-semibold">
-                    <span className="w-2 h-2 rounded-full bg-[#097899]" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-
-          {/* Section 02: The Brain (Reversed) */}
-          <div className="lg:col-span-5 order-last lg:order-none">
-            <span className="text-8xl font-black text-slate-100 absolute -translate-y-20 translate-x-40 select-none">02</span>
-            <div className="relative z-10">
-              <h3 className="text-4xl font-bold text-slate-900 mb-6">
-                Cognitive <br /><span className="text-[#097899]">Deep-Flow</span>
-              </h3>
-              <p className="text-lg text-slate-600 mb-8 leading-relaxed">
-                We integrate AI that learns from every tap. Your app becomes an evolving organism, predicting user needs before they even arise.
-              </p>
-              <button className="group flex items-center gap-4 text-[#097899] font-bold text-lg">
-                Explore Intelligence
-                <span className="w-12 h-12 rounded-full border border-[#097899]/20 flex items-center justify-center transition-all group-hover:bg-[#097899] group-hover:text-white group-hover:scale-110">
-                  →
-                </span>
-              </button>
-            </div>
-          </div>
-
-          <div className="lg:col-span-7 group relative">
-             <div className="relative overflow-hidden rounded-[3rem] bg-white p-2 shadow-[0_40px_100px_-20px_rgba(9,120,153,0.12)] border border-white">
-              <div className="relative h-[450px] overflow-hidden rounded-[2.8rem] bg-gradient-to-br from-[#097899]/5 to-transparent flex items-center justify-center">
-                <img
-                  src="https://res.cloudinary.com/dtlrp3fzu/image/upload/v1763011860/stick_website_assets/lknhnmkr5yf3qt2an0gv.png"
-                  alt="AI Impact"
-                  className="w-3/4 h-auto object-contain transition-transform duration-1000 ease-out group-hover:scale-105 group-hover:rotate-2"
-                />
+            <div className="lg:col-span-5">
+              <span className="text-8xl font-black text-slate-100 absolute -translate-y-20 -translate-x-10 select-none">01</span>
+              <div className="relative z-10">
+                <h3 className="text-4xl font-bold text-slate-900 mb-6 group-hover:text-[#097899] transition-colors">
+                  The Architecture of <br /><span className="text-[#097899]">Possibility</span>
+                </h3>
+                <p className="text-lg text-slate-600 mb-8 leading-relaxed">
+                  A robust mobile core isn't about code—it's about reliability. We build the silent engine that powers your boldest ideas with 99.9% uptime and zero friction.
+                </p>
+                <ul className="space-y-4">
+                  {['Hyper-Reactive UI', 'Cloud-Native Scalability', 'Military-Grade Security'].map((item, i) => (
+                    <li key={i} className="flex items-center gap-3 text-slate-800 font-semibold">
+                      <span className="w-2 h-2 rounded-full bg-[#097899]" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
-          </div>
-        </div>
 
-        {/* --- Lovable CTA Section --- */}
-        <div className="mt-40 text-center">
-          <div className="relative inline-block p-1 rounded-[2.5rem] bg-gradient-to-r from-[#097899]/20 via-[#40b1d1]/20 to-[#097899]/20">
-            <div className="bg-white rounded-[2.4rem] px-12 py-16 md:px-24">
-              <h3 className="text-4xl md:text-5xl font-black text-slate-900 mb-6">
-                Ready for a <span className="italic">Smarter</span> Start?
-              </h3>
-              <p className="text-slate-500 text-lg max-w-xl mx-auto mb-10">
-                Join 50+ visionary brands that transformed their mobile presence with our unified AI-ecosystem.
-              </p>
-              <div className="flex flex-wrap justify-center gap-6">
-                <button className="px-10 py-5 bg-[#097899] text-white font-bold rounded-2xl shadow-[0_20px_40px_-10px_rgba(9,120,153,0.5)] hover:bg-[#075d77] hover:-translate-y-1 transition-all active:scale-95">
-                  Begin the Journey
-                </button>
-                <button className="px-10 py-5 bg-slate-50 text-slate-900 font-bold rounded-2xl hover:bg-slate-100 transition-all border border-slate-200">
-                  Watch Showcase
+            {/* Section 02: The Brain (Reversed) */}
+            <div className="lg:col-span-5 order-last lg:order-none">
+              <span className="text-8xl font-black text-slate-100 absolute -translate-y-20 translate-x-40 select-none">02</span>
+              <div className="relative z-10">
+                <h3 className="text-4xl font-bold text-slate-900 mb-6">
+                  Cognitive <br /><span className="text-[#097899]">Deep-Flow</span>
+                </h3>
+                <p className="text-lg text-slate-600 mb-8 leading-relaxed">
+                  We integrate AI that learns from every tap. Your app becomes an evolving organism, predicting user needs before they even arise.
+                </p>
+                <button className="group flex items-center gap-4 text-[#097899] font-bold text-lg">
+                  Explore Intelligence
+                  <span className="w-12 h-12 rounded-full border border-[#097899]/20 flex items-center justify-center transition-all group-hover:bg-[#097899] group-hover:text-white group-hover:scale-110">
+                    →
+                  </span>
                 </button>
               </div>
             </div>
-          </div>
-        </div>
 
-      </div>
-    </section>
+            <div className="lg:col-span-7 group relative">
+              <div className="relative overflow-hidden rounded-[3rem] bg-white p-2 shadow-[0_40px_100px_-20px_rgba(9,120,153,0.12)] border border-white">
+                <div className="relative h-[450px] overflow-hidden rounded-[2.8rem] bg-gradient-to-br from-[#097899]/5 to-transparent flex items-center justify-center">
+                  <img
+                    src="https://res.cloudinary.com/dtlrp3fzu/image/upload/v1763011860/stick_website_assets/lknhnmkr5yf3qt2an0gv.png"
+                    alt="AI Impact"
+                    className="w-3/4 h-auto object-contain transition-transform duration-1000 ease-out group-hover:scale-105 group-hover:rotate-2"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* --- Lovable CTA Section --- */}
+          <div className="mt-40 text-center">
+            <div className="relative inline-block p-1 rounded-[2.5rem] bg-gradient-to-r from-[#097899]/20 via-[#40b1d1]/20 to-[#097899]/20">
+              <div className="bg-white rounded-[2.4rem] px-12 py-16 md:px-24">
+                <h3 className="text-4xl md:text-5xl font-black text-slate-900 mb-6">
+                  Ready for a <span className="italic">Smarter</span> Start?
+                </h3>
+                <p className="text-slate-500 text-lg max-w-xl mx-auto mb-10">
+                  Join 50+ visionary brands that transformed their mobile presence with our unified AI-ecosystem.
+                </p>
+                <div className="flex flex-wrap justify-center gap-6">
+                  <button className="px-10 py-5 bg-[#097899] text-white font-bold rounded-2xl shadow-[0_20px_40px_-10px_rgba(9,120,153,0.5)] hover:bg-[#075d77] hover:-translate-y-1 transition-all active:scale-95">
+                    Begin the Journey
+                  </button>
+                  <button className="px-10 py-5 bg-slate-50 text-slate-900 font-bold rounded-2xl hover:bg-slate-100 transition-all border border-slate-200">
+                    Watch Showcase
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
 
 
 
 
 
       {/* Intelligent Document Processing Section */}
-       <section className="relative w-full py-28 bg-white overflow-hidden font-sans">
+      <section className="relative w-full py-28 bg-white overflow-hidden font-sans">
 
-      {/* --- Aesthetic Atmosphere --- */}
+        {/* --- Aesthetic Atmosphere --- */}
 
-      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#097899]/5 rounded-full blur-[120px] pointer-events-none" />
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#097899]/5 rounded-full blur-[120px] pointer-events-none" />
 
-      <div className="absolute -bottom-24 -left-24 w-[600px] h-[600px] bg-[#097899]/10 rounded-full blur-[140px] pointer-events-none opacity-60" />
-
-
-
-      <div className="relative container mx-auto px-6 lg:px-20">
-
-        
-
-        {/* --- Header: Sophisticated & Centered --- */}
-
-        <div className="max-w-3xl mx-auto text-center mb-24">
-
-          <h2 className="text-5xl md:text-6xl font-black text-slate-900 mb-8 tracking-tight">
-
-            The <span className="text-[#097899]">Impact</span> of Intelligence
-
-          </h2>
-
-          <div className="w-24 h-1 bg-gradient-to-r from-transparent via-[#097899] to-transparent mx-auto mb-8" />
-
-          <p className="text-xl text-slate-500 leading-relaxed font-light">
-
-            Empower your organization with software that doesn't just process data—it <span className="text-slate-900 font-semibold italic">amplifies potential</span>.
-
-          </p>
-
-        </div>
+        <div className="absolute -bottom-24 -left-24 w-[600px] h-[600px] bg-[#097899]/10 rounded-full blur-[140px] pointer-events-none opacity-60" />
 
 
 
-        {/* --- Central Feature: The Glass Podium --- */}
+        <div className="relative container mx-auto px-6 lg:px-20">
 
-        <div className="relative z-10 group">
 
-          {/* Background decorative ring */}
 
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-5xl h-[400px] border border-[#097899]/10 rounded-[4rem] -rotate-2 group-hover:rotate-0 transition-transform duration-1000" />
+          {/* --- Header: Sophisticated & Centered --- */}
 
-          
+          <div className="max-w-3xl mx-auto text-center mb-24">
 
-          <div className="relative bg-white/40 backdrop-blur-2xl border border-white rounded-[3rem] shadow-[0_32px_120px_-20px_rgba(9,120,153,0.15)] p-8 md:p-16 overflow-hidden">
+            <h2 className="text-5xl md:text-6xl font-black text-slate-900 mb-8 tracking-tight">
 
-            <div className="flex flex-col lg:flex-row items-center gap-16">
+              The <span className="text-[#097899]">Impact</span> of Intelligence
 
-              
+            </h2>
 
-              {/* Left Side: Dynamic List */}
+            <div className="w-24 h-1 bg-gradient-to-r from-transparent via-[#097899] to-transparent mx-auto mb-8" />
 
-              <div className="flex-1 order-2 lg:order-1">
+            <p className="text-xl text-slate-500 leading-relaxed font-light">
 
-                <h3 className="text-4xl font-bold text-slate-900 mb-8 leading-tight">
+              Empower your organization with software that doesn't just process data—it <span className="text-slate-900 font-semibold italic">amplifies potential</span>.
 
-                  Smarter Processes. <br />
+            </p>
 
-                  <span className="text-[#097899]">Exponential Results.</span>
+          </div>
 
-                </h3>
 
-                
 
-                <div className="grid gap-6">
+          {/* --- Central Feature: The Glass Podium --- */}
 
-                  {[
+          <div className="relative z-10 group">
 
-                    { label: "Streamlined Data", color: "#097899" },
+            {/* Background decorative ring */}
 
-                    { label: "Predictive Automation", color: "#40b1d1" },
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-5xl h-[400px] border border-[#097899]/10 rounded-[4rem] -rotate-2 group-hover:rotate-0 transition-transform duration-1000" />
 
-                    { label: "AI-Driven Logic", color: "#097899" },
 
-                    { label: "Seamless Synergy", color: "#40b1d1" }
 
-                  ].map((item, idx) => (
+            <div className="relative bg-white/40 backdrop-blur-2xl border border-white rounded-[3rem] shadow-[0_32px_120px_-20px_rgba(9,120,153,0.15)] p-8 md:p-16 overflow-hidden">
 
-                    <div key={idx} className="flex items-center gap-4 group/item">
+              <div className="flex flex-col lg:flex-row items-center gap-16">
 
-                      <div 
 
-                        className="w-10 h-10 rounded-2xl flex items-center justify-center transition-all duration-300 shadow-sm border border-slate-100 group-hover/item:scale-110 group-hover/item:rotate-6"
 
-                        style={{ backgroundColor: `${item.color}10`, color: item.color }}
+                {/* Left Side: Dynamic List */}
 
-                      >
+                <div className="flex-1 order-2 lg:order-1">
 
-                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <h3 className="text-4xl font-bold text-slate-900 mb-8 leading-tight">
 
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7" />
+                    Smarter Processes. <br />
 
-                        </svg>
+                    <span className="text-[#097899]">Exponential Results.</span>
+
+                  </h3>
+
+
+
+                  <div className="grid gap-6">
+
+                    {[
+
+                      { label: "Streamlined Data", color: "#097899" },
+
+                      { label: "Predictive Automation", color: "#40b1d1" },
+
+                      { label: "AI-Driven Logic", color: "#097899" },
+
+                      { label: "Seamless Synergy", color: "#40b1d1" }
+
+                    ].map((item, idx) => (
+
+                      <div key={idx} className="flex items-center gap-4 group/item">
+
+                        <div
+
+                          className="w-10 h-10 rounded-2xl flex items-center justify-center transition-all duration-300 shadow-sm border border-slate-100 group-hover/item:scale-110 group-hover/item:rotate-6"
+
+                          style={{ backgroundColor: `${item.color}10`, color: item.color }}
+
+                        >
+
+                          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7" />
+
+                          </svg>
+
+                        </div>
+
+                        <span className="text-lg font-medium text-slate-700 group-hover/item:text-[#097899] transition-colors">
+
+                          {item.label}
+
+                        </span>
 
                       </div>
 
-                      <span className="text-lg font-medium text-slate-700 group-hover/item:text-[#097899] transition-colors">
+                    ))}
 
-                        {item.label}
-
-                      </span>
-
-                    </div>
-
-                  ))}
+                  </div>
 
                 </div>
 
-              </div>
+
+
+                {/* Right Side: The 3D Focus */}
+
+                <div className="flex-1 flex justify-center order-1 lg:order-2">
+
+                  <div className="relative">
+
+                    {/* Floating Elements around image */}
+
+                    <div className="absolute -top-6 -right-6 w-20 h-20 bg-[#097899]/10 rounded-full blur-xl animate-pulse" />
+
+                    <div className="absolute -bottom-10 -left-10 w-32 h-32 bg-[#40b1d1]/10 rounded-full blur-2xl animate-bounce" style={{ animationDuration: '6s' }} />
 
 
 
-              {/* Right Side: The 3D Focus */}
 
-              <div className="flex-1 flex justify-center order-1 lg:order-2">
 
-                <div className="relative">
+                    <img
 
-                  {/* Floating Elements around image */}
+                      src="https://res.cloudinary.com/dtlrp3fzu/image/upload/v1763011862/stick_website_assets/z3wmxmweewnzjmstmbod.png"
 
-                  <div className="absolute -top-6 -right-6 w-20 h-20 bg-[#097899]/10 rounded-full blur-xl animate-pulse" />
+                      alt="Digital Transformation"
 
-                  <div className="absolute -bottom-10 -left-10 w-32 h-32 bg-[#40b1d1]/10 rounded-full blur-2xl animate-bounce" style={{ animationDuration: '6s' }} />
+                      className="relative z-10 w-[380px] h-auto rounded-[2rem] transform transition-all duration-700 ease-out group-hover:scale-105 group-hover:-translate-y-2"
 
-                  
+                    />
 
-                  
 
-                  <img
 
-                    src="https://res.cloudinary.com/dtlrp3fzu/image/upload/v1763011862/stick_website_assets/z3wmxmweewnzjmstmbod.png"
+                    {/* Reflection/Shadow under image */}
 
-                    alt="Digital Transformation"
+                    <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-[80%] h-4 bg-slate-900/10 blur-xl rounded-[100%] opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
 
-                    className="relative z-10 w-[380px] h-auto rounded-[2rem] transform transition-all duration-700 ease-out group-hover:scale-105 group-hover:-translate-y-2"
-
-                  />
-
-                  
-
-                  {/* Reflection/Shadow under image */}
-
-                  <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-[80%] h-4 bg-slate-900/10 blur-xl rounded-[100%] opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                  </div>
 
                 </div>
 
@@ -669,91 +687,89 @@ export default function Home() {
 
           </div>
 
-        </div>
 
 
+          {/* --- Bottom Triptych: Minimalist Info Strips --- */}
 
-        {/* --- Bottom Triptych: Minimalist Info Strips --- */}
+          <div className="mt-24 grid md:grid-cols-3 gap-12">
 
-        <div className="mt-24 grid md:grid-cols-3 gap-12">
+            {[
 
-          {[
+              {
 
-            {
+                title: "Cognitive Insights",
 
-              title: "Cognitive Insights",
+                desc: "Convert raw numbers into strategic advantages with intelligent analytics.",
 
-              desc: "Convert raw numbers into strategic advantages with intelligent analytics.",
+                icon: "M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
 
-              icon: "M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
+              },
 
-            },
+              {
 
-            {
+                title: "Rapid Velocity",
 
-              title: "Rapid Velocity",
+                desc: "Shatter bottlenecks with automation pipelines that work while you sleep.",
 
-              desc: "Shatter bottlenecks with automation pipelines that work while you sleep.",
+                icon: "M13 10V3L4 14h7v7l9-11h-7z"
 
-              icon: "M13 10V3L4 14h7v7l9-11h-7z"
+              },
 
-            },
+              {
 
-            {
+                title: "Strategic Agility",
 
-              title: "Strategic Agility",
+                desc: "Build a tech stack that pivots as fast as the global market demands.",
 
-              desc: "Build a tech stack that pivots as fast as the global market demands.",
+                icon: "M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
 
-              icon: "M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
+              },
 
-            },
+            ].map((item, i) => (
 
-          ].map((item, i) => (
+              <div
 
-            <div
+                key={i}
 
-              key={i}
+                className="relative group p-4"
 
-              className="relative group p-4"
+              >
 
-            >
+                <div className="mb-6 w-14 h-14 rounded-2xl bg-slate-50 flex items-center justify-center text-[#097899] transition-all duration-500 group-hover:bg-[#097899] group-hover:text-white group-hover:scale-110 group-hover:shadow-lg">
 
-              <div className="mb-6 w-14 h-14 rounded-2xl bg-slate-50 flex items-center justify-center text-[#097899] transition-all duration-500 group-hover:bg-[#097899] group-hover:text-white group-hover:scale-110 group-hover:shadow-lg">
+                  <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 
-                <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d={item.icon} />
 
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d={item.icon} />
+                  </svg>
 
-                </svg>
+                </div>
+
+                <h4 className="text-2xl font-bold text-slate-800 mb-4 transition-colors group-hover:text-[#097899]">
+
+                  {item.title}
+
+                </h4>
+
+                <p className="text-slate-500 leading-relaxed font-light">
+
+                  {item.desc}
+
+                </p>
+
+                <div className="mt-6 w-0 h-0.5 bg-[#097899]/20 group-hover:w-full transition-all duration-700" />
 
               </div>
 
-              <h4 className="text-2xl font-bold text-slate-800 mb-4 transition-colors group-hover:text-[#097899]">
+            ))}
 
-                {item.title}
+          </div>
 
-              </h4>
 
-              <p className="text-slate-500 leading-relaxed font-light">
-
-                {item.desc}
-
-              </p>
-
-              <div className="mt-6 w-0 h-0.5 bg-[#097899]/20 group-hover:w-full transition-all duration-700" />
-
-            </div>
-
-          ))}
 
         </div>
 
-
-
-      </div>
-
-    </section>
+      </section>
 
       <section className="relative w-full py-24 bg-gradient-to-br from-[#e6f9ff] via-white to-[#f0fcff] overflow-hidden">
         {/* Animated Background Blobs */}
