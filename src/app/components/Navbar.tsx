@@ -1,5 +1,5 @@
 "use client";
-import Image from "next/image";
+
 import Link from "next/link";
 import { useState, FC, useRef } from "react";
 import {
@@ -12,7 +12,6 @@ import {
   PlayCircle,
   Info,
 } from "lucide-react";
-// using external Cloudinary URL directly in Image src
 
 const Navbar: FC = () => {
   const [isProductsOpen, setProductsOpen] = useState(false);
@@ -40,21 +39,16 @@ const Navbar: FC = () => {
     }
   };
 
-  // ✅ Main Navigation Links
   const navLinks = [
     { name: "Home", href: "/", icon: <Home size={18} /> },
     { name: "About Us", href: "/about", icon: <Info size={18} /> },
   ];
 
-  // ✅ Product Links
   const productsLinks = [
-    // { name: "OCR", href: "/products/ocr" },
     { name: "Websites", href: "/products/websites" },
     { name: "Applications", href: "/products/applications" },
-    // { name: "RPA Automation & AI Products", href: "/products/rpa-automation" },
   ];
 
-  // ✅ Company Links (without About Us)
   const companyLinks = [
     { name: "Contact Us", href: "/contact" },
     { name: "Privacy Policy", href: "/privacy" },
@@ -63,141 +57,161 @@ const Navbar: FC = () => {
   ];
 
   return (
-    <nav className="sticky top-0 z-50 w-full bg-white/90 backdrop-blur-md border-b border-gray-100 shadow-md transition-all duration-300 h-[85px]">
-      <div className="container mx-auto flex items-center justify-between px-10 h-full">
-        {/* Logo */}
-        <Link href="/" className="flex items-center group">
-          <img
-            src="https://res.cloudinary.com/dtlrp3fzu/image/upload/v1763011911/stick_website_assets/wtwjiyybu7odemnlu76z.png"
-            alt="TechSahayata Logo"
-            width="145"
-            height="40"
-            className="object-contain transition-transform duration-300 group-hover:scale-110"
-          />
+    <nav className="sticky top-0 z-50 w-full shadow-md bg-white">
+      <div className="flex h-[85px] w-full">
 
-        </Link>
+        {/* LEFT : Logo Section */}
+        <div className="flex items-center bg-white px-8 min-w-[240px] z-10">
+          <Link href="/" className="flex items-center">
+            <img
+              src="https://res.cloudinary.com/dtlrp3fzu/image/upload/v1763011911/stick_website_assets/wtwjiyybu7odemnlu76z.png"
+              alt="TechSahayata Logo"
+              width="145"
+              height="40"
+              className="object-contain"
+            />
+             <span className="mt-1 text-xs font-medium tracking-wider text-sky-400 drop-shadow-[0_0_6px_rgba(56,189,248,0.6)]">
+  Crafting Digital Love
+</span>
 
-        {/* Desktop Menu */}
-        <div className="hidden lg:flex items-center space-x-10 ml-auto">
-          {/* Main Links */}
-          {navLinks.map((link) => (
-            <Link
-              key={link.name}
-              href={link.href}
-              className="relative flex items-center gap-2 text-gray-800 hover:text-[#33aed7] font-semibold text-[16px] tracking-wide transition-all duration-200 group"
-            >
-              {link.icon}
-              {link.name}
-              <span className="absolute left-0 bottom-[-6px] w-0 h-[2px] bg-[#33aed7] rounded-full transition-all duration-300 group-hover:w-full"></span>
-            </Link>
-          ))}
 
-          {/* Products Dropdown */}
-          <div
-            className="relative"
-            onMouseEnter={() => handleMouseEnter("products")}
-            onMouseLeave={() => handleMouseLeave("products")}
-          >
-            <button className="flex items-center gap-2 text-gray-800 hover:text-[#33aed7] font-semibold text-[16px] tracking-wide transition-all duration-200 group">
-              <Package size={18} /> Products
-              <ChevronDown
-                size={16}
-                className={`transition-transform duration-200 ${isProductsOpen ? "rotate-180 text-[#33aed7]" : ""
-                  }`}
-              />
-            </button>
-            {isProductsOpen && (
-              <div className="absolute right-0 mt-3 w-56 rounded-xl bg-white/95 backdrop-blur-md shadow-xl border border-gray-100 py-2 z-20 animate-fadeIn">
-                {productsLinks.map((item) => (
-                  <Link
-                    key={item.name}
-                    href={item.href}
-                    className="block px-5 py-2.5 text-gray-700 hover:text-[#33aed7] hover:bg-[#e0f3f8] rounded-md font-medium transition-all"
-                  >
-                    {item.name}
-                  </Link>
-                ))}
-              </div>
-            )}
-          </div>
-
-          {/* Company Dropdown */}
-          <div
-            className="relative"
-            onMouseEnter={() => handleMouseEnter("company")}
-            onMouseLeave={() => handleMouseLeave("company")}
-          >
-            <button className="flex items-center gap-2 text-gray-800 hover:text-[#33aed7] font-semibold text-[16px] tracking-wide transition-all duration-200 group">
-              <Building2 size={18} /> Company
-              <ChevronDown
-                size={16}
-                className={`transition-transform duration-200 ${isCompanyOpen ? "rotate-180 text-[#33aed7]" : ""
-                  }`}
-              />
-            </button>
-            {isCompanyOpen && (
-              <div className="absolute right-0 mt-3 w-60 rounded-xl bg-white/95 backdrop-blur-md shadow-xl border border-gray-100 py-2 z-20 animate-fadeIn">
-                {companyLinks.map((item) => (
-                  <Link
-                    key={item.name}
-                    href={item.href}
-                    className="block px-5 py-2.5 text-gray-700 hover:text-[#33aed7] hover:bg-[#e0f3f8] rounded-md font-medium transition-all"
-                  >
-                    {item.name}
-                  </Link>
-                ))}
-              </div>
-            )}
-          </div>
-
-          {/* Request Demo Button */}
-          <Link
-            href="/contact"
-            className="flex items-center gap-2 rounded-full bg-gradient-to-r from-[#33aed7] to-[#2aa1c9] hover:from-[#2aa1c9] hover:to-[#1f91b5] px-6 py-3 font-semibold text-white shadow-md hover:shadow-lg transition-all duration-300"
-          >
-            <PlayCircle size={18} /> Request a Demo
           </Link>
         </div>
 
-        {/* Mobile Menu Toggle */}
-        <div className="lg:hidden flex items-center">
-          <button
-            onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}
-            className="p-2 rounded-lg border border-gray-300 text-gray-700 hover:bg-[#e0f3f8] hover:border-[#33aed7] transition-all duration-200"
-          >
-            {isMobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
-          </button>
-        </div>
-      </div>
+        {/* RIGHT : Menu Wrapper (NOT clipped) */}
+        <div className="relative flex flex-1 items-center justify-end">
 
-      {/* Mobile Menu */}
-      {isMobileMenuOpen && (
-        <div className="lg:hidden bg-white/95 backdrop-blur-md border-t border-gray-100 shadow-lg animate-fadeIn">
-          <div className="container mx-auto px-6 py-6 space-y-4">
-            {/* Main Links */}
+          {/* Fancy Blue Background (CLIPPED ONLY HERE) */}
+          <div
+            className="absolute inset-0 bg-[#87CEEB]"
+            style={{
+              clipPath: "polygon(40px 0, 100% 0, 100% 100%, 0 100%)",
+            }}
+          />
+
+          {/* Desktop Menu (NOT clipped) */}
+          <div className="relative z-10 hidden lg:flex items-center space-x-10 px-10">
+
             {navLinks.map((link) => (
               <Link
                 key={link.name}
                 href={link.href}
-                className="flex items-center gap-2 text-gray-800 hover:text-[#33aed7] text-[15px] font-semibold"
-                onClick={() => setMobileMenuOpen(false)}
+                className="flex items-center gap-2 font-semibold text-gray-900 hover:text-white"
               >
-                {link.icon} {link.name}
+                {link.icon}
+                {link.name}
               </Link>
             ))}
 
             {/* Products */}
-            <div>
-              <div className="flex items-center gap-2 text-gray-800 text-[15px] font-semibold mb-1">
+            <div
+              className="relative"
+              onMouseEnter={() => handleMouseEnter("products")}
+              onMouseLeave={() => handleMouseLeave("products")}
+            >
+              <button className="flex items-center gap-2 font-semibold text-gray-900 hover:text-white">
                 <Package size={18} /> Products
-              </div>
-              <div className="pl-6 space-y-2">
+                <ChevronDown
+                  size={16}
+                  className={`transition-transform ${
+                    isProductsOpen ? "rotate-180" : ""
+                  }`}
+                />
+              </button>
+
+              {isProductsOpen && (
+                <div className="absolute right-0 mt-3 w-56 rounded-lg bg-white shadow-xl border py-2 z-50">
+                  {productsLinks.map((item) => (
+                    <Link
+                      key={item.name}
+                      href={item.href}
+                      className="block px-5 py-2 text-gray-700 hover:bg-[#e0f3f8]"
+                    >
+                      {item.name}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            {/* Company */}
+            <div
+              className="relative"
+              onMouseEnter={() => handleMouseEnter("company")}
+              onMouseLeave={() => handleMouseLeave("company")}
+            >
+              <button className="flex items-center gap-2 font-semibold text-gray-900 hover:text-white">
+                <Building2 size={18} /> Company
+                <ChevronDown
+                  size={16}
+                  className={`transition-transform ${
+                    isCompanyOpen ? "rotate-180" : ""
+                  }`}
+                />
+              </button>
+
+              {isCompanyOpen && (
+                <div className="absolute right-0 mt-3 w-60 rounded-lg bg-white shadow-xl border py-2 z-50">
+                  {companyLinks.map((item) => (
+                    <Link
+                      key={item.name}
+                      href={item.href}
+                      className="block px-5 py-2 text-gray-700 hover:bg-[#e0f3f8]"
+                    >
+                      {item.name}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            {/* CTA */}
+            <Link
+              href="/contact"
+              className="flex items-center gap-2 rounded-full bg-white px-6 py-3 font-semibold text-[#2aa1c9] shadow hover:bg-gray-100"
+            >
+              <PlayCircle size={18} /> Request a Demo
+            </Link>
+          </div>
+
+          {/* Mobile Toggle */}
+          <div className="relative z-10 lg:hidden ml-auto px-4">
+            <button
+              onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}
+              className="p-2 rounded-lg bg-white border"
+            >
+              {isMobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {/* Mobile Drawer */}
+      {isMobileMenuOpen && (
+        <div className="lg:hidden bg-white border-t shadow-md">
+          <div className="flex flex-col px-6 py-6 space-y-5">
+
+            {navLinks.map((link) => (
+              <Link
+                key={link.name}
+                href={link.href}
+                onClick={() => setMobileMenuOpen(false)}
+                className="flex items-center gap-3 font-semibold text-gray-800"
+              >
+                {link.icon}
+                {link.name}
+              </Link>
+            ))}
+
+            <div>
+              <p className="font-semibold text-gray-700 mb-2">Products</p>
+              <div className="ml-4 space-y-2">
                 {productsLinks.map((item) => (
                   <Link
                     key={item.name}
                     href={item.href}
-                    className="block text-gray-600 hover:text-[#33aed7] text-sm"
                     onClick={() => setMobileMenuOpen(false)}
+                    className="block text-gray-600"
                   >
                     {item.name}
                   </Link>
@@ -205,18 +219,15 @@ const Navbar: FC = () => {
               </div>
             </div>
 
-            {/* Company */}
             <div>
-              <div className="flex items-center gap-2 text-gray-800 text-[15px] font-semibold mb-1">
-                <Building2 size={18} /> Company
-              </div>
-              <div className="pl-6 space-y-2">
+              <p className="font-semibold text-gray-700 mb-2">Company</p>
+              <div className="ml-4 space-y-2">
                 {companyLinks.map((item) => (
                   <Link
                     key={item.name}
                     href={item.href}
-                    className="block text-gray-600 hover:text-[#33aed7] text-sm"
                     onClick={() => setMobileMenuOpen(false)}
+                    className="block text-gray-600"
                   >
                     {item.name}
                   </Link>
@@ -224,16 +235,13 @@ const Navbar: FC = () => {
               </div>
             </div>
 
-            {/* Demo Button */}
-            <div className="pt-3">
-              <Link
-                href="/demo"
-                className="flex justify-center items-center gap-2 w-full rounded-full bg-gradient-to-r from-[#33aed7] to-[#2aa1c9] hover:from-[#2aa1c9] hover:to-[#1f91b5] px-5 py-2.5 font-semibold text-white shadow-md hover:shadow-lg transition-all duration-300"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                <PlayCircle size={18} /> Request a Demo
-              </Link>
-            </div>
+            <Link
+              href="/contact"
+              onClick={() => setMobileMenuOpen(false)}
+              className="mt-4 flex items-center justify-center gap-2 rounded-full bg-[#2aa1c9] px-6 py-3 text-white font-semibold"
+            >
+              <PlayCircle size={18} /> Request a Demo
+            </Link>
           </div>
         </div>
       )}
