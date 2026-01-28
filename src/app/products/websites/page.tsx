@@ -183,11 +183,6 @@ export default function Projects() {
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-20">
           <div className="relative">
             <h2 className="text-4xl md:text-5xl font-black text-[#002c3a] tracking-tight">Product Gallery</h2>
-            <motion.div 
-              initial={{ width: 0 }}
-              whileInView={{ width: "100%" }}
-              className="h-2 bg-[#097899] mt-2 rounded-full origin-left"
-            />
           </div>
           <p className="text-slate-500 font-medium mt-4 md:mt-0">
             Page <span className="text-[#097899] font-bold">{currentPage}</span> of {totalPages} — {projects.length} Total Projects

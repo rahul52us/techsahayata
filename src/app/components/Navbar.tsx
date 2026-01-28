@@ -1,7 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { useState, FC, useRef } from "react";
+import { usePathname } from "next/navigation"; 
+import { useState, FC, useRef, useEffect } from "react";
 import {
   ChevronDown,
   Menu,
@@ -17,9 +18,14 @@ const Navbar: FC = () => {
   const [isProductsOpen, setProductsOpen] = useState(false);
   const [isCompanyOpen, setCompanyOpen] = useState(false);
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
-
+  
+  const pathname = usePathname();
   const productsTimer = useRef<NodeJS.Timeout | null>(null);
   const companyTimer = useRef<NodeJS.Timeout | null>(null);
+
+  useEffect(() => {
+    setMobileMenuOpen(false);
+  }, [pathname]);
 
   const handleMouseEnter = (menu: "products" | "company") => {
     if (menu === "products") {
@@ -58,75 +64,63 @@ const Navbar: FC = () => {
 
   return (
     <nav className="sticky top-0 z-50 w-full shadow-md bg-white">
-      <div className="flex h-[85px] w-full">
-
-        {/* LEFT : Logo Section */}
-        <div className="flex items-center bg-white px-8 min-w-[240px] z-10">
-          <Link href="/" className="flex items-center">
+      <div className="flex h-[70px] md:h-[85px] w-full items-center">
+        
+        {/* LEFT SECTION: Logo & Slogan */}
+        <div className="flex items-center bg-white px-4 md:pl-8 md:pr-12 z-30 h-full relative">
+          <Link href="/" className="flex items-center gap-3 md:gap-4">
             <img
               src="https://res.cloudinary.com/dtlrp3fzu/image/upload/v1763011911/stick_website_assets/wtwjiyybu7odemnlu76z.png"
               alt="TechSahayata Logo"
-              width="145"
-              height="40"
-              className="object-contain"
+              className="object-contain w-[100px] md:w-[135px]"
             />
-             <span className="mt-1 text-xs font-medium tracking-wider text-sky-400 drop-shadow-[0_0_6px_rgba(56,189,248,0.6)]">
-  Crafting Digital Love
-</span>
-
-
+            <div className="h-5 w-[1px] bg-gray-200 hidden md:block" />
+            <span className="text-[9px] md:text-xs font-bold tracking-widest drop-shadow-[0_0_8px_rgba(9,120,153,0.3)] uppercase whitespace-nowrap" style={{ color: "#097899" }}>
+              Crafting Digital Love
+            </span>
           </Link>
+          
+          <div className="hidden md:block absolute top-0 -right-7 h-full w-14 bg-white z-[-1]" style={{ clipPath: 'polygon(0 0, 0% 100%, 100% 100%)' }} />
         </div>
 
-        {/* RIGHT : Menu Wrapper (NOT clipped) */}
-        <div className="relative flex flex-1 items-center justify-end">
-
-          {/* Fancy Blue Background (CLIPPED ONLY HERE) */}
+        {/* RIGHT SECTION: Navigation */}
+        <div className="relative flex flex-1 h-full items-center justify-end px-4 md:px-10">
           <div
-            className="absolute inset-0 bg-[#87CEEB]"
+            className="absolute inset-0 z-0"
             style={{
-              clipPath: "polygon(40px 0, 100% 0, 100% 100%, 0 100%)",
+              backgroundColor: "#097899",
+              clipPath: "polygon(0 0, 100% 0, 100% 100%, 30px 100%)",
             }}
           />
 
-          {/* Desktop Menu (NOT clipped) */}
-          <div className="relative z-10 hidden lg:flex items-center space-x-10 px-10">
-
+          {/* Desktop Menu */}
+          <div className="relative z-10 hidden lg:flex items-center space-x-6 xl:space-x-8">
             {navLinks.map((link) => (
               <Link
                 key={link.name}
                 href={link.href}
-                className="flex items-center gap-2 font-semibold text-gray-900 hover:text-white"
+                className="flex items-center gap-2 font-bold text-white hover:opacity-80 transition-all"
               >
                 {link.icon}
                 {link.name}
               </Link>
             ))}
 
-            {/* Products */}
-            <div
-              className="relative"
-              onMouseEnter={() => handleMouseEnter("products")}
+            {/* Products Dropdown */}
+            <div 
+              className="relative h-[85px] flex items-center" 
+              onMouseEnter={() => handleMouseEnter("products")} 
               onMouseLeave={() => handleMouseLeave("products")}
             >
-              <button className="flex items-center gap-2 font-semibold text-gray-900 hover:text-white">
+              <button className="flex items-center gap-2 font-bold text-white hover:opacity-80 transition-all">
                 <Package size={18} /> Products
-                <ChevronDown
-                  size={16}
-                  className={`transition-transform ${
-                    isProductsOpen ? "rotate-180" : ""
-                  }`}
-                />
+                <ChevronDown size={16} className={`transition-transform duration-200 ${isProductsOpen ? "rotate-180" : ""}`} />
               </button>
-
+              
               {isProductsOpen && (
-                <div className="absolute right-0 mt-3 w-56 rounded-lg bg-white shadow-xl border py-2 z-50">
+                <div className="absolute top-[75px] right-0 w-52 rounded-xl bg-white shadow-2xl border border-gray-100 py-2 z-[60] animate-in fade-in slide-in-from-top-2 duration-200">
                   {productsLinks.map((item) => (
-                    <Link
-                      key={item.name}
-                      href={item.href}
-                      className="block px-5 py-2 text-gray-700 hover:bg-[#e0f3f8]"
-                    >
+                    <Link key={item.name} href={item.href} className="block px-5 py-3 text-gray-700 font-semibold hover:bg-blue-50 hover:text-[#097899] transition-colors">
                       {item.name}
                     </Link>
                   ))}
@@ -134,30 +128,21 @@ const Navbar: FC = () => {
               )}
             </div>
 
-            {/* Company */}
-            <div
-              className="relative"
-              onMouseEnter={() => handleMouseEnter("company")}
+            {/* Company Dropdown */}
+            <div 
+              className="relative h-[85px] flex items-center" 
+              onMouseEnter={() => handleMouseEnter("company")} 
               onMouseLeave={() => handleMouseLeave("company")}
             >
-              <button className="flex items-center gap-2 font-semibold text-gray-900 hover:text-white">
+              <button className="flex items-center gap-2 font-bold text-white hover:opacity-80 transition-all">
                 <Building2 size={18} /> Company
-                <ChevronDown
-                  size={16}
-                  className={`transition-transform ${
-                    isCompanyOpen ? "rotate-180" : ""
-                  }`}
-                />
+                <ChevronDown size={16} className={`transition-transform duration-200 ${isCompanyOpen ? "rotate-180" : ""}`} />
               </button>
-
+              
               {isCompanyOpen && (
-                <div className="absolute right-0 mt-3 w-60 rounded-lg bg-white shadow-xl border py-2 z-50">
+                <div className="absolute top-[75px] right-0 w-52 rounded-xl bg-white shadow-2xl border border-gray-100 py-2 z-[60] animate-in fade-in slide-in-from-top-2 duration-200">
                   {companyLinks.map((item) => (
-                    <Link
-                      key={item.name}
-                      href={item.href}
-                      className="block px-5 py-2 text-gray-700 hover:bg-[#e0f3f8]"
-                    >
+                    <Link key={item.name} href={item.href} className="block px-5 py-3 text-gray-700 font-semibold hover:bg-blue-50 hover:text-[#097899] transition-colors">
                       {item.name}
                     </Link>
                   ))}
@@ -165,82 +150,76 @@ const Navbar: FC = () => {
               )}
             </div>
 
-            {/* CTA */}
             <Link
               href="/contact"
-              className="flex items-center gap-2 rounded-full bg-white px-6 py-3 font-semibold text-[#2aa1c9] shadow hover:bg-gray-100"
+              className="flex items-center gap-2 rounded-full bg-white px-6 py-2.5 font-bold shadow-md transition-all hover:-translate-y-0.5"
+              style={{ color: "#097899" }}
             >
-              <PlayCircle size={18} /> Request a Demo
+              <PlayCircle size={20} /> Request a Demo
             </Link>
           </div>
 
-          {/* Mobile Toggle */}
-          <div className="relative z-10 lg:hidden ml-auto px-4">
+          {/* Mobile Toggle Button */}
+          <div className="relative z-10 lg:hidden flex items-center">
             <button
               onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}
-              className="p-2 rounded-lg bg-white border"
+              className="p-2 rounded-lg bg-white/20 backdrop-blur-sm text-white border border-white/30 active:scale-90 transition-transform"
             >
-              {isMobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
+              {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
         </div>
       </div>
 
-      {/* Mobile Drawer */}
+      {/* Mobile Menu Drawer */}
       {isMobileMenuOpen && (
-        <div className="lg:hidden bg-white border-t shadow-md">
-          <div className="flex flex-col px-6 py-6 space-y-5">
-
+        <div className="lg:hidden bg-white border-t border-gray-100 shadow-2xl animate-in slide-in-from-top duration-300">
+          <div className="flex flex-col p-5 space-y-2">
             {navLinks.map((link) => (
               <Link
                 key={link.name}
                 href={link.href}
-                onClick={() => setMobileMenuOpen(false)}
-                className="flex items-center gap-3 font-semibold text-gray-800"
+                className="flex items-center gap-4 font-bold text-gray-700 p-4 rounded-xl hover:bg-blue-50"
               >
-                {link.icon}
+                <span style={{ color: "#097899" }}>{link.icon}</span>
                 {link.name}
               </Link>
             ))}
-
-            <div>
-              <p className="font-semibold text-gray-700 mb-2">Products</p>
-              <div className="ml-4 space-y-2">
-                {productsLinks.map((item) => (
-                  <Link
-                    key={item.name}
-                    href={item.href}
-                    onClick={() => setMobileMenuOpen(false)}
-                    className="block text-gray-600"
-                  >
-                    {item.name}
-                  </Link>
+            
+            {/* Products Section */}
+            <div className="pt-2">
+                <p className="px-4 text-[10px] font-black text-gray-400 uppercase tracking-widest">Products</p>
+                {productsLinks.map(l => (
+                    <Link 
+                      key={l.name} 
+                      href={l.href} 
+                      className="block p-4 font-bold text-gray-700 hover:text-[#097899]"
+                    >
+                      {l.name}
+                    </Link>
                 ))}
-              </div>
             </div>
-
-            <div>
-              <p className="font-semibold text-gray-700 mb-2">Company</p>
-              <div className="ml-4 space-y-2">
-                {companyLinks.map((item) => (
-                  <Link
-                    key={item.name}
-                    href={item.href}
-                    onClick={() => setMobileMenuOpen(false)}
-                    className="block text-gray-600"
-                  >
-                    {item.name}
-                  </Link>
+            
+            {/* More Section */}
+            <div className="pt-2">
+                <p className="px-4 text-[10px] font-black text-gray-400 uppercase tracking-widest">More</p>
+                {companyLinks.map(l => (
+                    <Link 
+                      key={l.name} 
+                      href={l.href} 
+                      className="block p-4 font-bold text-gray-700 hover:text-[#097899]"
+                    >
+                      {l.name}
+                    </Link>
                 ))}
-              </div>
             </div>
 
             <Link
               href="/contact"
-              onClick={() => setMobileMenuOpen(false)}
-              className="mt-4 flex items-center justify-center gap-2 rounded-full bg-[#2aa1c9] px-6 py-3 text-white font-semibold"
+              className="mt-4 flex items-center justify-center gap-2 rounded-xl p-4 text-white font-bold shadow-lg"
+              style={{ backgroundColor: "#097899" }}
             >
-              <PlayCircle size={18} /> Request a Demo
+              <PlayCircle size={22} /> Request a Demo
             </Link>
           </div>
         </div>
