@@ -63,8 +63,8 @@ const Navbar: FC = () => {
   ];
 
   return (
-    <nav className="sticky top-0 z-50 w-full shadow-md bg-white">
-      <div className="flex h-[70px] md:h-[85px] w-full items-center">
+        <nav className="fixed top-0 left-0 right-0 z-[100] w-full shadow-md bg-white">
+        <div className="flex h-[70px] md:h-[85px] w-full items-center">
         
         {/* LEFT SECTION: Logo & Slogan */}
         <div className="flex items-center bg-white px-4 md:pl-8 md:pr-12 z-30 h-full relative">
