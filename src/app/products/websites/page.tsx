@@ -98,7 +98,7 @@ const projects: Project[] = [
 export default function Projects() {
   const { scrollYProgress } = useScroll();
   const heroOpacity = useTransform(scrollYProgress, [0, 0.3], [1, 0]);
-  const heroScale = useTransform(scrollYProgress, [0, 0.3], [1, 1.1]);
+  const heroScale = useTransform(scrollYProgress, [0, 0.3], [1, 1.05]);
 
   // Pagination State
   const [currentPage, setCurrentPage] = useState(1);
@@ -114,204 +114,191 @@ export default function Projects() {
   };
 
   return (
-    <main className="bg-[#f3fafc] font-sans selection:bg-[#097899] selection:text-white overflow-x-hidden">
+    <main className="bg-[#f8fdff] font-sans selection:bg-[#097899] selection:text-white overflow-x-hidden">
       
       {/* --- PREMIUM HERO SECTION --- */}
-      <section className="relative w-full h-[90vh] flex items-center justify-center overflow-hidden bg-[#002c3a]">
+      <section className="relative w-full h-[85vh] flex items-center justify-center overflow-hidden bg-[#001a24]">
         <motion.div style={{ opacity: heroOpacity, scale: heroScale }} className="absolute inset-0 z-0">
           <img
             src="https://res.cloudinary.com/dtlrp3fzu/image/upload/v1762963740/webhero_zqqnmi.jpg"
             alt="Web Hero"
-            className="w-full h-full object-cover opacity-40"
+            className="w-full h-full object-cover opacity-30 brightness-110"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#002c3a]/50 to-[#f3fafc]" />
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#001a24]/80 to-[#f8fdff]" />
         </motion.div>
 
         <div className="relative z-10 text-center px-6 max-w-5xl">
           <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-[#097899]/20 border border-[#097899]/30 text-[#67e2ff] text-xs font-bold tracking-[0.2em] uppercase mb-8 backdrop-blur-md"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-[#67e2ff] text-[10px] font-black tracking-[0.3em] uppercase mb-8 backdrop-blur-xl shadow-2xl"
           >
-            <Sparkles size={14} className="animate-pulse" /> Precision Crafted
+            <Sparkles size={12} className="text-[#097899]" /> Future of Web
           </motion.div>
           
           <motion.h1 
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-6xl md:text-8xl font-black text-white mb-6 tracking-tighter"
+            className="text-5xl md:text-8xl font-black text-white mb-6 tracking-tight"
           >
-            Our Web <span className="text-[#097899]">Solutions</span>
+            Built for <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#097899] to-[#67e2ff]">Performance.</span>
           </motion.h1>
           
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="text-lg md:text-2xl text-slate-200 font-light max-w-2xl mx-auto leading-relaxed mb-12"
+            className="text-base md:text-xl text-slate-400 font-medium max-w-2xl mx-auto leading-relaxed mb-10"
           >
-            Preserving legacy data while building future-proof experiences. Explore our modern ecosystem of web products.
+            We don't just build websites; we engineer digital ecosystems that convert visitors into loyal advocates.
           </motion.p>
           
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center"
           >
             <button
               onClick={scrollToProjects}
-              className="bg-[#097899] hover:bg-[#0b89ad] text-white px-10 py-4 rounded-full font-bold shadow-xl transition-all flex items-center gap-2 group"
+              className="group relative bg-[#097899] text-white px-12 py-4 rounded-full font-bold transition-all hover:shadow-[0_0_30px_rgba(9,120,153,0.4)]"
             >
-              View Portfolio <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
+              <span className="relative z-10 flex items-center gap-2">
+                Explore Gallery <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+              </span>
             </button>
           </motion.div>
         </div>
 
         <motion.div 
-          animate={{ y: [0, 10, 0] }}
-          transition={{ repeat: Infinity, duration: 2 }}
-          className="absolute bottom-10 flex flex-col items-center text-white/40"
+          animate={{ y: [0, 8, 0] }}
+          transition={{ repeat: Infinity, duration: 2.5 }}
+          className="absolute bottom-10 text-white/20"
         >
-          <MousePointer2 size={24} />
-          <span className="text-[10px] uppercase tracking-widest mt-2">Scroll</span>
+          <MousePointer2 size={20} />
         </motion.div>
       </section>
 
       {/* --- PROJECTS GRID --- */}
-      <section id="projects" className="py-24 px-6 md:px-12 max-w-[1400px] mx-auto min-h-screen">
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-20">
-          <div className="relative">
-            <h2 className="text-4xl md:text-5xl font-black text-[#002c3a] tracking-tight">Product Gallery</h2>
+      <section id="projects" className="py-24 px-6 md:px-12 max-w-[1300px] mx-auto min-h-screen">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+          <div className="space-y-2">
+            <h2 className="text-4xl md:text-5xl font-black text-[#002c3a] tracking-tighter">Web Works</h2>
+            <div className="h-1.5 w-20 bg-[#097899] rounded-full" />
           </div>
-          <p className="text-slate-500 font-medium mt-4 md:mt-0">
-            Page <span className="text-[#097899] font-bold">{currentPage}</span> of {totalPages} — {projects.length} Total Projects
-          </p>
+          <div className="px-5 py-2 rounded-xl bg-white shadow-sm border border-slate-100">
+            <p className="text-xs font-bold text-slate-400 uppercase tracking-widest">
+              Showing <span className="text-[#097899]">{indexOfFirstProject + 1}-{Math.min(indexOfLastProject, projects.length)}</span> of {projects.length}
+            </p>
+          </div>
         </div>
 
-        {/* Paginated Grid with Transitions */}
-        <motion.div 
-          layout
-          className="grid md:grid-cols-2 lg:grid-cols-3 gap-12"
-        >
+        {/* The Pretty Grid */}
+        <motion.div layout className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <AnimatePresence mode="wait">
             {currentProjects.map((project, index) => (
               <motion.div
                 key={project.title}
-                layout
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.9 }}
-                transition={{ duration: 0.4, delay: index * 0.05 }}
-                className="group relative bg-white rounded-[2rem] overflow-hidden shadow-[0_15px_50px_-15px_rgba(9,120,153,0.1)] hover:shadow-[0_30px_70px_-10px_rgba(9,120,153,0.2)] transition-all duration-500 flex flex-col border border-slate-100"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, scale: 0.95 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="group relative h-[480px] w-full"
               >
-                {/* Media Container */}
-                <div className="relative h-64 overflow-hidden bg-slate-200">
-                  {project.video ? (
-                    <video
-                      src={project.video}
-                      autoPlay loop muted playsInline
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                    />
-                  ) : (
-                    <img
-                      src={project.image!}
-                      alt={project.title}
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                    />
-                  )}
+                {/* Background Shadow Effect */}
+                <div className="absolute inset-4 bg-[#097899]/20 blur-[40px] rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                
+                <div className="relative h-full w-full bg-white rounded-[2.5rem] border border-slate-100 overflow-hidden flex flex-col transition-all duration-500 group-hover:-translate-y-2 group-hover:border-[#097899]/30">
                   
-                  <div className="absolute inset-0 bg-[#097899]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
-                  
-                  <div className="absolute top-5 right-5 z-10">
-                    <div className="w-12 h-12 rounded-2xl bg-white/90 backdrop-blur-sm flex items-center justify-center shadow-lg text-[#097899] transition-all duration-500 group-hover:bg-[#097899] group-hover:text-white group-hover:rotate-12">
-                      {project.video ? <PlayCircle size={24} /> : <Globe size={24} />}
+                  {/* Media Header */}
+                  <div className="relative h-1/2 overflow-hidden">
+                    <div className="absolute top-4 left-4 z-20 flex gap-2">
+                      <span className="px-3 py-1 rounded-full bg-white/90 backdrop-blur-md text-[10px] font-black uppercase tracking-tighter text-[#097899] shadow-sm">
+                        {project.video ? "Dynamic" : "Live View"}
+                      </span>
                     </div>
-                  </div>
-                </div>
 
-                {/* Content Container */}
-                <div className="p-8 flex flex-col flex-grow">
-                  <h3 className="text-2xl font-bold text-[#002c3a] mb-3 group-hover:text-[#097899] transition-colors">
-                    {project.title}
-                  </h3>
-                  <p className="text-slate-500 text-sm leading-relaxed mb-10 flex-grow">
-                    {project.description}
-                  </p>
-                  
-                  <motion.a
-                    href={project.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    whileHover={{ y: -2 }}
-                    whileTap={{ scale: 0.98 }}
-                    className="inline-flex items-center justify-between w-full p-5 rounded-2xl bg-[#f3fafc] text-[#097899] font-black text-xs uppercase tracking-widest hover:bg-[#097899] hover:text-white transition-all duration-300 shadow-sm"
-                  >
-                    Project Demo
-                    <ExternalLink size={16} />
-                  </motion.a>
+                    {project.video ? (
+                      <video
+                        src={project.video}
+                        autoPlay loop muted playsInline
+                        className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+                      />
+                    ) : (
+                      <img
+                        src={project.image!}
+                        alt={project.title}
+                        className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+                      />
+                    )}
+                    
+                    {/* Dark Overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  </div>
+
+                  {/* Body Content */}
+                  <div className="p-8 flex flex-col justify-between flex-grow">
+                    <div>
+                      <h3 className="text-xl font-black text-[#002c3a] mb-2 leading-tight group-hover:text-[#097899] transition-colors">
+                        {project.title}
+                      </h3>
+                      <p className="text-sm text-slate-500 font-medium leading-relaxed line-clamp-3">
+                        {project.description}
+                      </p>
+                    </div>
+
+                    <motion.a
+                      href={project.link}
+                      target="_blank"
+                      className="mt-6 flex items-center justify-center gap-3 w-full py-4 rounded-2xl bg-[#f0f9ff] text-[#097899] font-bold text-xs uppercase tracking-widest transition-all hover:bg-[#097899] hover:text-white"
+                    >
+                      Experience Demo <ExternalLink size={14} />
+                    </motion.a>
+                  </div>
                 </div>
               </motion.div>
             ))}
           </AnimatePresence>
         </motion.div>
 
-        {/* --- BEAUTIFUL PAGINATION --- */}
-        <div className="mt-20 flex justify-center">
-          <div className="flex items-center gap-3 bg-white/80 backdrop-blur-md p-3 rounded-[2rem] shadow-xl border border-slate-200/50">
-            {/* Prev Button */}
+        {/* --- MINIMALIST PAGINATION --- */}
+        <div className="mt-24 flex justify-center">
+          <nav className="flex items-center gap-4 p-2 bg-white rounded-2xl border border-slate-100 shadow-xl shadow-[#097899]/5">
             <button
-              onClick={() => {
-                setCurrentPage(prev => Math.max(prev - 1, 1));
-                scrollToProjects();
-              }}
+              onClick={() => { setCurrentPage(p => Math.max(p - 1, 1)); scrollToProjects(); }}
               disabled={currentPage === 1}
-              className="p-3 rounded-full hover:bg-slate-100 disabled:opacity-20 transition-all text-[#002c3a]"
+              className="p-3 rounded-xl hover:bg-slate-50 disabled:opacity-20 transition-all"
             >
-              <ChevronLeft size={20} />
+              <ChevronLeft size={20} className="text-[#097899]" />
             </button>
 
-            {/* Page Numbers */}
-            <div className="flex gap-2">
-              {Array.from({ length: totalPages }, (_, i) => i + 1).map((pageNum) => (
+            <div className="flex gap-1">
+              {Array.from({ length: totalPages }, (_, i) => i + 1).map((num) => (
                 <button
-                  key={pageNum}
-                  onClick={() => {
-                    setCurrentPage(pageNum);
-                    scrollToProjects();
-                  }}
-                  className="relative w-12 h-12 flex items-center justify-center text-sm font-black transition-colors duration-300"
+                  key={num}
+                  onClick={() => { setCurrentPage(num); scrollToProjects(); }}
+                  className={`w-10 h-10 rounded-xl text-xs font-black transition-all ${
+                    currentPage === num 
+                    ? 'bg-[#097899] text-white shadow-lg shadow-[#097899]/30 scale-110' 
+                    : 'text-slate-400 hover:bg-slate-50'
+                  }`}
                 >
-                  <span className={`relative z-10 ${currentPage === pageNum ? 'text-white' : 'text-slate-400 hover:text-[#097899]'}`}>
-                    {pageNum}
-                  </span>
-                  {currentPage === pageNum && (
-                    <motion.div
-                      layoutId="activeBubble"
-                      className="absolute inset-0 bg-[#097899] rounded-2xl shadow-lg shadow-[#097899]/30"
-                      transition={{ type: "spring", bounce: 0.3, duration: 0.6 }}
-                    />
-                  )}
+                  {num}
                 </button>
               ))}
             </div>
 
-            {/* Next Button */}
             <button
-              onClick={() => {
-                setCurrentPage(prev => Math.min(prev + 1, totalPages));
-                scrollToProjects();
-              }}
+              onClick={() => { setCurrentPage(p => Math.min(p + 1, totalPages)); scrollToProjects(); }}
               disabled={currentPage === totalPages}
-              className="p-3 rounded-full hover:bg-slate-100 disabled:opacity-20 transition-all text-[#002c3a]"
+              className="p-3 rounded-xl hover:bg-slate-50 disabled:opacity-20 transition-all"
             >
-              <ChevronRight size={20} />
+              <ChevronRight size={20} className="text-[#097899]" />
             </button>
-          </div>
+          </nav>
         </div>
-      </section>      
-
-      <div className="h-10" />
+      </section>
+      
+      <div className="h-20" />
     </main>
   );
 }
