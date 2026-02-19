@@ -24,13 +24,13 @@ const Footer: React.FC = () => {
 
       <div className="max-w-screen-xl mx-auto px-6">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 items-start border-b border-white/5 pb-8">
-          
+
           {/* Column 1: Brand & Logo */}
           <div className="space-y-4">
             <Link href="/" className="group inline-block">
-              <img 
-                src="https://res.cloudinary.com/dtlrp3fzu/image/upload/v1763011911/stick_website_assets/wtwjiyybu7odemnlu76z.png" 
-                alt="TechSahayata Logo" 
+              <img
+                src="https://res.cloudinary.com/dtlrp3fzu/image/upload/v1763011911/stick_website_assets/wtwjiyybu7odemnlu76z.png"
+                alt="TechSahayata Logo"
                 className="h-7 w-auto object-contain opacity-70 brightness-90 group-hover:opacity-100 group-hover:brightness-110 group-hover:drop-shadow-[0_0_8px_rgba(9,120,153,0.5)] transition-all duration-500"
               />
             </Link>
@@ -88,11 +88,11 @@ const Footer: React.FC = () => {
               </div>
               Contact Us
             </Link>
-            <a href="tel:+919977053447" className="group flex items-center gap-3 text-[13px] text-gray-400 hover:text-white transition-all">
+            <a href="tel:+8305487970" className="group flex items-center gap-3 text-[13px] text-gray-400 hover:text-white transition-all">
               <div className="p-1.5 rounded-md bg-white/5 border border-white/10 group-hover:border-[#097899]/50 transition-all">
                 <Phone size={12} className="text-[#097899]" />
               </div>
-              +91-9977053447
+              +91-8305487970
             </a>
             <a href="mailto:support@techsahayata.com" className="group flex items-center gap-3 text-[13px] text-gray-400 hover:text-white transition-all">
               <div className="p-1.5 rounded-md bg-white/5 border border-white/10 group-hover:border-[#097899]/50 transition-all">

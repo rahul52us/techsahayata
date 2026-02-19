@@ -1,11 +1,11 @@
 "use client";
 import { useState } from "react";
-import { 
-  Send, 
-  MapPin, 
-  Phone, 
-  Mail, 
-  Clock, 
+import {
+  Send,
+  MapPin,
+  Phone,
+  Mail,
+  Clock,
   Sparkles,
   ArrowRight
 } from "lucide-react";
@@ -60,7 +60,7 @@ export default function ContactPage() {
       {/* Main Content Area */}
       <section className="container mx-auto px-6 lg:px-12 pb-24 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-          
+
           {/* Left Side: Information Cards (The Bento Column) */}
           <div className="lg:col-span-5 space-y-6">
             {/* Info Card */}
@@ -69,11 +69,11 @@ export default function ContactPage() {
                 <span className="w-1.5 h-8 bg-[#097899] rounded-full"></span>
                 Get in Touch
               </h3>
-              
+
               <div className="space-y-8">
                 {[
-                  { icon: <MapPin size={20} />, label: "Address", val: "123 Business District, Tech City, TC 12345" },
-                  { icon: <Phone size={20} />, label: "Phone", val: "9977053447" },
+                  { icon: <MapPin size={20} />, label: "Address", val: "City Center, Gwalior, Madhya pradesh" },
+                  { icon: <Phone size={20} />, label: "Phone", val: "8305487970" },
                   { icon: <Mail size={20} />, label: "Email", val: "support@techsahayata.com" }
                 ].map((item, i) => (
                   <div key={i} className="flex items-center gap-5 group/item">
@@ -119,7 +119,7 @@ export default function ContactPage() {
               <div className="absolute top-0 right-0 p-8 text-[#097899]/10">
                 <Send size={120} />
               </div>
-              
+
               <div className="relative z-10">
                 <h2 className="text-3xl font-black text-gray-900 mb-2">Send us a Message</h2>
                 <p className="text-gray-500 mb-10">We usually respond within 2-4 business hours.</p>
