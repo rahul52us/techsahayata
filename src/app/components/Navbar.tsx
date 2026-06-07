@@ -47,6 +47,8 @@ const Navbar: FC = () => {
 
   const navLinks = [
     { name: "Home", href: "/", icon: <Home size={18} /> },
+    { name: "Blogs", href: "/blog", icon: <Package size={18} /> },
+    { name: "Testimonials", href: "/testimonials", icon: <Building2 size={18} /> },
     { name: "About Us", href: "/about", icon: <Info size={18} /> },
   ];
 
@@ -153,11 +155,11 @@ const Navbar: FC = () => {
               </div>
 
               <Link
-                href="/contact"
+                href="/login"
                 className="flex items-center gap-2 rounded-full bg-white px-6 py-2.5 font-bold shadow-md transition-all hover:-translate-y-0.5"
                 style={{ color: "#097899" }}
               >
-                <PlayCircle size={20} /> Request a Demo
+                <PlayCircle size={20} /> Admin Login
               </Link>
             </div>
 
@@ -215,11 +217,11 @@ const Navbar: FC = () => {
               </div>
 
               <Link
-                href="/contact"
+                href="/login"
                 className="mt-4 flex items-center justify-center gap-2 rounded-xl p-4 text-white font-bold shadow-lg"
                 style={{ backgroundColor: "#097899" }}
               >
-                <PlayCircle size={22} /> Request a Demo
+                <PlayCircle size={22} /> Admin Login
               </Link>
             </div>
           </div>
