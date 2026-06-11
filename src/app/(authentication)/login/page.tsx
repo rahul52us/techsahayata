@@ -15,15 +15,15 @@ import {
 import Link from "next/link";
 import { useState } from "react";
 import { FcGoogle } from "react-icons/fc";
-import CustomButton from "../../component/common/CustomButton/CustomButton";
 import { observer } from "mobx-react-lite";
+import { useRouter } from "next/navigation";
 import stores from "../../store/stores";
+import CustomButton from "@/component/common/CustomButton/CustomButton";
 
 const Login = observer(() => {
-  const {
-    auth: { login, openNotification },
-  } = stores;
-  const [formData, setFormData] = useState({ username: "", password: "", loginType: "username" });
+  const {auth : {login, openNotification}} = stores
+  const router = useRouter();
+  const [formData, setFormData] = useState({ username: "", password: "", loginType : 'username' });
   const [isLoading, setIsLoading] = useState(false);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -31,34 +31,23 @@ const Login = observer(() => {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
 
     try {
-      const form = e.currentTarget;
-      const usernameInput = form.elements.namedItem("username") as HTMLInputElement;
-      const passwordInput = form.elements.namedItem("password") as HTMLInputElement;
-
-      const submissionData = {
-        username: usernameInput.value || formData.username,
-        password: passwordInput.value || formData.password,
-        loginType: formData.loginType
-      };
-
-      const response: any = await login(submissionData);
+      const response: any = await login(formData);
       openNotification({
         title: "Login Successful",
-        message: `${response.message}!`,
+        message: `${response?.message || "Welcome back"}!`,
         type: "success",
         duration: 3000,
       });
-
-      window.location.assign("/dashboard");
+      router.push("/dashboard");
     } catch (error: any) {
       openNotification({
         title: "Login Failed",
-        message: error.response?.data?.message || error.response?.message || "Invalid credentials",
+        message: error.response?.message || "Invalid credentials",
         type: "error",
       });
     } finally {
@@ -138,7 +127,7 @@ const Login = observer(() => {
         </form>
 
         <Text mt={8} textAlign="center" color={"brand.1000"}>
-          Don&apos;t have an account?{" "}
+          Don’t have an account?{" "}
           <Link href="/register" style={{ color: "#065F68", textDecoration: "none" }}>
             Sign up
           </Link>

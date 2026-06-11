@@ -3,201 +3,135 @@
 import {
   Box,
   Button,
-  Checkbox,
   Flex,
-  FormControl,
-  FormLabel,
   Heading,
+  Icon,
   IconButton,
-  Input,
   SimpleGrid,
+  Stat,
+  StatLabel,
+  StatNumber,
   Spinner,
-  Text,
-  Textarea,
+  useBreakpointValue,
 } from "@chakra-ui/react";
-import { FaHome, FaPlus } from "react-icons/fa";
 import { observer } from "mobx-react-lite";
+import { FaBlog, FaPlus, FaProjectDiagram, FaTasks, FaEyeSlash } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-import stores from "../../../store/stores";
+import stores from "../../store/stores";
+import BlogsLayout from "./BlogsLayout";
 
-const initialForm = {
-  title: "",
-  excerpt: "",
-  content: "",
-  coverImageUrl: "",
-  published: true,
-};
+interface BlogCounts {
+  privateBlogs: number;
+  publicBlogs: number;
+  deletedBlogs: number;
+}
 
 const BlogIndex = observer(() => {
+  const [loading, setLoading] = useState<boolean>(false);
+  const [countData, setCountData] = useState<BlogCounts>({
+    privateBlogs: 0,
+    publicBlogs: 0,
+    deletedBlogs: 0,
+  });
+
   const {
-    BlogStore: { blogs, getBlogs, createBlog, updateBlog, deleteBlog },
+    BlogStore: { getBlogs },
   } = stores;
+
   const router = useRouter();
-  const [loading, setLoading] = useState(false);
-  const [saving, setSaving] = useState(false);
-  const [error, setError] = useState("");
-  const [editingId, setEditingId] = useState("");
-  const [formData, setFormData] = useState(initialForm);
+  const showIconOnly = useBreakpointValue({ base: true, md: false });
 
   useEffect(() => {
     setLoading(true);
-    getBlogs(true)
-      .catch((err: any) => setError(err?.message || "Unable to load blogs"))
-      .finally(() => setLoading(false));
+    getBlogs(true).finally(() => setLoading(false));
   }, [getBlogs]);
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLInputElement>) => {
-    const { name, value, type, checked } = e.target as HTMLInputElement;
-    setFormData({ ...formData, [name]: type === "checkbox" ? checked : value });
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setSaving(true);
-    setError("");
-
-    try {
-      if (editingId) {
-        await updateBlog(editingId, formData);
-      } else {
-        await createBlog(formData);
-      }
-      await getBlogs(true);
-      setFormData(initialForm);
-      setEditingId("");
-    } catch (err: any) {
-      setError(err?.message || "Unable to save blog");
-    } finally {
-      setSaving(false);
-    }
-  };
+  const summaryData = [
+    {
+      label: "Public Blogs",
+      value: countData?.publicBlogs,
+      icon: FaProjectDiagram,
+      colorScheme: "teal",
+    },
+    {
+      label: "Private Blogs",
+      value: countData?.privateBlogs,
+      icon: FaTasks,
+      colorScheme: "blue",
+    },
+    {
+      label: "Inactive Blogs",
+      value: countData?.deletedBlogs,
+      icon: FaEyeSlash,
+      colorScheme: "purple",
+    },
+  ];
 
   return (
-    <Box p={{ base: 4, md: 8 }} bg="gray.50" borderRadius="lg" boxShadow="lg" minH="100vh">
+    <Box p={{ base: 6, md: 8 }} bg="gray.50" borderRadius="lg" boxShadow="lg" minH="100vh">
+      {/* Header Section */}
       <Flex justify="space-between" align="center" mb={{ base: 6, md: 8 }} flexWrap="wrap" gap={4}>
-        <Heading as="h1" display="flex" alignItems="center" fontSize={{ base: "2xl", md: "3xl" }} color="teal.700">
-          <Box as={FaHome} boxSize={{ base: 6, md: 8 }} mr={3} />
+        <Heading
+          as="h1"
+          display="flex"
+          alignItems="center"
+          fontSize={{ base: "2xl", md: "3xl" }}
+          color="teal.700"
+          fontWeight="bold"
+        >
+          <Icon as={FaBlog} boxSize={{ base: 6, md: 8 }} mr={3} />
           Blogs
         </Heading>
 
-        <IconButton
-          aria-label="Create Blog"
-          icon={<FaPlus />}
-          colorScheme="teal"
-          size="lg"
-          borderRadius="full"
-          onClick={() => router.push("/dashboard/blogs")}
-          display={{ base: "flex", md: "none" }}
-        />
-      </Flex>
-
-      <SimpleGrid columns={{ base: 1, xl: 2 }} spacing={6}>
-        <Box p={6} bg="white" borderRadius="2xl" boxShadow="sm">
-          <Heading as="h2" size="md" mb={4}>
-            {editingId ? "Edit Blog" : "Add Blog"}
-          </Heading>
-          <form onSubmit={handleSubmit}>
-            <FormControl mb={4}>
-              <FormLabel>Title</FormLabel>
-              <Input name="title" value={formData.title} onChange={handleInputChange} placeholder="Enter title" required />
-            </FormControl>
-            <FormControl mb={4}>
-              <FormLabel>Excerpt</FormLabel>
-              <Textarea name="excerpt" value={formData.excerpt} onChange={handleInputChange} placeholder="Short excerpt" required />
-            </FormControl>
-            <FormControl mb={4}>
-              <FormLabel>Content</FormLabel>
-              <Textarea name="content" value={formData.content} onChange={handleInputChange} placeholder="Blog content" minH="180px" required />
-            </FormControl>
-            <FormControl mb={4}>
-              <FormLabel>Cover Image URL</FormLabel>
-              <Input name="coverImageUrl" value={formData.coverImageUrl} onChange={handleInputChange} placeholder="https://..." />
-            </FormControl>
-            <Checkbox colorScheme="teal" isChecked={formData.published} name="published" onChange={handleInputChange} mb={4}>
-              Publish immediately
-            </Checkbox>
-
-            {error ? (
-              <Box mb={4} p={3} borderRadius="lg" bg="red.50" color="red.700">
-                {error}
-              </Box>
-            ) : null}
-
-            <Button colorScheme="teal" type="submit" isLoading={saving} loadingText="Saving" w="full">
-              {editingId ? "Update Blog" : "Create Blog"}
-            </Button>
-          </form>
-        </Box>
-
-        <Box p={6} bg="white" borderRadius="2xl" boxShadow="sm">
-          <Heading as="h2" size="md" mb={4}>
-            Blogs List
-          </Heading>
-          {loading ? (
-            <Flex justify="center" py={10}>
-              <Spinner size="lg" />
-            </Flex>
+        <Box>
+          {showIconOnly ? (
+            <IconButton
+              aria-label="Create Blog"
+              icon={<FaPlus />}
+              colorScheme="teal"
+              size="lg"
+              variant="solid"
+              borderRadius="full"
+              onClick={() => router.push("/dashboard/blogs/create")}
+            />
           ) : (
-            <SimpleGrid columns={1} spacing={4}>
-              {blogs.data.map((blog: any) => (
-                <Box key={blog._id} borderWidth="1px" borderRadius="2xl" p={4}>
-                  <Flex justify="space-between" align="start" gap={4}>
-                    <Box flex="1">
-                      <Heading size="sm">{blog.title}</Heading>
-                      <Text mt={2} fontSize="sm" color="gray.600">
-                        {blog.excerpt}
-                      </Text>
-                    </Box>
-                    {blog.coverImageUrl ? (
-                      <Box
-                        as="img"
-                        src={blog.coverImageUrl}
-                        alt={blog.title}
-                        w="120px"
-                        h="80px"
-                        objectFit="cover"
-                        borderRadius="lg"
-                      />
-                    ) : null}
-                  </Flex>
-
-                  <Flex mt={4} gap={3}>
-                    <Button
-                      size="sm"
-                      variant="outline"
-                      colorScheme="teal"
-                      onClick={() => {
-                        setEditingId(blog._id);
-                        setFormData({
-                          title: blog.title,
-                          excerpt: blog.excerpt,
-                          content: blog.content,
-                          coverImageUrl: blog.coverImageUrl || "",
-                          published: blog.published,
-                        });
-                      }}
-                    >
-                      Edit
-                    </Button>
-                    <Button
-                      size="sm"
-                      variant="outline"
-                      colorScheme="red"
-                      onClick={async () => {
-                        await deleteBlog(blog._id);
-                        await getBlogs(true);
-                      }}
-                    >
-                      Delete
-                    </Button>
-                  </Flex>
-                </Box>
-              ))}
-            </SimpleGrid>
+            <Button
+              leftIcon={<FaPlus />}
+              colorScheme="teal"
+              variant="solid"
+              size="lg"
+              px={6}
+              fontWeight="semibold"
+              borderRadius="md"
+              onClick={() => router.push("/dashboard/blogs/create")}
+            >
+              Create Blog
+            </Button>
           )}
         </Box>
-      </SimpleGrid>
+      </Flex>
+
+      {/* Summary Widgets */}
+      {loading ? (
+        <Flex justify="center" mb={8}><Spinner size="lg" color="teal.500" /></Flex>
+      ) : (
+        <SimpleGrid columns={{ base: 1, sm: 3 }} spacing={6} mb={8}>
+          {summaryData.map((item) => (
+            <Box key={item.label} bg="white" borderRadius="lg" boxShadow="sm" p={5} borderLeft="4px solid" borderLeftColor={`${item.colorScheme}.400`}>
+              <Stat>
+                <StatLabel color="gray.500">{item.label}</StatLabel>
+                <StatNumber color={`${item.colorScheme}.600`}>{item.value ?? 0}</StatNumber>
+              </Stat>
+            </Box>
+          ))}
+        </SimpleGrid>
+      )}
+
+      {/* Blogs Layout */}
+      <Box p={6} bg="white" borderRadius="lg" boxShadow="sm">
+        <BlogsLayout />
+      </Box>
     </Box>
   );
 });

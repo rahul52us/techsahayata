@@ -19,8 +19,16 @@ class AuthStore {
   };
 
   constructor() {
-    makeAutoObservable(this);
+    makeAutoObservable(this, {}, { autoBind: true });
     this.restoreSession();
+  }
+
+  get user() {
+    return this.authUser;
+  }
+
+  set user(value: AuthUser | null) {
+    this.authUser = value;
   }
 
   restoreSession() {
@@ -46,25 +54,28 @@ class AuthStore {
       if (fallbackUser) {
         this.authUser = fallbackUser;
         this.isAuthenticated = true;
+        return;
       }
+
+      this.isAuthenticated = true;
+      void this.fetchUser();
     }
   }
 
-  setSession(token: string, user: AuthUser) {
+  setSession(token: string, user?: AuthUser) {
     if (typeof window === "undefined") return;
 
-    window.localStorage.setItem(AUTH_TOKEN, token);
-    setAuthSession(token, user);
-    const encryptedData = CryptoJS.AES.encrypt(JSON.stringify(user), ENCRYPT_SECRET_KEY).toString();
-    window.sessionStorage.setItem(USER_SESSION_DATA, encryptedData);
+    if (user) {
+      setAuthSession(token, user);
+      const encryptedData = CryptoJS.AES.encrypt(JSON.stringify(user), ENCRYPT_SECRET_KEY).toString();
+      window.sessionStorage.setItem(USER_SESSION_DATA, encryptedData);
+    }
   }
 
   clearSession() {
     if (typeof window === "undefined") return;
 
     clearAuthSession();
-    window.localStorage.removeItem(AUTH_TOKEN);
-    window.sessionStorage.removeItem(USER_SESSION_DATA);
     this.authUser = null;
     this.isAuthenticated = false;
   }
@@ -96,27 +107,57 @@ class AuthStore {
       loginType: formData.loginType || "username",
     });
 
-    const response = data?.data ?? data;
-    const token = response?.authorization_token;
-    const user = response?.user as AuthUser | undefined;
+    const response = data;
+    const payload = data?.data ?? data;
+    const token = payload?.authorization_token ?? data?.authorization_token;
+    const user = payload?.user as AuthUser | undefined;
 
-    if (!token || !user) {
+    if (!token) {
       throw new Error("Invalid login response");
     }
 
     runInAction(() => {
-      this.setSession(token, user);
-      this.authUser = user;
+      const fallbackUser: AuthUser | undefined =
+        user ?? {
+          _id: formData.username,
+          name: formData.username,
+          email: formData.username,
+          role: "admin",
+          isActive: true,
+        };
+
+      this.setSession(token, fallbackUser);
+      this.authUser = fallbackUser;
       this.isAuthenticated = true;
-      this.openNotification({
-        title: "Login successful",
-        message: `Welcome back, ${user.name}.`,
-        type: "success",
-        duration: 3000,
-      });
     });
 
     return response;
+  }
+
+  async fetchUser() {
+    try {
+      const { data } = await api.get("/auth/me");
+      const fetchedUser = (data?.data ?? data) as AuthUser | undefined;
+
+      if (!fetchedUser) {
+        return null;
+      }
+
+      runInAction(() => {
+        this.authUser = fetchedUser;
+        this.isAuthenticated = true;
+        const token = window.localStorage.getItem(AUTH_TOKEN);
+        if (token) {
+          setAuthSession(token, fetchedUser);
+          const encryptedData = CryptoJS.AES.encrypt(JSON.stringify(fetchedUser), ENCRYPT_SECRET_KEY).toString();
+          window.sessionStorage.setItem(USER_SESSION_DATA, encryptedData);
+        }
+      });
+
+      return fetchedUser;
+    } catch {
+      return null;
+    }
   }
 
   logout() {

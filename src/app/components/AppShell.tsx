@@ -2,25 +2,20 @@
 
 import { usePathname } from "next/navigation";
 import type { ReactNode } from "react";
-import Navbar from "./Navbar";
-import Footer from "./Footer";
-
-const HIDDEN_PREFIXES = ["/login", "/dashboard"];
+import AuthenticationLayout from "../layouts/authenticationLayout/AuthenticationLayout";
+import DashboardLayout from "../layouts/dashboardLayout/DashboardLayout";
+import MainLayout from "../layouts/mainLayout/MainLayout";
 
 export default function AppShell({ children }: { children: ReactNode }) {
   const pathname = usePathname();
-  const hideChrome = HIDDEN_PREFIXES.some((prefix) => pathname.startsWith(prefix));
 
-  if (hideChrome) {
-    return <>{children}</>;
+  if (pathname.startsWith("/login")) {
+    return <AuthenticationLayout>{children}</AuthenticationLayout>;
   }
 
-  return (
-    <>
-      <Navbar />
-      {children}
-      <Footer />
-    </>
-  );
-}
+  if (pathname.startsWith("/dashboard")) {
+    return <DashboardLayout>{children}</DashboardLayout>;
+  }
 
+  return <MainLayout>{children}</MainLayout>;
+}

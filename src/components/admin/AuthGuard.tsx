@@ -3,7 +3,7 @@
 import { useRouter } from "next/navigation";
 import { useEffect, useState, type ReactNode } from "react";
 import { observer } from "mobx-react-lite";
-import stores from "../../store/stores";
+import stores from "@/app/store/stores";
 import { AUTH_TOKEN } from "@/app/config/utils/variables";
 import { getAuthUser } from "@/lib/auth";
 
