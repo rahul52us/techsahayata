@@ -1,7 +1,14 @@
-// Layout dimension constants used by DashboardLayout, SidebarLayout, HeaderLayout
-export const headerHeight = "64px";
-export const headerPadding = "0 16px";
-export const sidebarWidth = "240px";
-export const mediumSidebarWidth = "64px";
-export const contentLargeBodyPadding = "80px 24px 24px 24px";
-export const contentSmallBodyPadding = "80px 12px 12px 12px";
+export const tablePageLimit = 10;
+export const paginationLimit = 10;
+export const miniTablePageLimit = 6;
+export const LargeScreenHeaderHeight = "80px";
+export const SmallScreenHeaderHeight = "60px";
+export const sidebarWidth = "250px";
+export const mediumSidebarWidth = "72px";
+export const headerHeight = "60px";
+export const headerPadding = "10px";
+export const contentLargeBodyPadding = "15px";
+export const contentSmallBodyPadding = "8px";
+export const CardBoxShadow = "rgb(0 0 0 / 20%) 0px 0px 11px";
+export const WebLargeScreenHeaderHeight = "0px";
+export const WebSmallScreenHeaderHeight = "0px";

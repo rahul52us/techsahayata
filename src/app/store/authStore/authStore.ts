@@ -10,6 +10,7 @@ import { clearAuthSession, getAuthUser, setAuthSession } from "@/lib/auth";
 
 class AuthStore {
   authUser: AuthUser | null = null;
+  company = "65f65a70fbe7ae65d05dac64";
   isAuthenticated = false;
   notificationOpen = false;
   notificationData = {

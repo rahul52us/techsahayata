@@ -25,8 +25,8 @@ import { FiSearch } from "react-icons/fi";
 import { BiMoon, BiSun } from "react-icons/bi";
 import { FaBars, FaSignOutAlt } from "react-icons/fa";
 import stores from "../../../store/stores";
-import { headerHeight, mediumSidebarWidth, sidebarWidth } from "../../../component/config/utils/variable";
 import { WEBSITE_TITLE } from "../../../config/utils/variables";
+import { headerHeight, mediumSidebarWidth, sidebarWidth } from "../../../component/config/utils/variable";
 
 const getInitials = (value: string) => {
   const parts = value

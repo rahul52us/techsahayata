@@ -1,53 +1,120 @@
-"use client";
-
-import { makeAutoObservable, runInAction } from "mobx";
+import { makeAutoObservable } from "mobx";
 import api from "../config/axios";
-import type { TestimonialItem } from "@/lib/types";
+import { authStore } from "../authStore/authStore";
 
 class TestimonialStore {
   testimonialLayout = "table";
+
   testimonials = {
-    data: [] as TestimonialItem[],
-    loading: false,
+    data: [],
+    totalPages: 1,
+    loading: true,
+  };
+
+  openTestimonialDrawer = {
+    open: false,
   };
 
   constructor() {
     makeAutoObservable(this);
   }
 
-  async getTestimonials() {
-    this.testimonials.loading = true;
-    try {
-      const { data } = await api.get("/testimonials");
-      runInAction(() => {
-        this.testimonials.data = data?.data ?? [];
-      });
-    } finally {
-      runInAction(() => {
+  // Fetch Testimonials
+
+  getTestimonials = async (sendData: {
+    limit?: number;
+    page: number;
+    search?: string;
+  }) => {
+      this.testimonials.loading = true;
+      try {
+        const { limit = 10, page, search } = sendData;
+        const searchQuery = search
+          ? `&search=${encodeURIComponent(search)}`
+          : "";
+
+        const { data } = await api.get(
+          `/testimonials/get?page=${page}&limit=${limit}${searchQuery}`
+        );
+
+        this.testimonials.data = data?.data || [];
+        this.testimonials.totalPages = data?.totalPages || 0;
+        return data.data;
+      } catch (err: any) {
+        return Promise.reject(err?.response?.data || err);
+      } finally {
         this.testimonials.loading = false;
-      });
+      }
+  };
+
+  // Delete Testimonial
+  deleteTestimonial = async (sendData: any) => {
+    try {
+      const { data } = await api.delete(`/testimonials/${sendData._id}`);
+      return data;
+    } catch (err: any) {
+      return Promise.reject(err?.response?.data || err);
     }
-  }
+  };
 
-  async createTestimonial(payload: Omit<TestimonialItem, "_id" | "createdAt" | "updatedAt">) {
-    const { data } = await api.post("/testimonials", payload);
-    return data;
-  }
+  // Create Testimonial
+  createTestimonial = async (sendData: any) => {
+    try {
+      const { data } = await api.post(`/testimonials/create`, {
+        ...sendData,
+        company: authStore.company,
+      });
+      this.testimonials.data.unshift(data.data);
+      return data;
+    } catch (err: any) {
+      return Promise.reject(err?.response?.data);
+    }
+  };
 
-  async updateTestimonial(id: string, payload: Partial<TestimonialItem>) {
-    const { data } = await api.put(`/testimonials/${id}`, payload);
-    return data;
-  }
+  // Edit Testimonial
+  updateTestimonial = async (id: any, sendData: any) => {
+    try {
+      const { data } = await api.put(`/testimonials/${id}`, sendData);
+      return data;
+    } catch (err: any) {
+      return Promise.reject(err?.response || err);
+    }
+  };
 
-  async deleteTestimonial(id: string) {
-    const { data } = await api.delete(`/testimonials/${id}`);
-    return data;
-  }
+  // Download Testimonial List
+  downloadTestimonialList = async (sendData: any) => {
+    try {
+      const response = await api.post(
+        "/testimonials/download/list",
+        sendData,
+        {
+          responseType: "blob",
+        }
+      );
+      const url = window.URL.createObjectURL(new Blob([response.data]));
+      const link = document.createElement("a");
+      link.href = url;
+      link.setAttribute("download", "testimonials.xlsx");
+      document.body.appendChild(link);
+      link.click();
+      return {
+        data: "Testimonial list downloaded successfully",
+      };
+    } catch (err: any) {
+      return Promise.reject(err);
+    }
+  };
 
-  toggleTestimonialLayout() {
-    this.testimonialLayout = this.testimonialLayout === "table" ? "grid" : "table";
-  }
+  // Toggle Testimonial Drawer
+  setOpenTestimonialDrawer = () => {
+    this.openTestimonialDrawer.open = !this.openTestimonialDrawer.open;
+  };
+
+  // Toggle Layout (Table/Grid)
+  setTestimonialLayout = () => {
+    this.testimonialLayout =
+      this.testimonialLayout === "table" ? "grid" : "table";
+  };
 }
 
 export const testimonialStore = new TestimonialStore();
-

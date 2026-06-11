@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { ArrowRight } from "lucide-react";
 import Header from "../components/Header";
+import TestimonialSection from "../components/TestimonialSection";
 
 
 interface StatCircleProps {
@@ -1106,6 +1107,7 @@ export default function Home() {
       </section>
 
 
+      <TestimonialSection />
     </main>
   );
 }

@@ -6,7 +6,7 @@ import { userStore } from "./userStore/userStore";
 import { layoutStore } from "./layoutStore/layoutStore";
 import { themeStore } from "./themeStore/themeStore";
 
-const stores = {
+const stores: any = {
   auth: authStore,
   dashboardStore,
   BlogStore: blogStore,
