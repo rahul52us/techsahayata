@@ -9,7 +9,6 @@ import {
   Icon,
   Text,
   useColorModeValue,
-  useTheme,
   Popover,
   PopoverTrigger,
   PopoverContent,
@@ -48,9 +47,8 @@ const DashPageHeader = observer(
     showMainTitle = true,
     metaData = {},
   }: PageHeaderProps) => {
-    const theme = useTheme();
-    const headingColor = useColorModeValue(theme.colors.gray[800], theme.colors.gray[200]);
-    const textColor = useColorModeValue(theme.colors.gray[600], theme.colors.gray[400]);
+    const headingColor = useColorModeValue("gray.800", "gray.200");
+    const textColor = useColorModeValue("gray.600", "gray.400");
 
     const defaultFavicon = metaData?.faviconUrl || "/favicon.ico";
     const [favicon, setFavicon] = useState(defaultFavicon);

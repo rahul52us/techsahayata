@@ -152,7 +152,6 @@ const SidebarContent = observer(({ collapsed, onClose }: { collapsed: boolean; o
 
   return (
     <Flex direction="column" h="full" bg="white">
-      <SidebarLogo isCollapsed={collapsed} />
 
       <Box flex="1" py={3} px={collapsed ? 2 : 3} overflowY="auto">
         <VStack align="stretch" spacing={1}>

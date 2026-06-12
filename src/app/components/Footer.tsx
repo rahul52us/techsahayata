@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import React from "react";
 import {
   Linkedin,
@@ -17,6 +18,11 @@ import {
 } from "lucide-react";
 
 const Footer: React.FC = () => {
+  const pathname = usePathname();
+  if (pathname?.startsWith("/login") || pathname?.startsWith("/dashboard")) {
+    return null;
+  }
+  
   return (
     <footer className="relative bg-[#050505] text-white py-8 overflow-hidden">
       {/* Aesthetic Top Divider */}

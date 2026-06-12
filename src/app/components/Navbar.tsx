@@ -27,6 +27,10 @@ const Navbar: FC = () => {
     setMobileMenuOpen(false);
   }, [pathname]);
 
+  if (pathname?.startsWith("/login") || pathname?.startsWith("/dashboard")) {
+    return null;
+  }
+
   const handleMouseEnter = (menu: "products" | "company") => {
     if (menu === "products") {
       if (productsTimer.current) clearTimeout(productsTimer.current);
