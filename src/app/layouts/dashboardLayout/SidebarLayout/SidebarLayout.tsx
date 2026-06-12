@@ -33,9 +33,9 @@ type SidebarItem = {
 
 const sidebarItems: SidebarItem[] = [
   { label: "Dashboard", href: "/dashboard", icon: FaChartPie },
-  { label: "Contacts", href: "/dashboard/contacts", icon: FaAddressBook },
-  { label: "Team", href: "/dashboard/team", icon: FaUsers },
-  { label: "Properties", href: "/dashboard/properties", icon: FaBuilding },
+  // { label: "Contacts", href: "/dashboard/contacts", icon: FaAddressBook },
+  // { label: "Team", href: "/dashboard/team", icon: FaUsers },
+  // { label: "Properties", href: "/dashboard/properties", icon: FaBuilding },
   { label: "Testimonials", href: "/dashboard/testimonials", icon: FaCommentAlt },
   { label: "Blogs", href: "/dashboard/blogs", icon: FaBlog },
 ];
