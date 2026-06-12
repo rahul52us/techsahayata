@@ -4,5 +4,6 @@ export const generateTestimonailsInitialValues = (data: any = {}) => {
       image: data?.image?.url
         ? { file: data.image }
         : { file: [] },
+      websites: data?.websites || [],
     };
   };

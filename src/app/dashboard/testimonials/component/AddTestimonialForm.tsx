@@ -10,7 +10,7 @@ const AddTestimonial = observer(({ close }: any) => {
     auth: { openNotification },
   } = stores;
 
-  const initialValues = { name: "", profession: "", rating : "", description: "", image:  { file: []  }};
+  const initialValues = { name: "", profession: "", rating : "", description: "", image:  { file: []  }, websites: [] };
 
   const handleSubmit = async (values: any, { setSubmitting, resetForm }: any) => {
 

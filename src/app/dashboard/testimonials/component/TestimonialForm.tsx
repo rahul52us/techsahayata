@@ -7,6 +7,7 @@ import { useState } from "react";
  import ShowFileUploadFile from "@/app/components/ShowFileUploadFile/ShowFileUploadFile";
 import { removeDataByIndex } from "@/app/config/utils/util";
 import CustomInput from "@/app/component copy/config/component/customInput/CustomInput";
+import { WEBSITE_DOMAINS } from "@/app/config/utils/websites";
  
 interface TestimonialFormProps {
   initialValues: { name: string; profession: string; description: string; image?: any };
@@ -68,6 +69,23 @@ const TestimonialForm: React.FC<TestimonialFormProps> = ({ initialValues, onSubm
 
               {/* Form Fields */}
               <SimpleGrid columns={{ base: 1, md: 2 }} spacing={6} w="full">
+                <CustomInput
+                  name="websites"
+                  label="Select Websites"
+                  type="select"
+                  isMulti={true}
+                  options={WEBSITE_DOMAINS.map(w => ({ label: w.name, value: w.id }))}
+                  onChange={(selected: any) => {
+                    setFieldValue("websites", selected ? selected.map((s: any) => s.value) : []);
+                  }}
+                  value={
+                    values.websites
+                      ? WEBSITE_DOMAINS.filter(w => values.websites.includes(w.id)).map(w => ({ label: w.name, value: w.id }))
+                      : []
+                  }
+                  error={errors.websites as string}
+                  showError={showError}
+                />
                 <CustomInput
                   name="name"
                   placeholder="Enter the Name"

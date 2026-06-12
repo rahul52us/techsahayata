@@ -5,6 +5,7 @@ const testimonialValidation = yup.object({
  profession : yup.string(),
  rating : yup.number().min(1,'Rating must be Minium 1').max(5,'Raitng can not greater than 5').required('rating is required').typeError('rating is required'),
  description : yup.string().min(10,'description should be atleast of 10 character').max(1800,'description should not greater than 1800 characters').trim().required('description is required').typeError('description is required'),
+ websites: yup.array().of(yup.string()).nullable()
 })
 
 export default testimonialValidation;
