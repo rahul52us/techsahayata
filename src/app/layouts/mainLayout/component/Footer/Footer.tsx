@@ -1,127 +1,121 @@
-import {
-  Box,
-  Container,
-  Divider,
-  Flex,
-  Image,
-  SimpleGrid,
-  Stack,
-  Text,
-  useColorModeValue,
-  Link as ChakraLink,
-} from "@chakra-ui/react";
-import React from "react";
+"use client";
+
 import Link from "next/link";
-import ContactSection from "./components/ContactSection";
-import FooterSection from "./components/FooterSection";
-import { footerData } from "./components/footerData";
+import React from "react";
+import {
+  Linkedin,
+  Globe2,
+  AppWindow,
+  Mail,
+  Phone,
+  Home,
+  Info,
+  MessageCircle,
+  Shield,
+  FileText,
+  BookOpen,
+} from "lucide-react";
 
-export const Footer: React.FC = () => {
-  const textColor = useColorModeValue("gray.700", "gray.700");
-  const bgColor = useColorModeValue("#E8E8E8", "#E8E8E8");
-
-  const sections: any = [
-    {
-      title: "NAVIGATION",
-      links: [
-        { name: "Leasing", href: "/appraisal" },
-        { name: "Rent", href: "/contact-us" },
-        { name: "Sell", href: "/appraisal" },
-        { name: "Buy", href: "/contact-us" },
-      ],
-    },
-    {
-      title: "OUR COMPANY",
-      links: [
-        { name: "Team", href: "/team" },
-        { name: "Blog", href: "/blog" },
-        { name: "Contact Us", href: "/contact-us" },
-        { name: "Quick Appraisal", href: "/appraisal" },
-      ],
-    },
-  ];
-
+const Footer: React.FC = () => {
   return (
-    <Box bg={bgColor} color={textColor} py={{ base: "10", md: 12 }}>
-      <Box>
-        <Container as={Stack} maxW={{ lg: "85%" }} px={{ base: 6, md: 6 }}>
-          <SimpleGrid
-            templateColumns={{
-              base: "1fr",
-              sm: "1fr 1fr",
-              md: "1.2fr 1fr 1fr 1fr",
-              lg: "1.5fr 1fr 1fr 1fr",
-            }}
-            spacing={{ base: 8, md: 10 }}
-          >
-            {/* Company Info */}
-            <Stack
-              spacing={{ base: 4, md: 5 }}
-              align={{ base: "center", md: "flex-start" }}
-            >
-              <Box textAlign={{ base: "center", md: "left" }}>
-                <Image
-                  src="/images/logo2.png"
-                  alt="VD Properties logo"
-                  objectFit="contain"
-                  h={{ base: "35px", lg: "40px", xl: "70px" }}
-                  mx={{ base: "auto", md: -1 }}
-                />
-                <Text
-                  fontSize={{ base: "xs", md: "sm" }}
-                  mt={3}
-                  color="gray.600"
-                  maxW="250px"
-                >
-                  Your partner in finding the perfect place to call home
-                </Text>
-                <Text
-                  fontSize={{ base: "xs", md: "sm" }}
-                  mt={1}
-                  color="gray.600"
-                >
-                  ABN: 22 692 789 754
-                </Text>
-              </Box>
-            </Stack>
+    <footer className="relative bg-[#050505] text-white py-8 overflow-hidden">
+      {/* Aesthetic Top Divider */}
+      <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[#097899]/40 to-transparent" />
 
-            {sections.map((section: any) => (
-              <FooterSection key={section.title} section={section} />
-            ))}
+      <div className="max-w-screen-xl mx-auto px-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 items-start border-b border-white/5 pb-8">
 
-            <ContactSection contactInfo={footerData.contactInfo} />
-          </SimpleGrid>
-        </Container>
+          {/* Column 1: Brand & Logo */}
+          <div className="space-y-4">
+            <Link href="/" className="group inline-block">
+              <img
+                src="https://res.cloudinary.com/dtlrp3fzu/image/upload/v1763011911/stick_website_assets/wtwjiyybu7odemnlu76z.png"
+                alt="TechSahayata Logo"
+                className="h-7 w-auto object-contain opacity-70 brightness-90 group-hover:opacity-100 group-hover:brightness-110 group-hover:drop-shadow-[0_0_8px_rgba(9,120,153,0.5)] transition-all duration-500"
+              />
+            </Link>
+            <p className="text-[12px] text-gray-500 leading-relaxed font-medium">
+              Crafting digital love through <br /> high-performance software.
+            </p>
+            <div className="flex gap-3">
+              <a href="https://linkedin.com" className="p-1.5 rounded-full bg-white/5 hover:bg-[#097899]/20 hover:text-[#097899] transition-all border border-white/5">
+                <Linkedin size={14} />
+              </a>
+            </div>
+          </div>
 
-        <Box mt={10}>
-          <Divider borderColor={"gray.300"} maxW="85%" mx="auto" />
-          <Flex
-            pt={6}
-            maxW="85%"
-            mx="auto"
-            justify="center"
-            align="center"
-            flexWrap="wrap"
-            gap={2}
-          >
-            <Text fontSize={{ base: "xs", sm: "sm" }} color="gray.600">
-              © VD Properties Pty Ltd. All rights reserved.
-            </Text>
-            <Text fontSize={{ base: "xs", sm: "sm" }} color="gray.600">
-              |
-            </Text>
-            <ChakraLink
-              as={Link}
-              href="/privacy-policy"
-              fontSize={{ base: "xs", sm: "sm" }}
-              color="gray.600"
-              _hover={{ color: "#ff914d", textDecoration: "underline" }}
-            >
-              Privacy Policy
-            </ChakraLink>
-          </Flex>
-        </Box>
-      </Box>
-    </Box>
+          {/* Column 2: Solutions & Nav */}
+          <div>
+            <h4 className="text-[10px] font-black uppercase tracking-[0.2em] mb-4 text-[#097899]">Solutions</h4>
+            <div className="flex flex-col gap-2.5 text-[13px] text-gray-400">
+              <Link href="/" className="hover:text-white flex items-center gap-2 group transition-all">
+                <Home size={12} className="group-hover:text-[#097899]" /> Home
+              </Link>
+              <Link href="/products/websites" className="hover:text-white flex items-center gap-2 group transition-all">
+                <Globe2 size={12} className="group-hover:text-[#097899]" /> Websites
+              </Link>
+              <Link href="/products/applications" className="hover:text-white flex items-center gap-2 group transition-all">
+                <AppWindow size={12} className="group-hover:text-[#097899]" /> Applications
+              </Link>
+            </div>
+          </div>
+
+          {/* Column 3: Company */}
+          <div>
+            <h4 className="text-[10px] font-black uppercase tracking-[0.2em] mb-4 text-[#097899]">Resources</h4>
+            <div className="flex flex-col gap-2.5 text-[13px] text-gray-400">
+              <Link href="/about" className="hover:text-white hover:translate-x-1 transition-all flex items-center gap-2">
+                 <Info size={12} /> About Us
+              </Link>
+              <Link href="/faqs" className="hover:text-white hover:translate-x-1 transition-all flex items-center gap-2">
+                 <BookOpen size={12} /> FAQs
+              </Link>
+              <Link href="/privacy" className="hover:text-white hover:translate-x-1 transition-all flex items-center gap-2">
+                 <Shield size={12} /> Privacy Policy
+              </Link>
+              <Link href="/terms" className="hover:text-white hover:translate-x-1 transition-all flex items-center gap-2">
+                 <FileText size={12} /> Terms
+              </Link>
+            </div>
+          </div>
+
+          {/* Column 4: Contact */}
+          <div className="space-y-3">
+            <h4 className="text-[10px] font-black uppercase tracking-[0.2em] mb-4 text-[#097899]">Support</h4>
+            <Link href="/contact" className="group flex items-center gap-3 text-[13px] text-gray-400 hover:text-white transition-all">
+              <div className="p-1.5 rounded-md bg-white/5 border border-white/10 group-hover:border-[#097899]/50 transition-all">
+                <MessageCircle size={12} className="text-[#097899]" />
+              </div>
+              Contact Us
+            </Link>
+            <a href="tel:+8305487970" className="group flex items-center gap-3 text-[13px] text-gray-400 hover:text-white transition-all">
+              <div className="p-1.5 rounded-md bg-white/5 border border-white/10 group-hover:border-[#097899]/50 transition-all">
+                <Phone size={12} className="text-[#097899]" />
+              </div>
+              +91-8305487970
+            </a>
+            <a href="mailto:support@techsahayata.com" className="group flex items-center gap-3 text-[13px] text-gray-400 hover:text-white transition-all">
+              <div className="p-1.5 rounded-md bg-white/5 border border-white/10 group-hover:border-[#097899]/50 transition-all">
+                <Mail size={12} className="text-[#097899]" />
+              </div>
+              support@techsahayata.com
+            </a>
+          </div>
+        </div>
+
+        {/* Bottom Bar */}
+        <div className="flex flex-col md:flex-row justify-between items-center pt-6 text-[10px] text-gray-600 gap-4">
+          <p className="tracking-widest font-medium uppercase">© {new Date().getFullYear()} TECHSAHAYATA</p>
+          <div className="flex items-center gap-2">
+            <span className="h-[1px] w-6 bg-gray-800" />
+            <p className="font-black uppercase tracking-tighter text-gray-400">
+              Built with ❤️ by <span className="text-[#097899]">Techsahayata</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
   );
-};
+};
+
+export default Footer;

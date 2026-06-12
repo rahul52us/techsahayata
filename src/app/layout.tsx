@@ -1,16 +1,12 @@
 import "./globals.css";
-import type { Metadata, Viewport } from "next";
-import AppShell from "./components/AppShell";
-import Providers from "./providers";
+import type { Metadata } from "next";
+import Navbar from "../app/components/Navbar";
+import Footer from "../app/components/Footer";
 
 export const metadata: Metadata = {
   title: "Techsahayata-Starter with Techsahayata",
   description: "Starter with Techsahayata",
-};
-
-export const viewport: Viewport = {
-  width: "device-width",
-  initialScale: 1,
+  viewport: 'width=device-width, initial-scale=1',
 };
 
 export default function RootLayout({
@@ -21,10 +17,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="min-h-screen bg-gray-50">
-        <Providers>
-          <AppShell>{children}</AppShell>
-        </Providers>
+        <Navbar />   
+        
+        {children}
+
+        <Footer />
       </body>
+
+      
     </html>
   );
 }
