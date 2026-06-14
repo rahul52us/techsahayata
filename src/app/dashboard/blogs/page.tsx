@@ -8,18 +8,15 @@ import {
   Icon,
   IconButton,
   SimpleGrid,
-  Stat,
-  StatLabel,
-  StatNumber,
-  Spinner,
   useBreakpointValue,
 } from "@chakra-ui/react";
 import { observer } from "mobx-react-lite";
-import { FaBlog, FaPlus, FaProjectDiagram, FaTasks, FaEyeSlash } from "react-icons/fa";
+import { FaHome, FaPlus, FaProjectDiagram, FaTasks, FaUsers } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import stores from "../../store/stores";
 import BlogsLayout from "./BlogsLayout";
+import SummaryWidget from "@/app/component copy/common/WigdetCard/SummaryWidget";
 
 interface BlogCounts {
   privateBlogs: number;
@@ -36,7 +33,7 @@ const BlogIndex = observer(() => {
   });
 
   const {
-    BlogStore: { getBlogs },
+    BlogStore: { getStatusCount },
   } = stores;
 
   const router = useRouter();
@@ -44,8 +41,13 @@ const BlogIndex = observer(() => {
 
   useEffect(() => {
     setLoading(true);
-    getBlogs(true).finally(() => setLoading(false));
-  }, [getBlogs]);
+    getStatusCount({})
+      .then((data: any) => {
+        setCountData(data?.data);
+      })
+      .catch(() => {})
+      .finally(() => setLoading(false));
+  }, [getStatusCount]);
 
   const summaryData = [
     {
@@ -53,25 +55,43 @@ const BlogIndex = observer(() => {
       value: countData?.publicBlogs,
       icon: FaProjectDiagram,
       colorScheme: "teal",
+      description: "Total number of public blogs.",
+      loading: loading,
     },
     {
       label: "Private Blogs",
       value: countData?.privateBlogs,
       icon: FaTasks,
       colorScheme: "blue",
+      description: "Total number of private blogs.",
+      loading: loading,
     },
     {
       label: "Inactive Blogs",
       value: countData?.deletedBlogs,
-      icon: FaEyeSlash,
+      icon: FaUsers,
       colorScheme: "purple",
+      description: "Total number of deleted blogs.",
+      loading: loading,
     },
   ];
 
   return (
-    <Box p={{ base: 6, md: 8 }} bg="gray.50" borderRadius="lg" boxShadow="lg" minH="100vh">
+    <Box
+      p={{ base: 6, md: 8 }}
+      bg="gray.50"
+      borderRadius="lg"
+      boxShadow="lg"
+      minH="100vh"
+    >
       {/* Header Section */}
-      <Flex justify="space-between" align="center" mb={{ base: 6, md: 8 }} flexWrap="wrap" gap={4}>
+      <Flex
+        justify="space-between"
+        align="center"
+        mb={{ base: 6, md: 8 }}
+        flexWrap="wrap"
+        gap={4}
+      >
         <Heading
           as="h1"
           display="flex"
@@ -80,7 +100,7 @@ const BlogIndex = observer(() => {
           color="teal.700"
           fontWeight="bold"
         >
-          <Icon as={FaBlog} boxSize={{ base: 6, md: 8 }} mr={3} />
+          <Icon as={FaHome} boxSize={{ base: 6, md: 8 }} mr={3} />
           Blogs
         </Heading>
 
@@ -94,6 +114,8 @@ const BlogIndex = observer(() => {
               variant="solid"
               borderRadius="full"
               onClick={() => router.push("/dashboard/blogs/create")}
+              _hover={{ bg: "teal.600" }}
+              _active={{ bg: "teal.700" }}
             />
           ) : (
             <Button
@@ -104,6 +126,9 @@ const BlogIndex = observer(() => {
               px={6}
               fontWeight="semibold"
               borderRadius="md"
+              _hover={{ bg: "teal.600" }}
+              _active={{ bg: "teal.700" }}
+              _focus={{ boxShadow: "outline" }}
               onClick={() => router.push("/dashboard/blogs/create")}
             >
               Create Blog
@@ -113,20 +138,19 @@ const BlogIndex = observer(() => {
       </Flex>
 
       {/* Summary Widgets */}
-      {loading ? (
-        <Flex justify="center" mb={8}><Spinner size="lg" color="teal.500" /></Flex>
-      ) : (
-        <SimpleGrid columns={{ base: 1, sm: 3 }} spacing={6} mb={8}>
-          {summaryData.map((item) => (
-            <Box key={item.label} bg="white" borderRadius="lg" boxShadow="sm" p={5} borderLeft="4px solid" borderLeftColor={`${item.colorScheme}.400`}>
-              <Stat>
-                <StatLabel color="gray.500">{item.label}</StatLabel>
-                <StatNumber color={`${item.colorScheme}.600`}>{item.value ?? 0}</StatNumber>
-              </Stat>
-            </Box>
-          ))}
-        </SimpleGrid>
-      )}
+      <SimpleGrid columns={{ base: 1, sm: 2, lg: 3 }} spacing={6} mb={8}>
+        {summaryData.map((data, index) => (
+          <SummaryWidget
+            key={index}
+            label={data.label}
+            value={data.value}
+            icon={data.icon}
+            colorScheme={data.colorScheme}
+            description={data.description}
+            loading={data.loading}
+          />
+        ))}
+      </SimpleGrid>
 
       {/* Blogs Layout */}
       <Box p={6} bg="white" borderRadius="lg" boxShadow="sm">

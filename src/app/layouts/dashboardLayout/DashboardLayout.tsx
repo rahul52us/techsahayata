@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { observer } from "mobx-react-lite";
 import { Box, Flex, Spinner, useBreakpointValue, useColorModeValue } from "@chakra-ui/react";
 import SidebarLayout from "./SidebarLayout/SidebarLayout";
@@ -41,7 +41,12 @@ const DashboardLayout = observer(({ children }: { children: React.ReactNode }) =
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, [isCallapse, openDashSidebarFun, restoreSession]);
 
-  if (!authUser) {
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!authUser || !mounted) {
     return (
       <Flex minH="100vh" align="center" justify="center" bg={bgColor}>
         <Spinner size="xl" color="teal.500" />

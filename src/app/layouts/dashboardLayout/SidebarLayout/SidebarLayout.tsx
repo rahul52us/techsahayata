@@ -208,6 +208,8 @@ const SidebarLayout = observer(
     } = stores;
     const sidebarWidthValue = isCollapsed ? mediumSidebarWidth : sidebarWidth;
 
+    const headerBg = useColorModeValue("#1E88E5", "#2B6CB0");
+
     return (
       <>
         <Drawer
@@ -243,7 +245,7 @@ const SidebarLayout = observer(
             <Flex direction="column" h="full">
               <Flex
                 height={headerHeight}
-                bg={useColorModeValue("#1E88E5", "#2B6CB0")}
+                bg={headerBg}
                 align="center"
                 justify="space-between"
                 px={isCollapsed ? 2 : 3}

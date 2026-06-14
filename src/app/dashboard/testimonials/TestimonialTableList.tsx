@@ -14,7 +14,7 @@ const TestimonialList = observer(
       testimonialStore: { getTestimonials, testimonials },
       auth: { openNotification },
     } = stores;
-    const [deleteData, setDeleteData] = useState({
+    const [deleteData, setDeleteData] = useState<any>({
       data: null,
       open: false,
     });
@@ -37,7 +37,7 @@ const TestimonialList = observer(
 
         getTestimonials(query)
           .then(() => {})
-          .catch((err) => {
+          .catch((err: any) => {
             openNotification({
               type: "error",
               title: "Failed to get testimonials",

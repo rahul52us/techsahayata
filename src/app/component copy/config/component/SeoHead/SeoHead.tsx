@@ -1,10 +1,10 @@
 "use client";
 
+import { WEBSITE_TITLE, SITE_URL, WEBSITE_DESCRIPTION, KEYWORDS } from "@/app/config/utils/variables";
 import Head from "next/head";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import { SITE_URL, WEBSITE_TITLE, KEYWORDS, WEBSITE_DESCRIPTION } from "../../../../config/utils/variables";
-
+ 
 interface SeoProps {
   title?: string;
   description?: string;
