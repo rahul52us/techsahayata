@@ -34,15 +34,19 @@ const BlogsCard: React.FC<BlogCardProps> = observer(
     return (
       <Box
         rounded="16px"
-        borderWidth={1}
+        borderWidth="1px"
+        borderColor="gray.200"
         overflow="hidden"
-        bg="transparent"
+        bg="white"
+        boxShadow="sm"
+        transition="all 0.3s ease"
+        _hover={{ boxShadow: "md", transform: "translateY(-4px)" }}
       >
         {/* Image */}
-        <Box position="relative" h={{ base: "210px", lg: "260px" }} overflow="hidden" rounded="12px">
+        <Box position="relative" h={{ base: "210px", lg: "260px" }} overflow="hidden" borderBottom="1px solid" borderColor="gray.100">
           <img
-            src={coverImage?.url}
-            style={{ height: "260px", width: "100%", objectFit: "cover", borderRadius: "12px" }}
+            src={coverImage?.url || "https://via.placeholder.com/400x260"}
+            style={{ height: "260px", width: "100%", objectFit: "cover" }}
             alt={title || "Blog Image"}
           />
 
@@ -68,19 +72,22 @@ const BlogsCard: React.FC<BlogCardProps> = observer(
         </Box>
 
         {/* Content */}
-        <Box p={{ base: 3, lg: 4 }}>
-          <Text fontSize="xs" color="#868080">
+        <Box p={{ base: 4, lg: 5 }}>
+          <Text fontSize="sm" color="gray.500" fontWeight="500">
             {formatDate(createdAt)}
           </Text>
 
           <Link
             href={`/blog/${slug}`}
             _hover={{ textDecoration: "none" }}
+            display="block"
+            mt={2}
           >
             <Text
-              mt={1}
-              fontSize={{ base: "16px", lg: "20px" }}
-              fontWeight={700}
+              fontSize={{ base: "lg", lg: "xl" }}
+              fontWeight="700"
+              color="gray.800"
+              lineHeight="1.4"
               noOfLines={2}
             >
               {title}
@@ -88,29 +95,31 @@ const BlogsCard: React.FC<BlogCardProps> = observer(
           </Link>
 
 
-          <Text
-            mt={1}
+          <Box
+            mt={3}
             fontSize="sm"
             color="gray.600"
-            noOfLines={2}
+            lineHeight="1.6"
             sx={{
               display: "-webkit-box",
-              WebkitLineClamp: "4",
+              WebkitLineClamp: "3",
               WebkitBoxOrient: "vertical",
               overflow: "hidden",
+              "& p": { margin: 0 }
             }}
             dangerouslySetInnerHTML={{ __html: subTitle || "" }}
           />
 
           {/* Read More */}
-          <Flex justify="flex-start" mt={3}>
+          <Flex justify="flex-start" mt={4}>
             <Link href={`/blog/${slug}`}>
               <Button
                 as="span"
                 variant="ghost"
-                color="brand.100"
+                color="#ff914d"
                 rightIcon={<ArrowForwardIcon />}
                 p={0}
+                fontWeight="600"
                 _hover={{ textDecoration: "underline", bg: "transparent" }}
               >
                 Read More
