@@ -7,7 +7,9 @@ import { useState } from "react";
  import ShowFileUploadFile from "@/app/components/ShowFileUploadFile/ShowFileUploadFile";
 import { removeDataByIndex } from "@/app/config/utils/util";
 import CustomInput from "@/app/component copy/config/component/customInput/CustomInput";
-import { WEBSITE_DOMAINS } from "@/app/config/utils/websites";
+import stores from "@/app/store/stores";
+import { useEffect } from "react";
+import { observer } from "mobx-react-lite";
  
 interface TestimonialFormProps {
   initialValues: { name: string; profession: string; description: string; image?: any };
@@ -16,8 +18,12 @@ interface TestimonialFormProps {
   isEdit?:boolean
 }
 
-const TestimonialForm: React.FC<TestimonialFormProps> = ({ initialValues, onSubmit, close, isEdit }) => {
+const TestimonialForm: React.FC<TestimonialFormProps> = observer(({ initialValues, onSubmit, close, isEdit }) => {
   const [showError, setShowError] = useState(false);
+
+  useEffect(() => {
+    stores.websiteStore.getWebsites();
+  }, []);
 
   return (
     <Card p={8} borderRadius={10} bg="white" boxShadow="lg">
@@ -74,13 +80,13 @@ const TestimonialForm: React.FC<TestimonialFormProps> = ({ initialValues, onSubm
                   label="Select Websites"
                   type="select"
                   isMulti={true}
-                  options={WEBSITE_DOMAINS.map(w => ({ label: w.name, value: w.id }))}
+                  options={stores.websiteStore.websites.data.map((w: any) => ({ label: w.name, value: w.key }))}
                   onChange={(selected: any) => {
                     setFieldValue("websites", selected ? selected.map((s: any) => s.value) : []);
                   }}
                   value={
                     values.websites
-                      ? WEBSITE_DOMAINS.filter(w => values.websites.includes(w.id)).map(w => ({ label: w.name, value: w.id }))
+                      ? stores.websiteStore.websites.data.filter((w: any) => values.websites.includes(w.key)).map((w: any) => ({ label: w.name, value: w.key }))
                       : []
                   }
                   error={errors.websites as string}
@@ -150,6 +156,6 @@ const TestimonialForm: React.FC<TestimonialFormProps> = ({ initialValues, onSubm
       </Formik>
     </Card>
   );
-};
+});
 
 export default TestimonialForm;

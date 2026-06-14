@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { observer } from "mobx-react-lite";
 import stores from "../../../../../../store/stores";
 import BlogForm from "../../BlogForm";
-import PageLoader from "../../../../../../component/common/Loader/PageLoader";
+import PageLoader from "@/app/component copy/common/Loader/PageLoader";
 import { useParams } from "next/navigation";
 
 const EditBlogForm = observer(() => {

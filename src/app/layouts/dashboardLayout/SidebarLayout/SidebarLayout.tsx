@@ -20,7 +20,7 @@ import { observer } from "mobx-react-lite";
 import { usePathname, useRouter } from "next/navigation";
 import type { ElementType, Dispatch, SetStateAction } from "react";
 import { BiLeftArrowAlt, BiRightArrowAlt } from "react-icons/bi";
-import { FaAddressBook, FaBlog, FaBuilding, FaChartPie, FaCommentAlt, FaSignOutAlt, FaUsers } from "react-icons/fa";
+import { FaAddressBook, FaBlog, FaBuilding, FaChartPie, FaCommentAlt, FaSignOutAlt, FaUsers, FaGlobe } from "react-icons/fa";
 import stores from "../../../store/stores";
 import { sidebarWidth, mediumSidebarWidth, headerHeight } from "../../../component/config/utils/variable";
 import { WEBSITE_TITLE } from "../../../config/utils/variables";
@@ -37,6 +37,7 @@ const sidebarItems: SidebarItem[] = [
   // { label: "Team", href: "/dashboard/team", icon: FaUsers },
   // { label: "Properties", href: "/dashboard/properties", icon: FaBuilding },
   { label: "Testimonials", href: "/dashboard/testimonials", icon: FaCommentAlt },
+  { label: "Websites", href: "/dashboard/websites", icon: FaGlobe },
   { label: "Blogs", href: "/dashboard/blogs", icon: FaBlog },
 ];
 

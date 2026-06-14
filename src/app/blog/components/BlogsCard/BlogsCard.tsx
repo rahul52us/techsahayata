@@ -51,7 +51,7 @@ const BlogsCard: React.FC<BlogCardProps> = observer(
           />
 
           {/* Tags */}
-          {tags?.length > 0 && (
+          {tags && tags.length > 0 && (
             <Flex position="absolute" top={4} left={4} gap={1} wrap="wrap">
               {tags.map((tag, index) => (
                 <Text

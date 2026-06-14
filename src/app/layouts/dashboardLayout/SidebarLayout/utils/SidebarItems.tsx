@@ -5,6 +5,7 @@ import {
   FaCommentAlt,
   FaCogs,
   FaPlusCircle,
+  FaGlobe,
 } from "react-icons/fa";
 
 interface SidebarItem {
@@ -29,6 +30,13 @@ const sidebarDatas: SidebarItem[] = [
     name: "Testimonials",
     icon: <FaCommentAlt />,
     url: "/dashboard/testimonials",
+    role: ["user", "admin", "superadmin", "manager"],
+  },
+  {
+    id: 5,
+    name: "Websites",
+    icon: <FaGlobe />,
+    url: "/dashboard/websites",
     role: ["user", "admin", "superadmin", "manager"],
   },
   {

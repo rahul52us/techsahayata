@@ -29,7 +29,9 @@ import { CloseIcon, WarningIcon } from "@chakra-ui/icons";
 import RichTextEditor from "@/app/component copy/common/Editor/RichQuillEditor";
 import CustomInput from "@/app/component copy/config/component/customInput/CustomInput";
 import FormModel from "@/app/component copy/common/FormModel/FormModel";
-import { WEBSITE_DOMAINS } from "@/app/config/utils/websites";
+
+import stores from "@/app/store/stores";
+import { useEffect } from "react";
 
 const BlogForm = observer(({ initialValues, submitForm, loading }: any) => {
   const [formState, setFormState] = useState<any>(initialValues);
@@ -38,6 +40,10 @@ const BlogForm = observer(({ initialValues, submitForm, loading }: any) => {
   const [isResetModalOpen, setIsResetModalOpen] = useState(false);
   const tagInputRef = useRef<HTMLInputElement>(null);
   const toast = useToast();
+
+  useEffect(() => {
+    stores.websiteStore.getWebsites();
+  }, []);
   const handleStateChange = (key: string, value: any) => {
     if (key === "coverImage") {
       setFormState((prev: any) => ({
@@ -352,13 +358,13 @@ const BlogForm = observer(({ initialValues, submitForm, loading }: any) => {
                   label=""
                   type="select"
                   isMulti={true}
-                  options={WEBSITE_DOMAINS.map((w: any) => ({ label: w.name, value: w.id }))}
+                  options={stores.websiteStore.websites.data.map((w: any) => ({ label: w.name, value: w.key }))}
                   onChange={(selected: any) => {
                     handleStateChange("websites", selected ? selected.map((s: any) => s.value) : []);
                   }}
                   value={
                     websites
-                      ? WEBSITE_DOMAINS.filter((w: any) => websites.includes(w.id)).map((w: any) => ({ label: w.name, value: w.id }))
+                      ? stores.websiteStore.websites.data.filter((w: any) => websites.includes(w.key)).map((w: any) => ({ label: w.name, value: w.key }))
                       : []
                   }
                 />

@@ -5,6 +5,7 @@ import { testimonialStore } from "./testimonialStore/testimonialStore";
 import { userStore } from "./userStore/userStore";
 import { layoutStore } from "./layoutStore/layoutStore";
 import { themeStore } from "./themeStore/themeStore";
+import { websiteStore } from "./websiteStore/websiteStore";
 
 const stores: any = {
   auth: authStore,
@@ -14,6 +15,7 @@ const stores: any = {
   userStore,
   layout: layoutStore,
   themeStore,
+  websiteStore,
 };
 
 export default stores;
