@@ -110,8 +110,22 @@ function useMousePosition() {
 /* ───────── COMPONENT: FloatingCube ───────── */
 function FloatingCube() {
     const { x, y } = useMousePosition();
-    const rotateX = useSpring(useTransform(y, [0, window.innerHeight], [10, -10]), { damping: 30 });
-    const rotateY = useSpring(useTransform(x, [0, window.innerWidth], [-10, 10]), { damping: 30 });
+
+    const width =
+        typeof window !== "undefined" ? window.innerWidth : 1920;
+
+    const height =
+        typeof window !== "undefined" ? window.innerHeight : 1080;
+
+    const rotateX = useSpring(
+        useTransform(y, [0, height], [10, -10]),
+        { damping: 30 }
+    );
+
+    const rotateY = useSpring(
+        useTransform(x, [0, width], [-10, 10]),
+        { damping: 30 }
+    );
 
     return (
         <motion.div
@@ -124,21 +138,15 @@ function FloatingCube() {
         >
             <motion.div
                 className="absolute inset-0 border border-orange-200/30 rounded-xl bg-orange-100/20 backdrop-blur-sm shadow-2xl"
-                style={{
-                    transform: "translateZ(30px)",
-                }}
+                style={{ transform: "translateZ(30px)" }}
             />
             <motion.div
                 className="absolute inset-0 border border-amber-200/30 rounded-xl bg-amber-100/20 backdrop-blur-sm"
-                style={{
-                    transform: "translateZ(-10px)",
-                }}
+                style={{ transform: "translateZ(-10px)" }}
             />
             <motion.div
                 className="absolute inset-0 border border-orange-300/20 rounded-xl bg-orange-200/10"
-                style={{
-                    transform: "translateZ(10px)",
-                }}
+                style={{ transform: "translateZ(10px)" }}
             />
         </motion.div>
     );
@@ -570,7 +578,7 @@ export default function ImpactAndBenefitsSection() {
                                     <div className="relative bg-white rounded-2xl border border-orange-200/50 shadow-2xl shadow-orange-200/30 overflow-hidden p-8 md:p-10">
                                         {/* Spine (left side decorative) */}
                                         <div className="absolute left-0 top-0 bottom-0 w-2 bg-gradient-to-b from-orange-400 to-amber-500 rounded-l-2xl" />
-                                        
+
                                         {/* Book page texture overlay */}
                                         <div className="absolute inset-0 opacity-5" style={{ backgroundImage: "radial-gradient(circle at 20% 50%, rgba(249,115,22,0.2) 1px, transparent 1px)", backgroundSize: "20px 20px" }} />
 
@@ -612,9 +620,8 @@ export default function ImpactAndBenefitsSection() {
                                 <button
                                     key={i}
                                     onClick={() => setActiveIndex(i)}
-                                    className={`h-2 rounded-full transition-all duration-300 ${
-                                        i === activeIndex ? "w-8 bg-orange-500" : "w-2 bg-orange-300/50"
-                                    }`}
+                                    className={`h-2 rounded-full transition-all duration-300 ${i === activeIndex ? "w-8 bg-orange-500" : "w-2 bg-orange-300/50"
+                                        }`}
                                 />
                             ))}
                         </div>
